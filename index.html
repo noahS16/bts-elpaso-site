@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BTS Arirang in EL Paso</title>
+    <!-- Tailwind CDN -->
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="font-solano font-bold ">
+    <header class="w-full absolute top-0 left-0 flex justify-end p-4 z-20">
+        <!-- List/Hamburger Icon -->
+        <div class="relative">
+            <button id="menuButton" class="p-2 text-white">
+                <!-- Simple list/hamburger icon SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black"
+                    stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!-- Slide Menu -->
+    <div id="dropdownMenu"
+        class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-20">
+        <a href="/assets/pages/aboutelpaso.html" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
+        <a href="/assets/pages/armymap.html" class="block px-4 py-2 hover:bg-gray-100">ADD YOUR CITY</a>
+        <a href="/index.html" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+    </div>
+    <!-- Overlay for clicking outside -->
+    <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
+
+    <main class="flex flex-col items-center bg-[var(--brand-primary)]">
+        <div class="w-full flex flex-col items-center">
+            <img src="/assets/images/homepage.jpg" alt="BTS Arirang in El Paso" class="max-w-full h-auto"/>
+            <div id="countdownCard"
+                class="mt-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 w-[90%] max-w-sm text-center">
+
+                <div class="text-3xl uppercase tracking-wider mb-2">
+                    Days Remaining Until BTS Hits the SunBowl!
+                </div>
+
+                <div class="grid grid-cols-4 gap-3">
+                    <div>
+                        <div id="days" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Days</div>
+                    </div>
+                    <div>
+                        <div id="hours" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Hours</div>
+                    </div>
+                    <div>
+                        <div id="minutes" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Min</div>
+                    </div>
+                    <div>
+                        <div id="seconds" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Sec</div>
+                    </div>
+                </div>
+            </div>
+            <img src="/assets/images/mountain-Photoroom.png" alt="BTS Arirang in El Paso" class="max-w-full h-auto" />
+        </div>
+
+    </main>
+
+    <footer class="bg-white h-full font-normal text-sm">
+        <hr>
+        <span class="text-4 block text-center">Designed and Developed by Noah & Nadia Saenz &copy; 2026</span>
+    </footer>
+
+    <script src="assets/scripts/menu.js"></script>
+    <script src="assets/scripts/countdown.js"></script>
+</body>
+</html>
