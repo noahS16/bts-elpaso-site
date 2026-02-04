@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About El Paso - BTS Arirang in EL Paso</title>
+    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body class="font-solano">
+    <header id="magicHeader" class="fixed top-0 left-0 w-full z-30
+         flex justify-between items-center px-5 py-4
+         text-3xl font-bold
+         bg-white/60 backdrop-blur-md
+         border-b border-white/30 shadow-sm
+         transition-transform duration-300
+         ">
+        <span>EPTX</span>
+        <span class="text-3xl mt-0 font-normal">-Arirang in El Paso-</span>
+        <!-- List/Hamburger Icon -->
+        <div class="relative">
+            <button id="menuButton" class="p-2 text-white">
+                <!-- Simple list/hamburger icon SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black"
+                    stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!-- Slide Menu -->
+    <div id="dropdownMenu"
+        class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-200 font-bold">
+        <a href="/utils/pages/aboutelpaso.html" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
+        <a href="/utils/pages/armymap.html" class="block px-4 py-2 hover:bg-gray-100">ADD YOUR CITY</a>
+        <a href="/index.html" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+
+    </div>
+    <!-- Overlay for clicking outside -->
+    <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
+
+    <main class="min-h-screen mt-20">
+        <div class="p-1">
+            <h1
+                class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5 mt-1 ml-0 p-1">
+                EP EATS</h1>
+        </div>
+        <div class="px-5 mt-6">
+            <!-- Cards container -->
+            <div id="cardsContainer" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 h-140 overflow-auto"></div>
+            <!-- Category buttons -->
+            <div id="categoryButtons" class="flex flex-wrap gap-2 justify-center mt-15">
+                <button data-cat="All"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">All</button>
+                <button data-cat="Mexican"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">Mexican</button>
+                <button data-cat="Korean"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">Korean</button>
+                <button data-cat="American"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">American</button>
+                <button data-cat="Asian"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">Asian</button>
+                <button data-cat="Pizza/Italian"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">Pizza/Italian</button>
+                <button data-cat="Cafes/Matcha"
+                    class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold hover:bg-red-600 transition">Cafes/Matcha</button>
+            </div>
+
+            
+        </div>
+    </main>
+    <footer class="bg-white h-full font-normal text-sm mt-15">
+        <hr>
+        <span class="text-4 block text-center">Designed and Developed by Noah & Nadia Saenz &copy; 2026</span>
+    </footer>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/food.js" type="module"></script>
+
+</body>
