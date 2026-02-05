@@ -1,5 +1,4 @@
-import { populate } from 'dotenv';
-import { addCity, getTotalArmy, getTotalCountries, getHighestPopulation, getFurthestArmy, getAllStats, getUniquePlaces } from '../../services/army-map-client.js';
+import { addCity, getAllStats, getUniquePlaces } from '../../services/army-map-client.js';
 import { showCityExistsModal } from '../scripts/modal.js';
 // Render map
 const map = L.map('map', {

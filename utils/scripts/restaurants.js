@@ -1,6 +1,6 @@
 export const restaurants = {
     Mexican: [
-        { name: "Morra Mia", miles: null, image: "../images/morra-mia.jpg", link: "" },
+        { name: "Morra Mia", miles: 5.6, image: "../images/morra-mia.jpg", link: "" },
         { name: "L&J", miles: null, image: "../images/lj.jpg", link: "#" },
         { name: "Kiki's", miles: null, image: "../images/kikis.jpg", link: "#" },
         { name: "Taconeta", miles: null, image: "../images/taconeta.jpg", link: "https://www.google.com/search?sca_esv=e2532f7e453b1d7f&sxsrf=ANbL-n7HPBMrEvkS5N20ZzABnULWPifcEw:1770196490939&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOVOGbKrqqaFP2kQcY69rfBsJATVrExzhZU9B4Vt34w1Y6kEJtM2igCgd6L1RgSd7BDbUERg0dHdGRv9Z_LJ3_hqPmDiU&q=Taconeta&sa=X&ved=2ahUKEwicsJnov7-SAxUs4skDHZPuF-UQ0bkNegQIMxAH&biw=1419&bih=871&dpr=1&aic=0" },
@@ -29,17 +29,27 @@ export const restaurants = {
         { name: "Sunny's Sushi", miles: null, image: "../images/sunnys-sushi.jpg", link: "https://www.google.com/search?q=sunnys+sushi+el+paso&biw=1419&bih=871&aic=0&sca_esv=e2532f7e453b1d7f&sxsrf=ANbL-n6ETjRz6vGbZeSeKPtmCGg_bVDIMA%3A1770199307069&ei=CxmDabr-A4rEp84Pjs3F0QE&ved=0ahUKEwj6r4Snyr-SAxUK4skDHY5mMRoQ4dUDCBM&uact=5&oq=sunnys+sushi+el+paso&gs_lp=Egxnd3Mtd2l6LXNlcnAiFHN1bm55cyBzdXNoaSBlbCBwYXNvMgsQABiABBiRAhiKBTILEAAYgAQYkQIYigUyCxAAGIAEGJECGIoFMgsQABiABBiRAhiKBTIJEAAYgAQYChgLMgYQABgWGB4yCBAAGBYYChgeMgYQABgWGB4yCBAAGBYYChgeMgYQABgWGB5IiUBQtQhYsT1wAngBkAEAmAGcAaABoRSqAQQwLjIwuAEDyAEA-AEBmAIWoAKrFcICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIcEC4YgAQYsAMYQxjHARjIAxiKBRiOBRivAdgBAcICExAuGIAEGLADGEMYyAMYigXYAQHCAhkQLhiABBiwAxhDGMcBGMgDGIoFGK8B2AEBwgIKECMYgAQYJxiKBcICExAuGIAEGMcBGCcYigUYjgUYrwHCAgoQABiABBhDGIoFwgIQEC4YgAQYQxjHARiKBRivAcICEBAuGIAEGNEDGEMYxwEYigXCAgsQLhiABBjRAxjHAcICBBAjGCfCAg0QABiABBixAxhDGIoFwgIgEC4YgAQYxwEYigUYjgUYrwEYlwUY3AQY3gQY4ATYAQHCAgoQIxjwBRgnGMkCwgITEC4YgAQYQxjHARiKBRiOBRivAcICERAuGIAEGJECGMcBGIoFGK8BwgIIEAAYgAQYsQPCAgUQABiABMICCBAuGIAEGLEDwgIKEC4YgAQYQxiKBcICBxAAGIAEGArCAgoQABiABBgUGIcCwgITEC4YgAQYsQMYgwEYxwEYChivAcICChAAGIAEGMkDGArCAgoQABiABBiSAxgKwgILEAAYgAQYkgMYigXCAg0QLhiABBjHARgKGK8BwgIQEC4YgAQYxwEYChiOBRivAcICCRAAGBYYyQMYHpgDAIgGAZAGE7oGBggBEAEYCJIHBDIuMjCgB5bJArIHBDAuMjC4B5wVwgcEMi0yMsgHZ4AIAA&sclient=gws-wiz-serp" }
     ],
     "Pizza/Italian": [
-        { name: "Ardivinos", miles: null, image: "../images/ardivinos.jpg", link: "#" },
-        { name: "Pizza Joint", miles: null, image: "../images/pizza-joint.jpg", link: "#" },
-        { name: "Deserto Pizza", miles: null, image: "../images/deserto-pizza.jpg", link: "#" },
-        { name: "Peter Piper Pizza", miles: null, image: "../images/peter-piper.jpg", link: "#" },
-        { name: "Italian Kitchen", miles: null, image: "../images/italian-kitchen.jpg", link: "#" }
+        { name: "Ardovinos", miles: null, image: "../images/ardovinos.jpg", link: "https://www.google.com/search?q=ardovinos+el+paso&oq=ardovinos+el+paso&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCggIEAAYChgWGB4yCggJEAAYChgWGB7SAQgzNjAyajBqN6gCCLACAfEFSkxz7JFUnzk&sourceid=chrome&ie=UTF-8" },
+        { name: "Pizza Joint", miles: null, image: "../images/pizza-joint.jpg", link: "https://share.google/2HThO7FiDqze2zGp1" },
+        { name: "Deserto Pizza", miles: null, image: "../images/deserto-pizza.jpg", link: "https://share.google/J35tXyAuK5pqnclng" },
+        { name: "Peter Piper Pizza", miles: null, image: "../images/peter-piper.jpg", link: "https://share.google/0I86GRV8iifBQKYjm" },
+        { name: "Italian Kitchen", miles: null, image: "../images/italian-kitchen.jpg", link: "https://share.google/X30nQTo0eyoCFQuWq" }
     ],
     "Cafes/Matcha": [
-        { name: "My Favorite Matcha", miles: null, image: "../images/my-favorite-matcha.jpg", link: "#" },
-        { name: "787 Coffee", miles: null, image: "../images/787-coffee.jpg", link: "#" },
-        { name: "Viejo Coffee", miles: null, image: "../images/viejo-coffee.jpg", link: "#" },
-        { name: "Brewnergy", miles: null, image: "../images/brewnergy.jpg", link: "#" },
-        { name: "Coffee Box", miles: null, image: "../images/coffee-box.jpg", link: "#" }
+        { name: "My Favorite Matcha", miles: null, image: "../images/my-favorite-matcha.png", link: "https://share.google/LPUp9cpfmWQ2JR2Tq" },
+        { name: "787 Coffee", miles: null, image: "../images/787-coffee.jpg", link: "https://share.google/nAq9sx4uBAin6bYCp" },
+        { name: "Viejo Coffee", miles: null, image: "../images/viejo-coffee.jpg", link: "https://share.google/HJsE780rpB9nPkaem" },
+        { name: "Brewnergy", miles: null, image: "../images/brewnergy.jpg", link: "https://share.google/9IOwGFkZdfJnkeVRH" },
+        { name: "Coffee Box", miles: null, image: "../images/coffee-box.jpg", link: "https://share.google/kh1us352jlpS8SQ1S" }
     ]
+};
+
+export const categoryPhotos = {
+    All: "../images/tata-red-lg.png",
+    Mexican: "../images/koya-blue.png",
+    Korean: "../images/shooky-purple.png",
+    American: "../images/rj-red.png",
+    Asian: "../images/cooky.png",
+    "Pizza/Italian": "../images/chimmy.png",
+    "Cafes/Matcha": "../images/mang.png"
 };

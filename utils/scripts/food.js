@@ -1,28 +1,51 @@
-import { restaurants } from './restaurants.js';
+import { restaurants, categoryPhotos } from './restaurants.js';
 
 const cardsContainer = document.getElementById('cardsContainer');
 const categoryButtons = document.querySelectorAll('.category-btn');
 
 function renderCards(category) {
-    cardsContainer.innerHTML = ''; // clear existing cards
+    cardsContainer.innerHTML = `<img src="${categoryPhotos[category]}" class="rounded-full object-cover">`;
 
     let items = [];
     if (category === 'All') {
-        // flatten all categories
         items = Object.values(restaurants).flat();
     } else {
         items = restaurants[category] || [];
     }
 
-    items.forEach(item => {
+    items.forEach((item, index) => {
         const card = document.createElement('div');
-        card.className = 'bg-white/90 backdrop-blur-sm rounded-xl shadow-md  p-4 text-center flex flex-col items-center';
+
+        card.className =
+            'bg-white/90 backdrop-blur-sm rounded-xl shadow-md px-0 text-center flex flex-col items-center card-animate';
+
+        // stagger delay
+        card.style.animationDelay = `${index * 60}ms`;
+
         card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}" class="w-full h-36 object-cover rounded-md mb-3">
-      <h3 class="font-bold text-xl mb-1">${item.name}</h3>
-      ${item.miles ? `<p class="text-gray-600 mb-2">${item.miles} miles from venue</p>` : ''}
-      <a href="${item.link}" class="text-red-500 font-bold hover:underline">View</a>
-    `;
+  <img src="${item.image}" alt="${item.name}"
+    class="w-full h-36 object-cover rounded-md mb-3">
+
+  <h3 class="font-bold text-2xl mb-1">${item.name}</h3>
+
+  <div class="flex flex-row items-center justify-between w-full px-3">
+    ${
+      item.miles
+        ? `
+          <p class="flex items-center gap-1 text-xl text-gray-600 mb-1">
+            <img src="../icons/map-pin.svg" alt="" class="w-5 h-5" />
+            ${item.miles}mi
+          </p>
+        `
+        : ''
+    }
+
+    <a href="${item.link}" class="text-xl text-red-500 font-bold hover:underline">
+      View
+    </a>
+  </div>
+`;
+
         cardsContainer.appendChild(card);
     });
 }
