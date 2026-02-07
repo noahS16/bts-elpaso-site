@@ -26,23 +26,25 @@
     <div id="dropdownMenu"
         class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-20">
         <a href="/utils/pages/aboutelpaso.html" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
         <a href="/utils/pages/food.html" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
-        <a href="/utils/pages/armymap.html" class="block px-4 py-2 hover:bg-gray-100">ADD YOUR CITY</a>
+        <a href="/utils/pages/thingstodo.html" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
+        <a href="/utils/pages/nightlife.html" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a href="/utils/pages/armymap.html" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
         <a href="/index.html" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
     </div>
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
 
     <main class="flex flex-col items-center bg-[var(--brand-primary)]">
-        <div class="w-full flex flex-col items-center">
-            <img src="/utils/images/homepage.jpg" alt="BTS Arirang in El Paso" class="max-w-full h-auto"/>
-            <div id="countdownCard"
-                class="mt-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-4 w-[90%] max-w-sm text-center">
+        <img src="/utils/images/homepage.jpg" alt="BTS Arirang in El Paso" class="max-w-full h-auto" />
+        <div class="w-full flex flex-col items-center mt-5 gap-10">
+            
+            <div id="dayOneCard"
+                class="backdrop-blur-sm bg-purple-300 rounded-xl shadow-lg p-4 w-[90%] max-w-sm text-center">
 
                 <div class="text-3xl uppercase tracking-wider mb-2">
-                    Days Remaining Until BTS Hits the SunBowl!
+                    Days Until arirang in el paso day one!
                 </div>
 
                 <div class="grid grid-cols-4 gap-3">
@@ -64,17 +66,46 @@
                     </div>
                 </div>
             </div>
-            <img src="/utils/images/mountain-Photoroom.png" alt="BTS Arirang in El Paso" class="max-w-full h-auto" />
+            <div id="dayTwoCard"
+                class="bg-purple-300 backdrop-blur-sm rounded-xl shadow-lg p-4 w-[90%] max-w-sm text-center">
+
+                <div class="text-3xl uppercase tracking-wider mb-2">
+                    Days Until Arirang in el paso day two!
+                </div>
+
+                <div class="grid grid-cols-4 gap-3">
+                    <div>
+                        <div id="daysTwo" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Days</div>
+                    </div>
+                    <div>
+                        <div id="hoursTwo" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Hours</div>
+                    </div>
+                    <div>
+                        <div id="minutesTwo" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Min</div>
+                    </div>
+                    <div>
+                        <div id="secondsTwo" class="text-4xl">0</div>
+                        <div class="text-sm text-gray-500">Sec</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-30 overflow-hidden">
+                <img src="/utils/images/mountain-Photoroom.png" class="w-full h-full object-cover object-bottom" />
+            </div>
         </div>
 
     </main>
 
-    <footer class="bg-white h-full font-normal text-sm">
+    <footer class="bg-white h-full font-normal text-sm mt-1">
         <hr>
-        <span class="text-4 block text-center">Designed and Developed by Noah & Nadia Saenz &copy; 2026</span>
+        <span class="text-4 block text-center py-2">Designed and Developed by Noah & Nadia Saenz &copy; 2026</span>
     </footer>
 
     <script src="utils/scripts/menu.js"></script>
     <script src="utils/scripts/countdown.js"></script>
 </body>
+
 </html>
