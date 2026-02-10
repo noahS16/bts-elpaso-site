@@ -10,18 +10,15 @@ export const faqs = [
       "Expect warm, sunny days with average highs around 85–90°F (29–32°C). Evenings can be breezy, so a light jacket is recommended."
   },
   {
-    question: "How far is the airport from the venue?",
-    answer:
-      "El Paso International Airport is about 15–20 minutes from most hotels and the Sun Bowl Stadium."
+    question: "What time should I arrive to the concert?",
+    answer: "We suggest arriving 2-3 hours before the concert starts. This gives you time to hang out with other ARMY, take freebies, and photos."
   },
   {
-    question: "Is the venue outdoors?",
-    answer:
-      "Yes, the Sun Bowl Stadium is an outdoor venue with scenic mountain views and minimal obstructions."
+    question: "How is traffic?",
+    answer: "Traffic will definitely get heavy around the start and end of the show."
   },
   {
-    question: "What transportation options are available?",
-    answer:
-      "Visitors can use rideshare services, Sun Metro buses, the downtown trolley, or rent a car."
+    question: "Where can I park?",
+    answer: "Parking is available around UTEP/Sun Bowl but will fill up fast. Paid lots and garages are close, and there is free street and campus parking further away (a few block to a mile). We suggest ride share and arriving early if you plan to drive."
   }
 ];

@@ -60,17 +60,20 @@ function renderCard(category) {
             class="block px-3 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
           >
             <!-- Header row -->
-            <div class="flex items-center justify-between">
-              <span class="font-medium">${venue.name}</span>
-              <span class="text-gray-500 flex items-center h-full">Map →</span>
+            <div class="flex justify-between items-center gap-0" >
+              <div class="flex flex-col gap-0">
+                <span class="font-semibold">${venue.name}</span>
+                <!-- Description -->
+                ${venue.description ? `
+                  <p class="text-gray-600 leading-snug">
+                    ${venue.description}
+                  </p>
+                  ` : ''}
+              </div>
+              <span class="text-gray-500 justify-center">→</span>
             </div>
 
-            <!-- Description -->
-            ${venue.description ? `
-              <p class="text-gray-600 mt-1 leading-snug">
-                ${venue.description}
-              </p>
-            ` : ''}
+            
           </a>
         `).join('')}
       </div>

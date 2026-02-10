@@ -73,6 +73,17 @@ export const activities = [
         name: "Hiking",
         description: "There are dozens of hiking trails around El Paso. Popular ones include the Tin Mines Trail and the Aztec Cave Trail in the Franklin Mountains. For more hiking options, check out the link!",
         siteLink: "https://www.alltrails.com/us/texas/el-paso",
+    },
+    {
+        image: "../images/food-trucks.jpg",
+        name: "Old Mesilla",
+        description: "Located about 45 minutes outside of El Paso in Las Cruces, NM. Old Mesilla is a historic district with a variety of local shops and restaurants. It's a great place to spend an afternoon exploring and trying some local cuisine.",
+        siteLink: "https://www.oldmesilla.org/",
+        mapLink: "https://maps.app.goo.gl/2gJsgvDR6xUPcRny8",
+    },
+    {
+        image: "",
+        name: "White Sands National Park",
     }
     
 ];
