@@ -80,12 +80,12 @@ export const bars = [
             },
             {
                 name: "Tin Man",
-                mapLink: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/3MHJXc4g1PJf1vka8",
                 description: "A local tap room with multiple locations city wide."
             },
             {
                 name: "Union Draft House",
-                mapLink: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/1GHF95duRpRRci7p8",
                 description: "A local sports bar with over 100 beers on tap and a full food menu. Multiple locations."
             }
         ]
@@ -97,27 +97,27 @@ export const bars = [
         venues: [
             {
                 name: "International Bar",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/FU1waMP7XMqDzDG76",
                 description: "Rooftop"
             },
             {
                 name: "The Reagan",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/7PcNsM7KdudF6pyv8",
                 description: "Unique cocktails"
             },
             {
                 name: "MONA",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/RoT26EAav48rpuEX8",
                 description: "Frequent live music/bands"
             },
             {
                 name: "The Tiki Room",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/q3r4QSU5eQweyrdg7",
                 description: "Tropical themed bar with island-inspired food and cocktails"
             },
             {
                 name: "Prickly Elder",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                mapLink: "https://maps.app.goo.gl/ALK6URBCBYCbPuGy5",
                 description: "Bar with a unique living room ambiance."
             },
         ]
@@ -125,27 +125,27 @@ export const bars = [
     {
         name: "Wineries",
         image: "../images/winery.jpg",
-        description: "Local wineries around the city. Take a drive up Highway 28 to get a great variety of places to choose from.",
+        description: "Local wineries around the city. Take a drive up Highway 28 for scenic views and a great variety of places to choose from.",
         venues: [
             {
                 name: "Zin Valle Vineyards (NM)",
-                map: "https://maps.app.goo.gl/eFJfSVuK9fudEnYP8",
+                mapLink: "https://maps.app.goo.gl/eFJfSVuK9fudEnYP8",
             },
             {
                 name: "La Viña Winery (NM)",
-                map: "https://maps.app.goo.gl/VXXJYQ2S6hYUHCoEA"
+                mapLink: "https://maps.app.goo.gl/VXXJYQ2S6hYUHCoEA"
             },
             {
                 name: "Sombra Antigua Vineyard & Winery (NM)",
-                map: "https://maps.app.goo.gl/QniqS3wtGwFAfUVd6"
+                mapLink: "https://maps.app.goo.gl/QniqS3wtGwFAfUVd6"
             },
             {
                 name: "D.H. Lescombes Winery & Bistro (NM)",
-                map: "https://maps.app.goo.gl/L6Roi2bH1PzYyiwd6"
+                mapLink: "https://maps.app.goo.gl/L6Roi2bH1PzYyiwd6"
             },
             {
                 name: "Wine Down (East)",
-                map: "https://maps.app.goo.gl/uXxStt5yNQj2GcEi8",
+                mapLink: "https://maps.app.goo.gl/uXxStt5yNQj2GcEi8",
             },
             
              
@@ -158,19 +158,19 @@ export const bars = [
         venues: [
             {
                 name: "Whiskey Dicks (East)",
-                map: "https://maps.app.goo.gl/FbVMfgabdDiug94t6",
+                mapLink: "https://maps.app.goo.gl/FbVMfgabdDiug94t6",
             },
             {
                 name: "Little Bit of Texas (West)",
-                map: "https://maps.app.goo.gl/d7V2XVMVHLApJnh26",
+                mapLink: "https://maps.app.goo.gl/d7V2XVMVHLApJnh26",
             },
             {
                 name: "Texas Stagecoach Saloon (Northeast)",
-                map: "https://maps.app.goo.gl/VeGr85RNpNb2hokR6",
+                mapLink: "https://maps.app.goo.gl/VeGr85RNpNb2hokR6",
             },
             {
                 name: "Willie's Brew and Q (Northeast)",
-                map: "https://maps.app.goo.gl/mSMYQZuqNn6rsLAp7",
+                mapLink: "https://maps.app.goo.gl/mSMYQZuqNn6rsLAp7",
                 description: "A casual bar in northeast El Paso with great BBQ. Go early before they run out!"
             }
            
@@ -179,45 +179,97 @@ export const bars = [
     {
         name: "CLose to Sun Bowl",
         image: "../images/cinci.jpg",
-        description: "Also known as 'Cinci', a strip of bars on Cincinnati Street near the Sun Bowl",
+        description: "Also known as 'Cinci', a strip of bars on Cincinnati Street near the Sun Bowl with club vibes.",
         venues: [
             {
-                name: "KIOSHI",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                name: "Kyoshi Sound House",
+                mapLink: "https://maps.app.goo.gl/YtvmpnMVy1NaNZLL9",
             },
+            {
+                name: "Good Times at 2626",
+                mapLink: "https://maps.app.goo.gl/yW34U8W3YGBbrru57"
+            },
+            {
+                name: "Palomino Tavern",
+                mapLink: "https://maps.app.goo.gl/AK1c3KXkwAtE6H4BA",
+            },
+            {
+                name: "Pink Pony Club",
+                mapLink: "https://www.instagram.com/pinkponyclubeptx/?hl=en"
+            }
         ]
     },
     {
         name: "Five Points",
-        image: "../images/sunbowl.jpg",
-        description: "Bars close to the Sun Bowl stadium.",
+        image: "../images/five-points.jpg",
+        description: "A historic district in central El Paso with plenty of spots to choose from. Most bars here have a full food menu.",
         venues: [
             {
-                name: "KIOSHI",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                name: "House of Rock",
+                mapLink: "https://maps.app.goo.gl/2oVzB87s9q1xbYLCA",
             },
+            {
+                name: "The District",
+                mapLink: "https://maps.app.goo.gl/mzqxvgpGh2u4gDWm7",
+                description: "Rolled tacos that rival Chicos Tacos."
+            },
+            {
+                name: "Headquartes Tap House",
+                mapLink: "https://maps.app.goo.gl/T396iMUfbwMnLEzS6"
+            },
+            {
+                name: "Tiki Bar",
+                mapLink: "https://maps.app.goo.gl/ZX29oJ5BJ1N44sqE8",
+            },
+            {
+                name: "Coconuts",
+                mapLink: "https://maps.app.goo.gl/C7byap2UVvYKQ7d97",
+            },
+            {
+                name: "Dewey's",
+                mapLink: "https://maps.app.goo.gl/Q5HfaAEvxuZGE6TX6"
+            },
+            {
+                name: "Love Buzz",
+                mapLink: "https://maps.app.goo.gl/QDEzXP1oWbMfKRmMA",
+            },
+            {
+                name: "Aviators",
+                mapLink: "https://maps.app.goo.gl/WPndSUB5B5NEQiBf7",
+            },
+            {
+                name: "Wall Street Lounge",
+                mapLink: "https://maps.app.goo.gl/di2fvB5fjRiCBDRq6",
+            },
+            {
+                name: "Neighborgood Bar",
+                mapLink: "https://maps.app.goo.gl/SmhoxUqbyMqfA7VZA",
+            }
         ]
     },
     {
         name: "Dive Bars",
-        image: "../images/sunbowl.jpg",
-        description: "Bars close to the Sun Bowl stadium.",
+        image: "../images/dive-bars.jpg",
+        description: "Popular dive bars around El Paso. Check out Rosa's Cantina, famous for inspiring Marty Robbins' 'El Paso'",
         venues: [
             {
-                name: "KIOSHI",
-                map: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
+                name: "Lloyd's Pub",
+                mapLink: "https://maps.app.goo.gl/Vg2WUqkqWsR2VLCZ7",
             },
+            {
+                mapLink: "https://maps.app.goo.gl/fZP8eeeNiyo2XVhi7",
+                name: "Graham's Corner"
+            },
+            {
+                name: "Roasa's Cantina",
+                mapLink: "https://maps.app.goo.gl/nLEgoaoNCpzSL4nV7",
+            },
+            {
+                name: "King's X",
+                mapLink: "https://maps.app.goo.gl/5oRy1D3DwiBD1pEo9",
+            },
+           
         ]
     },
-    {
-        name: "Near the Airport",
-        image: "",
-        description: "Spots near the airport",
-        venues: [   
-            {
-                name: "Honest Abes"
-            }
-        ]
-    }
     
 ];

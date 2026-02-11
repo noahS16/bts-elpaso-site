@@ -26,7 +26,8 @@ async function updateArmyDataDisplay() {
     document.getElementById('totalArmy').textContent = stats.totalArmy.toLocaleString();
     document.getElementById('totalCountries').textContent = stats.totalCountries.toLocaleString();
     document.getElementById('highestPopulation').textContent = stats.highestPopulation;
-    document.getElementById('furthestArmy').textContent = stats.furthestArmy;
+    document.getElementById('furthestCityName').textContent = stats.furthestArmy.city;
+    document.getElementById('furthestCityMiles').textContent = stats.furthestArmy.distance_miles.toFixed(1).concat(" ", "miles");
 }
 
 async function populateMapMarkers() {
@@ -70,7 +71,7 @@ searchInput.addEventListener('input', debounce(async () => {
     );
 
     const data = await res.json();
-    //console.log('Search results:', data);
+    console.log('Search results:', data);
 
     resultsList.innerHTML = '';
     resultsList.classList.remove('hidden');
@@ -80,12 +81,12 @@ searchInput.addEventListener('input', debounce(async () => {
         li.className =
             'px-4 py-3 hover:bg-gray-100 cursor-pointer text-lg';
 
-        li.textContent = place.display_name;
+        li.textContent = getPlaceLabel(place);
 
         li.onclick = async () => {
-            //if (localStorage.getItem('cityAdded')) { console.log("You have already added a city this session."); showCityExistsModal(); }
-            if (true) {
-                searchInput.value = place.display_name;
+            if (localStorage.getItem('cityAdded')) { console.log("You have already added a city this session."); showCityExistsModal(); }
+            else {
+                searchInput.value = getPlaceLabel(place);
                 await addCity(place);
                 localStorage.setItem('cityAdded', 'true');
                 await updateArmyDataDisplay()
@@ -98,9 +99,30 @@ searchInput.addEventListener('input', debounce(async () => {
     });
 }));
 
+function getPlaceLabel(place) {
+    const addr = place.address || {};
+
+  const locality =
+    addr.city ||
+    addr.town ||
+    addr.village ||
+    addr.municipality ||
+    addr.hamlet ||
+    addr.county ||
+    '';
+
+  const parts = [
+    locality,
+    addr.state,
+    addr.country
+  ].filter(Boolean);
+
+  return parts.join(', ');
+}
+
 // Pin to map
 function pinCity(place) {
-    const{city, state, country, population, lat, lon} = place;
+    const { city, state, country, population, lat, lon } = place;
     const armySvgIcon = L.divIcon({
         className: 'army-marker', // prevent default styles
         html: `
@@ -121,31 +143,30 @@ function pinCity(place) {
 
     // Add marker
     const marker = L.marker([lat, lon], { icon: armySvgIcon })
-    .addTo(map)
-    .bindPopup(
-      cityPopupCard({ city, state, country, population }),
-      {
-        closeButton: false,
-        offset: [0, -36],
-        className: 'army-leaflet-popup'
-      }
-    );
+        .addTo(map)
+        .bindPopup(
+            cityPopupCard({ city, state, country, population }),
+            {
+                closeButton: false,
+                offset: [0, -36],
+                className: 'font-solano p-0 m-0'
+            }
+        );
 
 
     // UI cleanup
-    
+
     resultsList.classList.add('hidden');
 }
 
 function cityPopupCard(data) {
-    return `
-    <div class="army-popup">
-      <h3 class="text-lg font-bold">${data.city}</h3>
-      <p class="text-sm opacity-80">${data.state}, ${data.country}</p>
-
-      <div class="mt-2 text-sm">
-        <p><strong>ARMY count:</strong> ${data.population}</p>
-      </div>
+  return `
+    <div class="flex flex-row w-full items-center justify-between min-w-[200px] m-0">
+        <div class="flex flex-col gap-0.5">
+            <h3 class="text-2xl font-bold text-purple-600 m-0">${data.city}</h3>
+            <span class="text-base">${data.country}</span>
+        </div>
+        <span class="text-end font-bold text-4xl text-red-500">${data.population}</span>
     </div>
   `;
 }

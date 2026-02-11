@@ -19,6 +19,6 @@ export const faqs = [
   },
   {
     question: "Where can I park?",
-    answer: "Parking is available around UTEP/Sun Bowl but will fill up fast. Paid lots and garages are close, and there is free street and campus parking further away (a few block to a mile). We suggest ride share and arriving early if you plan to drive."
+    answer: "Parking is available around UTEP/Sun Bowl but will fill up fast. Paid lots and garages are close, and there is free street and campus parking further away (a few blocks to a mile). We suggest ride share and arriving early if you plan to drive."
   }
 ];

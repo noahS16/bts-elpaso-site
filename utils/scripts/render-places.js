@@ -1,4 +1,4 @@
-import { activities } from './activities.js';
+import { activities } from './data/activities.js';
 
 const container = document.getElementById('gridCardsContainer');
 
@@ -31,7 +31,7 @@ function renderCard(activity) {
           <a
             href="${activity.mapLink}"
             target="_blank"
-            class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold"
+            class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold whitespace-nowrap"
           >
             View map
           </a>

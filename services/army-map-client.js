@@ -71,7 +71,8 @@ export async function getFurthestArmy() {
 
     
     //console.log(`${data.label} is the farthest city, ${data.distance_miles.toFixed(1)} miles away, with ${data.population} ARMY`);
-    return `${data.city} (~${data.distance_miles.toFixed(1)} miles)`;
+    return data;
+    //return `${data.city} (~${data.distance_miles.toFixed(1)} miles)`;
     
 }
 

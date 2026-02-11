@@ -1,4 +1,4 @@
-import { restaurants, categoryPhotos } from './restaurants.js';
+import { restaurants, categoryPhotos } from './data/restaurants.js';
 
 const cardsContainer = document.getElementById('cardsContainer');
 const categoryButtons = document.querySelectorAll('.category-btn');
@@ -28,8 +28,8 @@ function renderCards(category) {
     class="w-full h-36 object-cover rounded-md mb-3">
 
   <div class="flex flex-row items-center justify-center gap-x-1">
-    <h3 class="font-bold text-2xl mb-0">${item.name}</h3>
-    ${item.multipleLocations ? '<img src="../icons/multiple-loc.svg" class="w-5 h-5"/>' : ''}
+    <h3 class="font-bold text-lg mb-0">${item.name}</h3>
+    ${item.multipleLocations ? '<img src="../icons/multiple-loc.svg" class="w-4 h-4"/>' : ''}
   </div>
 
   <div class="flex flex-row items-center justify-between w-full px-3">
@@ -37,7 +37,7 @@ function renderCards(category) {
       item.miles
         ? `
           <p class="flex items-center gap-1 text-xl text-gray-600 mb-1">
-            <img src="../icons/map-pin.svg" alt="" class="w-5 h-5" />
+            <img src="../icons/map-pin.svg" alt="" class="w-4 h-4" />
             ${item.miles}
           </p>
         `
@@ -45,7 +45,7 @@ function renderCards(category) {
     }
     ${
       item.favorite
-        ? `<img src="../icons/purple-heart.svg" alt="" class="w-5 h-5" />`: ''
+        ? `<img src="../icons/purple-heart.svg" alt="" class="w-4 h-4" />`: ''
     }
     <a href="${item.link}" class="text-xl text-red-500 font-bold hover:underline">
       View
@@ -62,12 +62,16 @@ renderCards('All');
 
 // Add click handlers
 categoryButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const cat = btn.dataset.cat;
-        renderCards(cat);
+  btn.addEventListener('click', () => {
+    const cat = btn.dataset.cat;
+    renderCards(cat);
 
-        // Update active button style
-        categoryButtons.forEach(b => b.classList.remove('bg-red-600'));
-        btn.classList.add('bg-red-600');
+    categoryButtons.forEach(b => {
+      b.classList.remove('border-black', 'ring-2', 'ring-black');
+      b.classList.add('border-transparent');
     });
+
+    btn.classList.remove('border-transparent');
+    btn.classList.add('border-black', 'ring-2', 'ring-black');
+  });
 });
