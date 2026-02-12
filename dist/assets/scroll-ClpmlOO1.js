@@ -1,0 +1,1 @@
+const e=document.getElementById("magicHeader");let s=window.scrollY;window.addEventListener("scroll",()=>{const l=window.scrollY;l>s&&l>80?e.classList.add("-translate-y-full"):e.classList.remove("-translate-y-full"),s=l});
