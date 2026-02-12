@@ -8,14 +8,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        main: resolve(__dirname, 'index.html'),
         food: resolve(__dirname, 'src/pages/food/index.html'),
         about: resolve(__dirname, 'src/pages/about/index.html'),
         thingstodo: resolve(__dirname, 'src/pages/things-to-do/index.html'),
         nightlife: resolve(__dirname, 'src/pages/nightlife/index.html'),
         armymap: resolve(__dirname, 'src/pages/armymap/index.html'),
         events: resolve(__dirname, 'src/pages/events/index.html')
-
-        // add any other pages here
       },
     },
   },
