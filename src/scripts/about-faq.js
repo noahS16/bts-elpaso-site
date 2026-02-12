@@ -1,4 +1,4 @@
-import { faqs } from './data/faq.js';
+import { faqs } from '../data/faq.js';
 
 const faqContainer = document.getElementById("faqContainer");
 

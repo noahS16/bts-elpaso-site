@@ -1,7 +1,7 @@
 export const bars = [
     {
         name: "Pride Square",
-        image: "../images/pride-square.jpg",
+        image: "/utils/images/pride-square.jpg",
         description: "Heart of El Paso’s LGBTQ+ nightlife. Located Downtown between Franklin and Stanton Street.",
         mapLink: "https://maps.google.com/...",
         venues: [
@@ -30,7 +30,7 @@ export const bars = [
     },
     {
         name: "Breweries & Craft Beer",
-        image: "../images/brewery.jpg",
+        image: "/utils/images/brewery.jpg",
         description: "Local breweries and craft beer spots around the city.",
         venues: [
             {
@@ -92,7 +92,7 @@ export const bars = [
     },
     {
         name: "Downtown",
-        image: "../images/downtown-bars.jpg",
+        image: "/utils/images/downtown-bars.jpg",
         description: "Popular bars in the Downtown area.",
         venues: [
             {
@@ -124,7 +124,7 @@ export const bars = [
     },
     {
         name: "Wineries",
-        image: "../images/winery.jpg",
+        image: "/utils/images/winery.jpg",
         description: "Local wineries around the city. Take a drive up Highway 28 for scenic views and a great variety of places to choose from.",
         venues: [
             {
@@ -153,7 +153,7 @@ export const bars = [
     },
     {
         name: "Country Bars",
-        image: "../images/country-bars.jpg",
+        image: "/utils/images/country-bars.jpg",
         description: "Bars with a country vibe",
         venues: [
             {
@@ -178,7 +178,7 @@ export const bars = [
     },
     {
         name: "CLose to Sun Bowl",
-        image: "../images/cinci.jpg",
+        image: "/utils/images/cinci.jpg",
         description: "Also known as 'Cinci', a strip of bars on Cincinnati Street near the Sun Bowl with club vibes.",
         venues: [
             {
@@ -201,7 +201,7 @@ export const bars = [
     },
     {
         name: "Five Points",
-        image: "../images/five-points.jpg",
+        image: "/utils/images/five-points.jpg",
         description: "A historic district in central El Paso with plenty of spots to choose from. Most bars here have a full food menu.",
         venues: [
             {
@@ -249,7 +249,7 @@ export const bars = [
     },
     {
         name: "Dive Bars",
-        image: "../images/dive-bars.jpg",
+        image: "/utils/images/dive-bars.jpg",
         description: "Popular dive bars around El Paso. Check out Rosa's Cantina, famous for inspiring Marty Robbins' 'El Paso'",
         venues: [
             {

@@ -3,7 +3,7 @@
 /* Fonts */
 @font-face {
   font-family: "Solano Gothic MVB";
-  src: url("../utils/fonts/SolanoGothicMVB-Bd.woff2") format("woff2");
+  src: url("../../utils/fonts/SolanoGothicMVB-Bd.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "Solano Gothic MVB";
-  src: url("../utils/fonts/SolanoGothicMVB-Rg.woff2") format("woff2");
+  src: url("../../utils/fonts/SolanoGothicMVB-Rg.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -56,6 +56,8 @@
 .card-animate {
   animation: fadeUp 0.45s ease-out both;
 }
+
+
 
 /* Global defaults */
 /* html {

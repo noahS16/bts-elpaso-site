@@ -1,4 +1,4 @@
-import { bars } from './data/bars.js';
+import { bars } from '/src/data/bars.js';
 
 const container = document.getElementById('nightlifeCardsContainer');
 let openVenues = null;

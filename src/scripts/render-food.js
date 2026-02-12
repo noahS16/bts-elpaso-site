@@ -1,4 +1,4 @@
-import { restaurants, categoryPhotos } from './data/restaurants.js';
+import { restaurants, categoryPhotos } from '../data/restaurants.js';
 
 const cardsContainer = document.getElementById('cardsContainer');
 const categoryButtons = document.querySelectorAll('.category-btn');
@@ -29,7 +29,7 @@ function renderCards(category) {
 
   <div class="flex flex-row items-center justify-center gap-x-1">
     <h3 class="font-bold text-lg mb-0">${item.name}</h3>
-    ${item.multipleLocations ? '<img src="../icons/multiple-loc.svg" class="w-4 h-4"/>' : ''}
+    ${item.multipleLocations ? '<img src="/utils/icons/multiple-loc.svg" class="w-4 h-4"/>' : ''}
   </div>
 
   <div class="flex flex-row items-center justify-between w-full px-3">
@@ -37,7 +37,7 @@ function renderCards(category) {
       item.miles
         ? `
           <p class="flex items-center gap-1 text-xl text-gray-600 mb-1">
-            <img src="../icons/map-pin.svg" alt="" class="w-4 h-4" />
+            <img src="/utils/icons/map-pin.svg" alt="" class="w-4 h-4" />
             ${item.miles}
           </p>
         `
@@ -45,7 +45,7 @@ function renderCards(category) {
     }
     ${
       item.favorite
-        ? `<img src="../icons/purple-heart.svg" alt="" class="w-4 h-4" />`: ''
+        ? `<img src="/utils/icons/purple-heart.svg" alt="" class="w-4 h-4" />`: ''
     }
     <a href="${item.link}" class="text-xl text-red-500 font-bold hover:underline">
       View

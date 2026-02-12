@@ -1,4 +1,4 @@
-import { activities } from './data/activities.js';
+import { activities } from '/src/data/activities.js';
 
 const container = document.getElementById('gridCardsContainer');
 

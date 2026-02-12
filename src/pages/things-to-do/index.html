@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About El Paso - BTS Arirang in EL Paso</title>
-    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
@@ -27,31 +27,34 @@
     <!-- Menu -->
     <div id="dropdownMenu"
         class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-200 font-bold">
-        <a href="/utils/pages/aboutelpaso.html" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
-        <a href="/utils/pages/food.html" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
-        <a href="/utils/pages/thingstodo.html" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
-        <a href="/utils/pages/nightlife.html" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
-        <a href="/utils/pages/armymap.html" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
-        <a href="/utils/pages/events.html" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a href="./index.html" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a href="../food/index.html" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a href="./index.html" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
+        <a href="../nightlife/index.html" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a href="../armymap/index.html" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
+        <a href="../events/index.html" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
         <a href="/index.html" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
     </div>
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
 
     <main class="min-h-auto mt-20 px-4">
-        <div class="flex flex-row items-center justify-between">
-            <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
-                NIGHTLIFE
-            </h1>
-            <img src="../images/cooky.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
+        <div class="flex flex-col ">
+            <div class="flex flex-row items-center justify-between">
+                <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
+                    WHAT TO DO
+                </h1>
+                <img src="/utils/images/koya-final.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
+            </div>
+
         </div>
         <section class="mt-3">
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
-                id="nightlifeCardsContainer">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto" id="gridCardsContainer">
                 <!-- Cards go here -->
             </div>
         </section>
     </main>
+
     <footer class="bg-white-100 mt-5">
         <div class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center">
 
@@ -83,8 +86,6 @@
             </div>
         </div>
     </footer>
-    <script src="../scripts/menu.js"></script>
-    <script src="../scripts/scroll.js"></script>
-    <script src="../scripts/render-nightlife.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
 
 </body>
