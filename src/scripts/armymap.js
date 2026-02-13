@@ -85,8 +85,8 @@ searchInput.addEventListener('input', debounce(async () => {
         li.textContent = getPlaceLabel(place);
 
         li.onclick = async () => {
-            //if (localStorage.getItem('cityAdded')) { console.log("You have already added a city this session."); showCityExistsModal(); }
-            if (true) {
+            if (localStorage.getItem('cityAdded')) { console.log("You have already added a city this session."); showCityExistsModal(); }
+            else {
                 searchInput.value = getPlaceLabel(place);
                 await addCity(place);
                 localStorage.setItem('cityAdded', 'true');
