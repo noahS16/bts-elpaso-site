@@ -9,11 +9,17 @@
 </head>
 
 <body class="font-solano">
-    <header id="magicHeader" class="fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-4 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
-        <span>EPTX</span>
-        <span class="text-3xl mt-0 font-normal">-Arirang in El Paso-</span>
-        <!-- List/Hamburger Icon -->
-        <div class="relative">
+    <header id="magicHeader"
+        class="lg:p-6 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-4 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+
+        <!-- Left Logo -->
+        <a href="/">EPTX</a>
+
+        <!-- Mobile title (still exactly the same) -->
+        <span class="text-3xl mt-0 font-normal md:hidden">-Arirang in El Paso-</span>
+
+        <!-- Hamburger (mobile only) -->
+        <div class="relative lg:hidden">
             <button id="menuButton" class="p-2 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black"
                     stroke-width="3">
@@ -21,6 +27,18 @@
                 </svg>
             </button>
         </div>
+
+        <!-- Desktop menu (hidden on mobile) -->
+        <nav class="hidden lg:flex justify-end gap-8 font-bold text-4l ">
+            <a href="/src/pages/about/" class="hover:underline">ABOUT EP</a>
+            <a href="/src/pages/food/" class="hover:underline">FOOD</a>
+            <a href="/src/pages/things-to-do/" class="hover:underline">THINGS TO DO</a>
+            <a href="/src/pages/nightlife/" class="hover:underline">NIGHTLIFE</a>
+            <a href="/src/pages/armymap/" class="hover:underline">MA CITY</a>
+            <a href="/src/pages/events/" class="hover:underline">MEETUPS/EVENTS</a>
+            <a href="/" class="hover:underline">HOME</a>
+        </nav>
+
     </header>
     <!-- Menu -->
     <div id="dropdownMenu"
@@ -37,154 +55,156 @@
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
 
-    <div class="mt-20">
+    <div class="mt-20 lg:p-10">
         <div>
             <div class="flex flex-row items-center justify-between px-2">
-                <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
+                <h1
+                    class="text-5xl lg:text-6xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                     About El Paso
                 </h1>
-                <img src="../../../utils/images/chimmy.png" alt="BT21 Shooky" class="w-15 h-15 rounded-full" />
+                <img src="/utils/images/chimmy.png" alt="BT21 Shooky" class=" w-15 h-15 rounded-full" />
             </div>
 
-            <img src="../../../utils/images/elpaso.jpg" alt="El Paso" class="mt-1 w-full h-auto object-cover object-top " />
+
 
         </div>
-        <div class="grid grid-cols-1 gap-10 px-4">
-
-            <p class="text-[20px] text-center font-normal">With a population of over 2.5 million, the <span
-                    class="font-semibold">El Paso Borderplex</span> is a vibrant region where Texas, New Mexico, and
-                Mexico
-                meet. Expect desert views, mountain
-                sunsets,
-                amazing food, and a welcoming community ready to host ARMY from all over.</p>
-            <div class="flex flex-row justify-evenly">
-                <a href="../food/index.html"
-                    class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
-                    <img src="../../../utils/icons/shooky.svg" alt="BT21 Shooky" class="w-8 h-8 mb-1" />
-                    <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
-                        Food
-                    </span>
-                </a>
-                <a href="../things-to-do/index.html"
-                    class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
-                    <img src="../../../utils/icons/tata.svg" alt="BT21 Tata" class="w-8 h-8 mb-1" />
-                    <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
-                        Things To Do
-                    </span>
-                </a>
-                <a href="../nightlife/index.html"
-                    class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
-                    <img src="../../../utils/icons/cooky-white.svg" alt="BT21 Shooky" class="w-10 h-10 mb-1" />
-                    <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
-                        Nightlife
-                    </span>
-                </a>
-            </div>
-
-            <section>
-                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
-                    <h2 class="text-3xl font-bold text-center">
-                        QUICK FACTS ABOUT EL PASO
-                    </h2>
-                    <!-- Content -->
-                    <div class="p-4">
-                        <ul class="flex flex-col gap-4 text-lg">
-                            <li class="flex items-center gap-3">
-                                <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0">
-                                <span>Average May Temp: 86°F / 30°C - sunny and breezy</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="../../../utils/icons/purple-car.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Sun Metro buses, rideshare, trolley system downtown</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="../../../utils/icons/purple-ribbon.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Consistently ranked top 10 safest large cities in the U.S.</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Population: ~680,000 (city)</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="../../../utils/icons/purple-airplane.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Centrally located airport (15-20 minutes from most hotels)</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex justify-center gap-4 mt-6">
-                            <a href="https://sunmetro.net/routes/routes"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Bus Info
-                            </a>
-                            <a href="https://sunmetro.net/streetcar/about-streetcars/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Trolley Info
-                            </a>
-                            <a href="https://visitelpaso.com/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Tourist Info
-                            </a>
-                        </div>
-
-                    </div>
+        <div class="flex flex-col lg:flex-row">
+            <div><img src="/utils/images/elpaso.jpg" alt="El Paso"
+                    class="mt-1 w-full h-auto object-cover object-top " /></div>
+            <div class="flex flex-col gap-10 lg:justify-center">
+                <p class="text-[20px] text-center font-normal px-4 lg:text-[25px]">With a population of over 2.5
+                    million, the <span class="font-semibold">El Paso Borderplex</span> is a vibrant region where Texas,
+                    New Mexico, and
+                    Mexico meet. Expect desert views, mountain sunsets, amazing food, and a welcoming community ready to
+                    host ARMY from all over.
+                </p>
+                <div class="flex flex-row justify-evenly">
+                    <a href="../food/index.html"
+                        class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
+                        <img src="../../../utils/icons/shooky.svg" alt="BT21 Shooky" class="w-8 h-8 mb-1" />
+                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                            Food
+                        </span>
+                    </a>
+                    <a href="../things-to-do/index.html"
+                        class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
+                        <img src="../../../utils/icons/tata.svg" alt="BT21 Tata" class="w-8 h-8 mb-1" />
+                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                            Things To Do
+                        </span>
+                    </a>
+                    <a href="../nightlife/index.html"
+                        class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
+                        <img src="../../../utils/icons/cooky-white.svg" alt="BT21 Shooky" class="w-10 h-10 mb-1" />
+                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                            Nightlife
+                        </span>
+                    </a>
                 </div>
-            </section>
 
-            <section>
 
-                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
-                    <h2 class="text-3xl font-bold text-center">
+
+            </div>
+        </div>
+        <div class="flex flex-col gap-10 px-4 mt-10 lg:flex-row lg:justify-around">
+            <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
+                <h2 class="text-3xl font-bold text-center lg:text-4xl">
+                    QUICK FACTS ABOUT EL PASO
+                </h2>
+                <!-- Content -->
+                <div class="p-4">
+                    <ul class="flex flex-col gap-4 text-lg lg:text-xl">
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0">
+                            <span>Average May Temp: 86°F / 30°C - sunny and breezy</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-car.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Sun Metro buses, rideshare, trolley system downtown</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-ribbon.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Consistently ranked top 10 safest large cities in the U.S.</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Population: ~680,000 (city)</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-airplane.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Centrally located airport (15-20 minutes from most hotels)</span>
+                        </li>
+                    </ul>
+
+                    <div class="flex justify-center gap-4 mt-6">
+                        <a href="https://sunmetro.net/routes/routes"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Bus Info
+                        </a>
+                        <a href="https://sunmetro.net/streetcar/about-streetcars/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Trolley Info
+                        </a>
+                        <a href="https://visitelpaso.com/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Tourist Info
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex flex-col bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
+                <div>
+                    <h2 class="text-3xl font-bold text-center lg:text-4xl">
                         THE VENUE
                     </h2>
                     <img src="../../../utils/images/sunbowl.png" alt="Sun Bowl Stadium"
                         class="w-full h-56 object-cover object-center" />
-
-                    <!-- Content -->
-                    <div class="p-4 flex justify-around items-center">
-                        <ul class="flex flex-col gap-4 text-lg items-start">
-                            <li class="flex items-center gap-2">
-                                <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>51,500</span>
-                            </li>
-
-                            <li class="flex items-center gap-2">
-                                <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Outdoor</span>
-                            </li>
-
-                            <li class="flex items-center gap-2">
-                                <img src="../../../utils/icons/purple-eye.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Little to no obstructions</span>
-                            </li>
-                        </ul>
-                        <div class="flex flex-col items end justify-center gap-4">
-                            <a href="https://www.utepspecialevents.com/prohibited_items/clear_bag_policy"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Prohibited Items
-                            </a>
-                            <a href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Section POV
-                            </a>
-                            <a href="https://www.utepspecialevents.com/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Sun Bowl Website
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-            <section>
-                <h2 class="font-bold text-3xl text-center">FAQ</h2>
-                <div id="faqContainer" class="space-y-3"></div>
-            </section>
 
+                <!-- Content -->
+                <div class="p-4 flex flex-col gap-2 justify-around items-center">
+                    <ul class="flex flex-row gap-4 text-lg items-start text-center lg:text-xl">
+                        <li class="flex items-center gap-2">
+                            <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>51,500</span>
+                        </li>
 
+                        <li class="flex items-center gap-2">
+                            <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Outdoor</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <img src="../../../utils/icons/purple-eye.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Little to no obstructions</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-row items end justify-center text-center gap-4">
+                        <a href="https://www.utepspecialevents.com/prohibited_items/clear_bag_policy"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Prohibited Items
+                        </a>
+                        <a href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Section POV
+                        </a>
+                        <a href="https://www.utepspecialevents.com/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Sun Bowl Website
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-10 p-2 flex flex-col gap-2">
+            <h2 class="underline decoration-4 decoration-red-500 font-bold text-3xl text-center lg:text-4xl lg:text-start">FAQ</h2>
+            <div id="faqContainer" class="space-y-3"></div>
         </div>
     </div>
 

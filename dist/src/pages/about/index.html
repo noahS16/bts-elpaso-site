@@ -5,18 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About El Paso - BTS Arirang in EL Paso</title>
-  <script type="module" crossorigin src="/assets/about-zEFDKC81.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/menu-6ByEY3Xw.js">
+  <script type="module" crossorigin src="/assets/about-CT4hLeKc.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/menu-D7Fif6hX.js">
   <link rel="modulepreload" crossorigin href="/assets/scroll-ClpmlOO1.js">
-  <link rel="stylesheet" crossorigin href="/assets/menu-C9K3xgoZ.css">
+  <link rel="stylesheet" crossorigin href="/assets/menu-CO5nfvPU.css">
 </head>
 
 <body class="font-solano">
-    <header id="magicHeader" class="fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-4 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
-        <span>EPTX</span>
-        <span class="text-3xl mt-0 font-normal">-Arirang in El Paso-</span>
-        <!-- List/Hamburger Icon -->
-        <div class="relative">
+    <header id="magicHeader"
+        class="lg:p-6 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-4 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+
+        <!-- Left Logo -->
+        <a href="/">EPTX</a>
+
+        <!-- Mobile title (still exactly the same) -->
+        <span class="text-3xl mt-0 font-normal md:hidden">-Arirang in El Paso-</span>
+
+        <!-- Hamburger (mobile only) -->
+        <div class="relative lg:hidden">
             <button id="menuButton" class="p-2 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black"
                     stroke-width="3">
@@ -24,6 +30,18 @@
                 </svg>
             </button>
         </div>
+
+        <!-- Desktop menu (hidden on mobile) -->
+        <nav class="hidden lg:flex justify-end gap-8 font-bold text-4l ">
+            <a href="/src/pages/about/" class="hover:underline">ABOUT EP</a>
+            <a href="/src/pages/food/" class="hover:underline">FOOD</a>
+            <a href="/src/pages/things-to-do/" class="hover:underline">THINGS TO DO</a>
+            <a href="/src/pages/nightlife/" class="hover:underline">NIGHTLIFE</a>
+            <a href="/src/pages/armymap/" class="hover:underline">MA CITY</a>
+            <a href="/src/pages/events/" class="hover:underline">MEETUPS/EVENTS</a>
+            <a href="/" class="hover:underline">HOME</a>
+        </nav>
+
     </header>
     <!-- Menu -->
     <div id="dropdownMenu"
@@ -40,154 +58,156 @@
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
 
-    <div class="mt-20">
+    <div class="mt-20 lg:p-10">
         <div>
             <div class="flex flex-row items-center justify-between px-2">
-                <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
+                <h1
+                    class="text-5xl lg:text-6xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                     About El Paso
                 </h1>
-                <img src="/assets/chimmy-CCt8q0mx.png" alt="BT21 Shooky" class="w-15 h-15 rounded-full" />
+                <img src="/utils/images/chimmy.png" alt="BT21 Shooky" class=" w-15 h-15 rounded-full" />
             </div>
 
-            <img src="/assets/elpaso-Sh9M-eSk.jpg" alt="El Paso" class="mt-1 w-full h-auto object-cover object-top " />
+
 
         </div>
-        <div class="grid grid-cols-1 gap-10 px-4">
-
-            <p class="text-[20px] text-center font-normal">With a population of over 2.5 million, the <span
-                    class="font-semibold">El Paso Borderplex</span> is a vibrant region where Texas, New Mexico, and
-                Mexico
-                meet. Expect desert views, mountain
-                sunsets,
-                amazing food, and a welcoming community ready to host ARMY from all over.</p>
-            <div class="flex flex-row justify-evenly">
-                <a href="../food/index.html"
-                    class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
-                    <img src="/assets/shooky-BTaZabWS.svg" alt="BT21 Shooky" class="w-8 h-8 mb-1" />
-                    <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
-                        Food
-                    </span>
-                </a>
-                <a href="../things-to-do/index.html"
-                    class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
-                    <img src="/assets/tata-CYBCiIQT.svg" alt="BT21 Tata" class="w-8 h-8 mb-1" />
-                    <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
-                        Things To Do
-                    </span>
-                </a>
-                <a href="../nightlife/index.html"
-                    class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
-                    <img src="/assets/cooky-white-DJ5O20tr.svg" alt="BT21 Shooky" class="w-10 h-10 mb-1" />
-                    <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
-                        Nightlife
-                    </span>
-                </a>
-            </div>
-
-            <section>
-                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
-                    <h2 class="text-3xl font-bold text-center">
-                        QUICK FACTS ABOUT EL PASO
-                    </h2>
-                    <!-- Content -->
-                    <div class="p-4">
-                        <ul class="flex flex-col gap-4 text-lg">
-                            <li class="flex items-center gap-3">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='256px'%20height='256px'%20viewBox='0%200%201024%201024'%20fill='%23C27AFF'%20class='icon'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M215.446696%20281.290557a46.532764%2046.532764%200%201%200%2065.797328-65.890393l-65.145869-65.14587A46.532764%2046.532764%200%201%200%20150.300827%20216.098155l65.145869%2065.192402zM512%20511.860402m-279.196583%200a279.196583%20279.196583%200%201%200%20558.393166%200%20279.196583%20279.196583%200%201%200-558.393166%200ZM186.131055%20512a46.532764%2046.532764%200%200%200-46.998091-46.532764H46.951559a46.532764%2046.532764%200%201%200%200%2093.065528H139.132964c25.965282%200%2046.998091-20.614014%2046.998091-46.532764zM977.048441%20465.467236h-92.134872a46.532764%2046.532764%200%200%200%200%2093.065528h92.134872a46.532764%2046.532764%200%201%200%200-93.065528zM215.400164%20742.755976l-65.14587%2065.145869a46.672362%2046.672362%200%200%200-0.325729%2066.123057%2046.625829%2046.625829%200%200%200%2066.123057-0.325729l65.14587-65.145869a46.532764%2046.532764%200%200%200-65.797328-65.797328zM512%20186.131055a46.532764%2046.532764%200%200%200%2046.532764-46.998091V46.998091a46.532764%2046.532764%200%201%200-93.065528%200v92.134873c0%2025.965282%2020.660547%2046.998091%2046.532764%2046.998091zM512%20837.868945a46.532764%2046.532764%200%200%200-46.532764%2047.044624v92.134872a46.579297%2046.579297%200%201%200%2093.065528%200v-92.134872c0-26.011815-20.614014-47.044624-46.532764-47.044624zM808.553304%20281.290557l65.145869-65.192402a46.532764%2046.532764%200%200%200-65.797328-65.797328l-65.145869%2065.145869a46.579297%2046.579297%200%200%200%2065.797328%2065.843861zM808.553304%20742.755976a46.532764%2046.532764%200%201%200-65.797328%2065.797328l65.145869%2065.145869c18.380442%2018.380442%2047.789148%2018.613106%2066.123057%200.325729a46.625829%2046.625829%200%200%200-0.325729-66.123057l-65.145869-65.145869z'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0">
-                                <span>Average May Temp: 86°F / 30°C - sunny and breezy</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20stroke='%23000000'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M8%2017H16M8%2017C8%2018.1046%207.10457%2019%206%2019C4.89543%2019%204%2018.1046%204%2017M8%2017C8%2015.8954%207.10457%2015%206%2015C4.89543%2015%204%2015.8954%204%2017M16%2017C16%2018.1046%2016.8954%2019%2018%2019C19.1046%2019%2020%2018.1046%2020%2017M16%2017C16%2015.8954%2016.8954%2015%2018%2015C19.1046%2015%2020%2015.8954%2020%2017M10%205V11M4%2011L4.33152%209.01088C4.56901%207.58593%204.68776%206.87345%205.0433%206.3388C5.35671%205.8675%205.79705%205.49447%206.31346%205.26281C6.8993%205%207.6216%205%209.06621%205H12.4311C13.3703%205%2013.8399%205%2014.2662%205.12945C14.6436%205.24406%2014.9946%205.43194%2015.2993%205.68236C15.6435%205.96523%2015.904%206.35597%2016.425%207.13744L19%2011M4%2017H3.6C3.03995%2017%202.75992%2017%202.54601%2016.891C2.35785%2016.7951%202.20487%2016.6422%202.10899%2016.454C2%2016.2401%202%2015.9601%202%2015.4V14.2C2%2013.0799%202%2012.5198%202.21799%2012.092C2.40973%2011.7157%202.71569%2011.4097%203.09202%2011.218C3.51984%2011%204.0799%2011%205.2%2011H17.2C17.9432%2011%2018.3148%2011%2018.6257%2011.0492C20.3373%2011.3203%2021.6797%2012.6627%2021.9508%2014.3743C22%2014.6852%2022%2015.0568%2022%2015.8C22%2015.9858%2022%2016.0787%2021.9877%2016.1564C21.9199%2016.5843%2021.5843%2016.9199%2021.1564%2016.9877C21.0787%2017%2020.9858%2017%2020.8%2017H20'%20stroke='%23C27AFF'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Sun Metro buses, rideshare, trolley system downtown</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="/assets/purple-ribbon-B6hms_HY.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Consistently ranked top 10 safest large cities in the U.S.</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23C27AFF'%20width='800px'%20height='800px'%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M16%2015.503A5.041%205.041%200%201%200%2016%205.42a5.041%205.041%200%200%200%200%2010.083zm0%202.215c-6.703%200-11%203.699-11%205.5v3.363h22v-3.363c0-2.178-4.068-5.5-11-5.5z'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Population: ~680,000 (city)</span>
-                            </li>
-
-                            <li class="flex items-center gap-3">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20stroke='%23C27AFF'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M20.0486%2010.6286L15.3786%208.61859L14.3386%208.17859C14.1786%208.09859%2014.0386%207.88859%2014.0386%207.70859V4.64859C14.0386%203.68859%2013.3286%202.54859%2012.4686%202.10859C12.1686%201.95859%2011.8086%201.95859%2011.5086%202.10859C10.6586%202.54859%209.94859%203.69859%209.94859%204.65859V7.71859C9.94859%207.89859%209.80859%208.10859%209.64859%208.18859L3.94859%2010.6386C3.31859%2010.8986%202.80859%2011.6886%202.80859%2012.3686V13.6886C2.80859%2014.5386%203.44859%2014.9586%204.23859%2014.6186L9.24859%2012.4586C9.63859%2012.2886%209.95859%2012.4986%209.95859%2012.9286V14.0386V15.8386C9.95859%2016.0686%209.82859%2016.3986%209.66859%2016.5586L7.34859%2018.8886C7.10859%2019.1286%206.99859%2019.5986%207.10859%2019.9386L7.55859%2021.2986C7.73859%2021.8886%208.40859%2022.1686%208.95859%2021.8886L11.3386%2019.8886C11.6986%2019.5786%2012.2886%2019.5786%2012.6486%2019.8886L15.0286%2021.8886C15.5786%2022.1586%2016.2486%2021.8886%2016.4486%2021.2986L16.8986%2019.9386C17.0086%2019.6086%2016.8986%2019.1286%2016.6586%2018.8886L14.3386%2016.5586C14.1686%2016.3986%2014.0386%2016.0686%2014.0386%2015.8386V12.9286C14.0386%2012.4986%2014.3486%2012.2986%2014.7486%2012.4586L19.7586%2014.6186C20.5486%2014.9586%2021.1886%2014.5386%2021.1886%2013.6886V12.3686C21.1886%2011.6886%2020.6786%2010.8986%2020.0486%2010.6286Z'%20fill='%23C27AFF'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Centrally located airport (15-20 minutes from most hotels)</span>
-                            </li>
-                        </ul>
-
-                        <div class="flex justify-center gap-4 mt-6">
-                            <a href="https://sunmetro.net/routes/routes"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Bus Info
-                            </a>
-                            <a href="https://sunmetro.net/streetcar/about-streetcars/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Trolley Info
-                            </a>
-                            <a href="https://visitelpaso.com/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Tourist Info
-                            </a>
-                        </div>
-
-                    </div>
+        <div class="flex flex-col lg:flex-row">
+            <div><img src="/utils/images/elpaso.jpg" alt="El Paso"
+                    class="mt-1 w-full h-auto object-cover object-top " /></div>
+            <div class="flex flex-col gap-10 lg:justify-center">
+                <p class="text-[20px] text-center font-normal px-4 lg:text-[25px]">With a population of over 2.5
+                    million, the <span class="font-semibold">El Paso Borderplex</span> is a vibrant region where Texas,
+                    New Mexico, and
+                    Mexico meet. Expect desert views, mountain sunsets, amazing food, and a welcoming community ready to
+                    host ARMY from all over.
+                </p>
+                <div class="flex flex-row justify-evenly">
+                    <a href="../food/index.html"
+                        class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
+                        <img src="../../../utils/icons/shooky.svg" alt="BT21 Shooky" class="w-8 h-8 mb-1" />
+                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                            Food
+                        </span>
+                    </a>
+                    <a href="../things-to-do/index.html"
+                        class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
+                        <img src="../../../utils/icons/tata.svg" alt="BT21 Tata" class="w-8 h-8 mb-1" />
+                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                            Things To Do
+                        </span>
+                    </a>
+                    <a href="../nightlife/index.html"
+                        class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
+                        <img src="../../../utils/icons/cooky-white.svg" alt="BT21 Shooky" class="w-10 h-10 mb-1" />
+                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                            Nightlife
+                        </span>
+                    </a>
                 </div>
-            </section>
 
-            <section>
 
-                <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
-                    <h2 class="text-3xl font-bold text-center">
+
+            </div>
+        </div>
+        <div class="flex flex-col gap-10 px-4 mt-10 lg:flex-row lg:justify-around">
+            <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
+                <h2 class="text-3xl font-bold text-center lg:text-4xl">
+                    QUICK FACTS ABOUT EL PASO
+                </h2>
+                <!-- Content -->
+                <div class="p-4">
+                    <ul class="flex flex-col gap-4 text-lg lg:text-xl">
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0">
+                            <span>Average May Temp: 86°F / 30°C - sunny and breezy</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-car.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Sun Metro buses, rideshare, trolley system downtown</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-ribbon.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Consistently ranked top 10 safest large cities in the U.S.</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Population: ~680,000 (city)</span>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <img src="../../../utils/icons/purple-airplane.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Centrally located airport (15-20 minutes from most hotels)</span>
+                        </li>
+                    </ul>
+
+                    <div class="flex justify-center gap-4 mt-6">
+                        <a href="https://sunmetro.net/routes/routes"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Bus Info
+                        </a>
+                        <a href="https://sunmetro.net/streetcar/about-streetcars/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Trolley Info
+                        </a>
+                        <a href="https://visitelpaso.com/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Tourist Info
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex flex-col bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
+                <div>
+                    <h2 class="text-3xl font-bold text-center lg:text-4xl">
                         THE VENUE
                     </h2>
-                    <img src="/assets/sunbowl-Dv5WYqe4.png" alt="Sun Bowl Stadium"
+                    <img src="../../../utils/images/sunbowl.png" alt="Sun Bowl Stadium"
                         class="w-full h-56 object-cover object-center" />
-
-                    <!-- Content -->
-                    <div class="p-4 flex justify-around items-center">
-                        <ul class="flex flex-col gap-4 text-lg items-start">
-                            <li class="flex items-center gap-2">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23C27AFF'%20width='800px'%20height='800px'%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M16%2015.503A5.041%205.041%200%201%200%2016%205.42a5.041%205.041%200%200%200%200%2010.083zm0%202.215c-6.703%200-11%203.699-11%205.5v3.363h22v-3.363c0-2.178-4.068-5.5-11-5.5z'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>51,500</span>
-                            </li>
-
-                            <li class="flex items-center gap-2">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='256px'%20height='256px'%20viewBox='0%200%201024%201024'%20fill='%23C27AFF'%20class='icon'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M215.446696%20281.290557a46.532764%2046.532764%200%201%200%2065.797328-65.890393l-65.145869-65.14587A46.532764%2046.532764%200%201%200%20150.300827%20216.098155l65.145869%2065.192402zM512%20511.860402m-279.196583%200a279.196583%20279.196583%200%201%200%20558.393166%200%20279.196583%20279.196583%200%201%200-558.393166%200ZM186.131055%20512a46.532764%2046.532764%200%200%200-46.998091-46.532764H46.951559a46.532764%2046.532764%200%201%200%200%2093.065528H139.132964c25.965282%200%2046.998091-20.614014%2046.998091-46.532764zM977.048441%20465.467236h-92.134872a46.532764%2046.532764%200%200%200%200%2093.065528h92.134872a46.532764%2046.532764%200%201%200%200-93.065528zM215.400164%20742.755976l-65.14587%2065.145869a46.672362%2046.672362%200%200%200-0.325729%2066.123057%2046.625829%2046.625829%200%200%200%2066.123057-0.325729l65.14587-65.145869a46.532764%2046.532764%200%200%200-65.797328-65.797328zM512%20186.131055a46.532764%2046.532764%200%200%200%2046.532764-46.998091V46.998091a46.532764%2046.532764%200%201%200-93.065528%200v92.134873c0%2025.965282%2020.660547%2046.998091%2046.532764%2046.998091zM512%20837.868945a46.532764%2046.532764%200%200%200-46.532764%2047.044624v92.134872a46.579297%2046.579297%200%201%200%2093.065528%200v-92.134872c0-26.011815-20.614014-47.044624-46.532764-47.044624zM808.553304%20281.290557l65.145869-65.192402a46.532764%2046.532764%200%200%200-65.797328-65.797328l-65.145869%2065.145869a46.579297%2046.579297%200%200%200%2065.797328%2065.843861zM808.553304%20742.755976a46.532764%2046.532764%200%201%200-65.797328%2065.797328l65.145869%2065.145869c18.380442%2018.380442%2047.789148%2018.613106%2066.123057%200.325729a46.625829%2046.625829%200%200%200-0.325729-66.123057l-65.145869-65.145869z'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Outdoor</span>
-                            </li>
-
-                            <li class="flex items-center gap-2">
-                                <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20stroke='%23C27AFF'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3ccircle%20cx='12'%20cy='12'%20r='4'%20fill='%23C27AFF'/%3e%3cpath%20d='M21%2012C21%2012%2020%204%2012%204C4%204%203%2012%203%2012'%20stroke='%23C27AFF'%20stroke-width='2'/%3e%3c/g%3e%3c/svg%3e" class="w-5 h-5 flex-shrink-0" alt="">
-                                <span>Little to no obstructions</span>
-                            </li>
-                        </ul>
-                        <div class="flex flex-col items end justify-center gap-4">
-                            <a href="https://www.utepspecialevents.com/prohibited_items/clear_bag_policy"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Prohibited Items
-                            </a>
-                            <a href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Section POV
-                            </a>
-                            <a href="https://www.utepspecialevents.com/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
-                                Sun Bowl Website
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-            <section>
-                <h2 class="font-bold text-3xl text-center">FAQ</h2>
-                <div id="faqContainer" class="space-y-3"></div>
-            </section>
 
+                <!-- Content -->
+                <div class="p-4 flex flex-col gap-2 justify-around items-center">
+                    <ul class="flex flex-row gap-4 text-lg items-start text-center lg:text-xl">
+                        <li class="flex items-center gap-2">
+                            <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>51,500</span>
+                        </li>
 
+                        <li class="flex items-center gap-2">
+                            <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Outdoor</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <img src="../../../utils/icons/purple-eye.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span>Little to no obstructions</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-row items end justify-center text-center gap-4">
+                        <a href="https://www.utepspecialevents.com/prohibited_items/clear_bag_policy"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Prohibited Items
+                        </a>
+                        <a href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Section POV
+                        </a>
+                        <a href="https://www.utepspecialevents.com/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                            Sun Bowl Website
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-10 p-2 flex flex-col gap-2">
+            <h2 class="underline decoration-4 decoration-red-500 font-bold text-3xl text-center lg:text-4xl lg:text-start">FAQ</h2>
+            <div id="faqContainer" class="space-y-3"></div>
         </div>
     </div>
 

@@ -86,6 +86,13 @@ export const activities = [
         description: "About an hour and a half away from El Paso is a national Park with 275 square miles of white sand dunes. Sled rentals and picnic spots are available. Great place to recreate the Yet to Come MV.",
         siteLink: "https://www.nps.gov/whsa/index.htm",
         mapLink: "https://maps.app.goo.gl/yTLrXzVYBL4g3vwk8"
+    },
+    {
+        image: "/utils/images/outlets.jpg",
+        name: "Outlet Shoppes",
+        description: "Located in west El Paso, shop at the many discounted stores around the mall.",
+        siteLink: "https://www.theoutletshoppesatelpaso.com/",
+        mapLink: "https://maps.app.goo.gl/Y2QTznP2WSYSgc5cA",
     }
     
 ];

@@ -1,6 +1,6 @@
 export const restaurants = {
     Mexican: [
-        { name: "Morra Mia", miles: 5.6, image: "/utils/images/morra-mia.jpg", favorite: false, multipleLocations: true, link: "https://maps.app.goo.gl/rKfdeqtKRR54XaCF8https://maps.app.goo.gl/rKfdeqtKRR54XaCF8" },
+        { name: "Morra Mia", miles: 5.6, image: "/utils/images/morra-mia.jpg", favorite: false, multipleLocations: true, link: "https://maps.app.goo.gl/dm9eZ6cFmwQKLFpU7" },
         { name: "L&J", miles: 4.7, image: "/utils/images/lj.jpg", link: "https://maps.app.goo.gl/Hv8g9CjCpgyzQy4HA" },
         { name: "Kiki's", miles: 5.5, image: "/utils/images/kikis.jpg", favorite: false, link: "https://maps.app.goo.gl/LWiYomiR4B5Z3ohf9" },
         { name: "Taconeta", miles: 1.7, image: "/utils/images/taconeta.jpg", link: "https://maps.app.goo.gl/mj1aWmfYeGceMbEd8" },
@@ -9,6 +9,8 @@ export const restaurants = {
         { name: "Carlos & Mickey's", miles: 7.2, image: "/utils/images/carlos-mickeys.png", multipleLocations: true, link: "https://maps.app.goo.gl/KdqmbHNBJeoXYTr89" },
         { name: "Julio's" , miles: 10.8, image: "/utils/images/julios.jpg", multipleLocations: false, link: "https://maps.app.goo.gl/SCKrRYoDegte23787" },
         { name: "Andale", miles: 10.1, image: "/utils/images/andale.jpg", link: "https://maps.app.goo.gl/nyNfkkwXsjcz1CB3A" },
+        { name: "Delectacos", miles: 17.3, image: "/utils/images/delectacos.jpg", link: "https://maps.app.goo.gl/aUrk7orCKy7NbJ4J8" },
+
     ],
     Korean: [
         { name: "Gom Ramen", miles: 10.1, image: "/utils/images/gom-ramen.jpg", link: "https://maps.app.goo.gl/eMJw4MTPMEUPtVa56" },
@@ -37,7 +39,10 @@ export const restaurants = {
         { name: "Grove", miles: 10.9, image: "/utils/images/grove.png", multipleLocations: true, favorite: false, link: "https://maps.app.goo.gl/wkMu1mD1j4Zbrmrb7" },
         { name: "Ripe Eatery", miles: 9.7, image: "/utils/images/ripe.png", link: "https://maps.app.goo.gl/gGyhmfRmx8Gt9dPs5" },
         { name: "150 Sunset", miles: 7.7, image: "/utils/images/150sunset.png", link: "https://maps.app.goo.gl/CvUgKCXakEMgAZjy7" },
-        { name: "La Fete", miles: 15.3, image: "/utils/images/la-fete.png", link: "https://maps.app.goo.gl/QUtX8kWx6GNGmbtM9" }
+        { name: "La Fete", miles: 15.3, image: "/utils/images/la-fete.png", link: "https://maps.app.goo.gl/QUtX8kWx6GNGmbtM9" },
+        { name: "Café Rosé/Pink Cafe", miles: 15.3, image: "/utils/images/pink-cafe.jpg", multipleLocations:true, link: "https://maps.app.goo.gl/5eraKds3vA4R38VE6" },
+
+        
     ],
     Asian: [
         { name: "Kaedamma", miles: 0.9, image: "/utils/images/kaedamma.jpg", favorite: false, link: "https://maps.app.goo.gl/D9RDdrJE7t823RdC9" },
@@ -61,7 +66,7 @@ export const restaurants = {
     "Cafes/Matcha": [
         { name: "My Favorite Matcha", miles: 4.5, image: "/utils/images/my-favorite-matcha.png", favorite: false, link: "https://maps.app.goo.gl/9JRCxFiF28vTa9Kz9" },
         { name: "787 Coffee", miles: 0.9, image: "/utils/images/787-coffee.jpg", multipleLocations: true, favorite: false, link: "https://maps.app.goo.gl/PvNCAuz1NyciTQeS6" },
-        { name: "Viejo Coffee", miles: 0.9, image: "utils/images/viejo-coffee.jpg", link: "https://maps.app.goo.gl/YeH3jGjLRFuBKNXi8" },
+        { name: "Viejo Coffee", miles: 0.9, image: "/utils/images/viejo-coffee.jpg", link: "https://maps.app.goo.gl/YeH3jGjLRFuBKNXi8" },
         { name: "Brewnergy", miles: 0.8, image: "/utils/images/brewnergy.jpg", link: "https://maps.app.goo.gl/JK7pSMKsC3rRJ1uN9" },
         { name: "Coffee Box", miles: 2.0, image: "/utils/images/coffee-box.jpg", link: "https://maps.app.goo.gl/D9ZqgBZoZmj6risd7" },
         { name: "Crunch & Chill", miles: 7.4, image: "/utils/images/crunch-chill.png", link: "https://maps.app.goo.gl/iNnXc3xQx7RMvZLm9" },
@@ -72,7 +77,9 @@ export const restaurants = {
         { name: "Wake & Bake", miles: 3.3, image: "/utils/images/wake-bake.png", link: "https://maps.app.goo.gl/VhX9jKfxf6NgcoKv9" },
         { name: "2Ten Coffee Roasters", miles: 3.2, image: "/utils/images/2ten.png", multipleLocations:true, link: "https://maps.app.goo.gl/UmDKbf575r8b71FZ7" },
         { name: "Rally Point", miles: 22.8, image: "/utils/images/rally-point.png", multipleLocations: true, favorite: false, link: "https://maps.app.goo.gl/McRsMhmZ9fyJgfR6A" },
-        { name: "Tokyo Tea", miles: 6.8, image: "/utils/images/tokyo-tea.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/aGk1F6GdkU54xN6W8" }
+        { name: "Tokyo Tea", miles: 6.8, image: "/utils/images/tokyo-tea.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/aGk1F6GdkU54xN6W8" },
+        { name: "Donuts N Boba", miles: 13.0, image: "/utils/images/donuts-boba.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/GgcvDiLNd5P6oarR9" },
+
     ]
 };
 
