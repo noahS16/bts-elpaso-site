@@ -64,18 +64,18 @@
             <img src="/utils/images/mang.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
         </div>
         <div class="backdrop-blur-sm p-1">
-            <div id="map" class="w-full h-100 overflow-hidden"></div>
+            <div id="map" class="w-full h-80 overflow-hidden"></div>
         </div>
         <div class="relative px-5 mt-5">
-            <p class="text-center text-3xl font-bold">Let us know where you're visiting from!</p>
+            <p class="text-center text-2xl font-bold">Let us know where you're visiting from!</p>
             <input id="citySearch" type="text" placeholder="Search for your city..."
-                class="w-full rounded-full px-5 py-3 text-2xl shadow bg-white/90 focus:outline-none font-normal" />
+                class="w-full rounded-full px-5 py-3 text-2xl shadow bg-white/90 focus:outline-none font-normal mt-2" />
 
             <ul id="results"
                 class="h-50 text-2xl overflow-auto absolute left-5 right-5 mt-2 bg-white rounded-xl shadow-lg z-30 hidden">
             </ul>
         </div>
-        <div id="armyDataContainer" class="grid grid-cols-2 gap-4 mt-10 px-5">
+        <div id="armyDataContainer" class="grid grid-cols-2 gap-4 mt-7 px-5">
             <div class="stat-card content-center">
                 <h2 id="totalArmy" class="stat-number underline decoration-4 decoration-white/100 underline-offset-4">
                 </h2>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="stat-card content-center">
-                <div class="flex flex-col">
+                <div class="flex flex-col gap-0">
                     <h2 id="furthestCityName" class="stat-number"></h2>
                     <h3 id="furthestCityMiles" class="stat-label"></h3>
 
@@ -161,7 +161,7 @@
                     <span>Noah</span>
                 </div>
             </div>
-
+            <span class="text-gray-600 font-semibold">For ARMY by ARMY</span>
         </div>
     </footer>
 

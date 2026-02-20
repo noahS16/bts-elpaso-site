@@ -4,10 +4,10 @@ export const restaurants = {
         { name: "L&J", miles: 4.7, image: "/utils/images/lj.jpg", link: "https://maps.app.goo.gl/Hv8g9CjCpgyzQy4HA" },
         { name: "Kiki's", miles: 5.5, image: "/utils/images/kikis.jpg", favorite: false, link: "https://maps.app.goo.gl/LWiYomiR4B5Z3ohf9" },
         { name: "Taconeta", miles: 1.7, image: "/utils/images/taconeta.jpg", link: "https://maps.app.goo.gl/mj1aWmfYeGceMbEd8" },
-        { name: "El Cometa", miles: 1.6, image: "/utils/images/cometa.jpg", favorite: false, link: "https://maps.app.goo.gl/Cy3fj4b9GvVd75UU6" },
+        { name: "El Cometa", miles: 1.6, image: "/utils/images/cometa.jpg", favorite: false, multipleLocations:true, link: "https://maps.app.goo.gl/Cy3fj4b9GvVd75UU6" },
         { name: "Toro Bronco", miles: 6.2, image: "/utils/images/toro-bronco.jpg", link: "https://maps.app.goo.gl/q5msmr5oFN5v77yY6" },
         { name: "Carlos & Mickey's", miles: 7.2, image: "/utils/images/carlos-mickeys.png", multipleLocations: true, link: "https://maps.app.goo.gl/KdqmbHNBJeoXYTr89" },
-        { name: "Julio's" , miles: 10.8, image: "/utils/images/julios.jpg", multipleLocations: false, link: "https://maps.app.goo.gl/SCKrRYoDegte23787" },
+        { name: "Julio's" , miles: 10.8, image: "/utils/images/julios.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/SCKrRYoDegte23787" },
         { name: "Andale", miles: 10.1, image: "/utils/images/andale.jpg", link: "https://maps.app.goo.gl/nyNfkkwXsjcz1CB3A" },
         { name: "Delectacos", miles: 17.3, image: "/utils/images/delectacos.jpg", link: "https://maps.app.goo.gl/aUrk7orCKy7NbJ4J8" },
 
@@ -21,8 +21,8 @@ export const restaurants = {
         { name: "Korea House", miles: 11.8, image: "/utils/images/korea-house.jpg", link: "https://maps.app.goo.gl/9c6AN3w9cZaVej8y9" },
         { name: "Tommy's Korean Express", miles: 13.1, image: "/utils/images/tommys.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/qnJDniqpp4Hrpehd7" },
         { name: "bb.q Chicken" , miles: 22.4, image: "/utils/images/bbq-chicken.jpg", link: "https://maps.app.goo.gl/S3fQHdFfo8B5xcA89" },
-        { name: "Sol K-Dogs", miles: 2.6, image: "/utils/images/kdogs.jpg", link: "https://maps.app.goo.gl/6CWrVkWbcmGzttvY7" },
-       
+        { name: "Sol K-Dogs", miles: 2.6, image: "/utils/images/kdogs.jpg", multipleLocations:true, link: "https://maps.app.goo.gl/6CWrVkWbcmGzttvY7" },
+        { name: "Gen KBBQ", miles: 15.2, image: "/utils/images/gen-bbq.jpg", link: "https://maps.app.goo.gl/Co3q7E2ZsuD78RfCA" },
     ],
     American: [
         { name: "Shack Wings", miles: 9.8, image: "/utils/images/shack.jpg", favorite: false, multipleLocations: true, link: "https://maps.app.goo.gl/BhCS5hdhuR271GvL9" },
@@ -49,7 +49,7 @@ export const restaurants = {
         { name: "Koze", miles: 5.0, image: "/utils/images/koze.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/nY51FxwzLBHbjLvN9" },
         { name: "China Town", miles: 11.0, image: "/utils/images/china-town.jpg", favorite: false, link: "https://maps.app.goo.gl/48QdQKQDgb3YFnMD7" },
         { name: "Tara Thai", miles: 0.8, image: "/utils/images/tara-thai.jpg", link: "https://maps.app.goo.gl/1C1kRw1GqQdNTKr7A" },
-        { name: "Sunny's Sushi", miles: 1.4, image: "/utils/images/sunnys-sushi.jpg", link: "https://maps.app.goo.gl/6GbnsYLgED7KXVnv9" },
+        { name: "Sunny's Sushi", miles: 1.4, image: "/utils/images/sunnys-sushi.jpg", multipleLocations:true, link: "https://maps.app.goo.gl/6GbnsYLgED7KXVnv9" },
         { name: "Love Pho", miles: 5.4, image: "/utils/images/love-pho.jpg", multipleLocations: true, favorite: false, link: "https://maps.app.goo.gl/pygv1kdXMrS31gyj9" },
         { name: "Noodles & Dumplings", miles: 5.1, image: "/utils/images/noodles-dumplings.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/94dXDegrcEaYPg769" },
         { name: "Matsuharu", miles: 10.9, image: "/utils/images/matsuharu.jpg", link: "https://maps.app.goo.gl/YoFatTUnbvwmKnPY6" },

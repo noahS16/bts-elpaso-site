@@ -20,7 +20,7 @@ export const restaurants = {
         { name: "Tommy's Korean Express", miles: 13.1, image: "/utils/images/tommys.jpg", multipleLocations: true, link: "https://maps.app.goo.gl/qnJDniqpp4Hrpehd7" },
         { name: "bb.q Chicken" , miles: 22.4, image: "/utils/images/bbq-chicken.jpg", link: "https://maps.app.goo.gl/S3fQHdFfo8B5xcA89" },
         { name: "Sol K-Dogs", miles: 2.6, image: "/utils/images/kdogs.jpg", link: "https://maps.app.goo.gl/6CWrVkWbcmGzttvY7" },
-       
+        { name: "Gen KBBQ", miles: 15.2, image: "/utils/images/gen-bbq.jpg", link: "https://maps.app.goo.gl/Co3q7E2ZsuD78RfCA" },
     ],
     American: [
         { name: "Shack Wings", miles: 9.8, image: "/utils/images/shack.jpg", favorite: false, multipleLocations: true, link: "https://maps.app.goo.gl/BhCS5hdhuR271GvL9" },

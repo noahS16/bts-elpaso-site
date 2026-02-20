@@ -26,9 +26,8 @@ async function updateArmyDataDisplay() {
     //console.log('Army Stats:', stats);
     document.getElementById('totalArmy').textContent = stats.totalArmy.toLocaleString();
     document.getElementById('totalCountries').textContent = stats.totalCountries.toLocaleString();
-    document.getElementById('highestPopulation').textContent = stats.highestPopulation.toLocaleString();
     document.getElementById('furthestCityName').textContent = stats.furthestArmy.city;
-    document.getElementById('furthestCityMiles').textContent = stats.furthestArmy.distance_miles.toFixed(1).concat(" ", "miles");
+    document.getElementById('furthestCityMiles').textContent = stats.furthestArmy.distance_miles.toLocaleString(undefined, {maximumFractionDigits:0}).concat(" ", "miles");
 }
 
 async function populateMapMarkers() {
@@ -85,7 +84,7 @@ searchInput.addEventListener('input', debounce(async () => {
         li.textContent = getPlaceLabel(place);
 
         li.onclick = async () => {
-            if (localStorage.getItem('cityAdded')) { console.log("You have already added a city this session."); showCityExistsModal(); }
+            if (localStorage.getItem('cityAdded')) { showCityExistsModal(); }
             else {
                 searchInput.value = getPlaceLabel(place);
                 await addCity(place);
