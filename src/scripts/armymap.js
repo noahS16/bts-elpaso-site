@@ -28,6 +28,8 @@ async function updateArmyDataDisplay() {
     document.getElementById('totalCountries').textContent = stats.totalCountries.toLocaleString();
     document.getElementById('furthestCityName').textContent = stats.furthestArmy.city;
     document.getElementById('furthestCityMiles').textContent = stats.furthestArmy.distance_miles.toLocaleString(undefined, {maximumFractionDigits:0}).concat(" ", "miles");
+    document.getElementById('highestPopulation').textContent = stats.highestPopulation.toLocaleString();
+    document.getElementById('totalCities').textContent = stats.totalCities.toLocaleString();
 }
 
 async function populateMapMarkers() {
@@ -60,7 +62,7 @@ function debounce(fn, delay = 400) {
 
 searchInput.addEventListener('input', debounce(async () => {
     const query = searchInput.value.trim();
-    //console.log('Searching for:', query);
+    console.log('Searching for:', query);
     if (query.length < 3) {
         resultsList.classList.add('hidden');
         return;

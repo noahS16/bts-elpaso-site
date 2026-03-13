@@ -93,6 +93,45 @@ export const activities = [
         description: "Located in west El Paso, shop at the many discounted stores around the mall.",
         siteLink: "https://www.theoutletshoppesatelpaso.com/",
         mapLink: "https://maps.app.goo.gl/Y2QTznP2WSYSgc5cA",
-    }
+    },
     
+];
+
+export const localEvents = [
+    {
+        image: "/utils/images/comiccon.jpg",
+        name: "El Paso Comic Con",
+        siteLink: "https://elpasocomiccon.com/",
+        description: "Located downtown at the El Paso Convention Center. From meeting pop-culture icons to shopping and costume contests, EP comic-con has it all. Some of this year's special guests include Kevin Smith, and Cheech and Chong!",
+        date: "May 1-3",
+    },
+
+    {
+        image: "/utils/images/sol-summit.jpg",
+        name: "Sol Summit",
+        siteLink: "https://solsummitmusic.com/",
+        description: "Located downtown at San Jacinto Plaza. Sol Summit is a 2 day music and culture festival with headliners 'Flaming Lips' and 'Bomba Estéreo'.",
+        date: "May 2-3",
+    },
+    {
+        image: "/utils/images/elmont.jpg",
+        name: "Crankdat",
+        siteLink:"https://www.elmontsocial.com/category/events/",
+        description: "Located in west EP at Elmont Swim Club. Get tickets to see popular dubstep artist Crankdat. (21+)",
+        date: "May 1",
+    },
+    {
+        image: "/utils/images/chihuahuas.jpg",
+        name: "EP Chihuahuas Baseball",
+        siteLink: "https://www.milb.com/el-paso/schedule/2026-05",
+        description: "Located downtown at Southwest University Park. Cheer on our Triple-A baseball team, affiliates of the SD Padres!",
+        date: "May 5",
+    },
+    {
+        image: "/utils/images/michelada.jpg",
+        name: "Michelada Fest",
+        siteLink: "https://www.michefestelpaso.com/",
+        description: "Located southeast EP at Ascarate Park. A 2 day festival honoring the famous beer cocktail with headliners like 'Juanes' and 'Jhayco'. All ages!",
+        date: "May 2-3",
+    }
 ];

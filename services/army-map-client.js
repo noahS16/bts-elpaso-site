@@ -4,9 +4,9 @@ export const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.m
 
 export async function addCity(place) {
     const payload = {
-        p_city: place.address.city || place.address.town || place.address.village || place.address.municipality || "Unknown",
+        p_city: place.address.city || place.address.town || place.address.village || place.address.municipality || place.address.hamlet || "Unknown",
         p_state: place.address.state || "",
-        p_country: place.address.country,
+        p_country: place.address.country == "Mexico" ? "México" : place.address.country,
         p_lat: place.lat,
         p_lon: place.lon
     };
@@ -55,7 +55,20 @@ export async function getHighestPopulation() {
         return null;
     }
     //console.log(data);
-    return `${data.city}, ${data.country}`;
+    return `${data.city}`;
+}
+
+export async function getSecondHighestPopulation() {
+    const { data, error } = await supabase
+        .from('second_city_by_population')
+        .select('*')
+        .single();
+    if (error) {
+        console.error('Error fetching highest population city:', error);
+        return null;
+    }
+    //console.log(data);
+    return `${data.city}`;
 }
 
 export async function getFurthestArmy() {
@@ -76,24 +89,36 @@ export async function getFurthestArmy() {
     
 }
 
+export async function getTotalCities(){
+    const { count, error } = await supabase
+        .from('army_cities')
+        .select('*', { count: 'exact', head: true });
+
+    if (error) throw error;
+    return count;
+}
+
 export async function getAllStats() {
-    const [totalArmy, totalCountries, highestPopulation, furthestArmy] = await Promise.all([
+    const [totalArmy, totalCountries, highestPopulation, furthestArmy, totalCities] = await Promise.all([
         getTotalArmy(),
         getTotalCountries(),
-        getHighestPopulation(),
-        getFurthestArmy()
+        getSecondHighestPopulation(),
+        getFurthestArmy(),
+        getTotalCities(),
     ]);
     console.log({
         totalArmy,
         totalCountries,
         highestPopulation,
-        furthestArmy
+        furthestArmy,
+        totalCities,
     });
     return {
         totalArmy,
         totalCountries,
         highestPopulation,
-        furthestArmy
+        furthestArmy,
+        totalCities,
     };
 }
 

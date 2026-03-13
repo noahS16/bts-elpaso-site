@@ -69,11 +69,6 @@ export const bars = [
                 description: "About 40 minutes outside of the city, take the scenic route up Highway 28 into New Mexico. Pass multiple wineries, restaurants along the way.",
             },
             {
-                name: "Dead Beach Brewery (Central)",
-                mapLink: "https://maps.app.goo.gl/SdM9XPzEqbH5Q2447",
-                description: "Brewery in El Paso since 2013 with household names like 'Abuelita Stout' and 'Miner Brew', the official beer of the UTEP Miners ⛏️"
-            },
-            {
                 name: "Flix Brewhouse (West)",
                 mapLink: "https://maps.app.goo.gl/mQtgVXkrk5Ly1Gjy5",
                 description: "Brewery and movie theater in one. Watch a movie while enjoying their craft beer. They also have a full food menu and a full bar with movie themed cocktails."

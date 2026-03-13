@@ -12,7 +12,7 @@
 
 <body class="font-solano">
     <header id="magicHeader"
-        class="lg:p-6 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-4 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+        class="lg:p-6 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
 
         <!-- Left Logo -->
         <a href="/">EPTX</a>
@@ -61,11 +61,13 @@
             <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                 ARMY FROM...
             </h1>
-            <img src="/utils/images/mang.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
+            <img src="/utils/images/mong-no-bg.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
         </div>
+
         <div class="backdrop-blur-sm p-1">
-            <div id="map" class="w-full h-80 overflow-hidden"></div>
+            <div id="map" class="w-full h-80 overflow-hidden rounded-xl"></div>
         </div>
+
         <div class="relative px-5 mt-5">
             <p class="text-center text-2xl font-bold">Let us know where you're visiting from!</p>
             <input id="citySearch" type="text" placeholder="Search for your city..."
@@ -75,33 +77,43 @@
                 class="h-50 text-2xl overflow-auto absolute left-5 right-5 mt-2 bg-white rounded-xl shadow-lg z-30 hidden">
             </ul>
         </div>
-        <div id="armyDataContainer" class="grid grid-cols-2 gap-4 mt-7 px-5">
-            <div class="stat-card content-center">
-                <h2 id="totalArmy" class="stat-number underline decoration-4 decoration-white/100 underline-offset-4">
-                </h2>
-                <p class="stat-label">ARMY coming to El Paso</p>
+        <div id="armyDataContainer" class="grid grid-cols-2 gap-3 mt-7 px-5">
+
+            <div class="stat-card stat-purple">
+                <span class="stat-sublabel">Total ARMY</span>
+                <h2 id="totalArmy" class="stat-number"></h2>
+                <p class="stat-label">coming to El Paso</p>
             </div>
 
-            <div class="stat-card content-center">
-                <h2 id="totalCountries"
-                    class="stat-number underline decoration-4 decoration-white/100 underline-offset-4"></h2>
-
-                <p class="stat-label">Different countries</p>
-            </div>
-
-            <div class="stat-card content-center">
-                <h2 id="highestPopulation" class="stat-number">El Paso</h2>
-                <p class="stat-label">City with the most ARMY</p>
-            </div>
-
-            <div class="stat-card content-center">
-                <div class="flex flex-col gap-0">
-                    <h2 id="furthestCityName" class="stat-number"></h2>
-                    <h3 id="furthestCityMiles" class="stat-label"></h3>
+            <div class="stat-card stat-red">
+                <div class="flex justify-around">
+                    <div class="text-center">
+                        <span class="stat-sublabel">Countries</span>
+                        <h2 id="totalCountries" class="stat-number"></h2>
+                    </div>
+                    <span class=" bg-gray-300 w-px self-stretch inline-block"></span>
+                    <div class="text-center">
+                        <span class="stat-sublabel">Cities</span>
+                        <h2 id="totalCities" class="stat-number"></h2>
+                    </div>
 
                 </div>
-                <p class="stat-label">Furthest traveling ARMY</p>
+
+                <p class="stat-label text-center">represented worldwide</p>
             </div>
+
+            <div class="stat-card stat-red">
+                <span class="stat-sublabel">Top Visitor</span>
+                <h2 id="highestPopulation" class="stat-number text-2xl"></h2>
+                <p class="stat-label">most ARMY visiting</p>
+            </div>
+
+            <div class="stat-card stat-purple">
+                <span class="stat-sublabel">Furthest Traveling</span>
+                <h2 id="furthestCityName" class="stat-number text-2xl"></h2>
+                <p id="furthestCityMiles" class="stat-label"></p>
+            </div>
+
         </div>
     </main>
 
