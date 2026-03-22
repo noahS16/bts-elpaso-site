@@ -29,6 +29,16 @@ export const events = [
         location_link: "https://maps.app.goo.gl/SRjQfL8p8FAK4uE76",
         description: ["Vendors", "Performers", "Dance Groups", "Ice Cream!"],
         link: "https://www.instagram.com/p/DTrN9_RDQlz/?igsh=dXAyeXN4cjh4ZHpk",
+    },
+    {
+        poster: "/utils/images/banner-voting.png",
+        event_name: "BTS Banner Voting",
+        host_name: "BTS Army Sin Fronteras",
+        event_dates: [{"date": "Vote by March 25", "time": ""},],
+        location: "BTS Army Sin Fronteras",
+        location_link: "https://www.facebook.com/btsarmysinfronterasjrzelp?mibextid=ZbWKwL",
+        description: ["Concert Banner", "Fan Project", "Vote For Your Favorite"],
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSdfHePnVZ_doIYU5gTczx_0O4exRelhj6vD1O8NtAEATKqS1Q/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
     }
 
 ];
