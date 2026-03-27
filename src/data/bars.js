@@ -173,6 +173,7 @@ export const bars = [
         name: "Country Bars",
         image: "/utils/images/country-bars.jpg",
         description: "Bars with a country vibe",
+        descriptionEs: "Bares con ambiente vaquero",
         venues: [
             {
                 name: "Whiskey Dicks (East)",
