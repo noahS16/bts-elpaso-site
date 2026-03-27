@@ -115,7 +115,7 @@ function renderCard(category) {
     if (!isOpen) {
       venues.classList.remove('max-h-0');
       venues.classList.add('max-h-96');
-      toggleBtn.textContent = 'Hide spots ▴';
+      toggleBtn.textContent = lang =='en' ? 'Hide spots ▴' : 'Esconder ▾';
       toggleBtn.setAttribute('aria-expanded', 'true');
 
       openVenues = venues;
@@ -123,7 +123,7 @@ function renderCard(category) {
     } else {
       venues.classList.add('max-h-0');
       venues.classList.remove('max-h-96');
-      toggleBtn.textContent = 'View spots ▾';
+      toggleBtn.textContent = lang == 'en' ? 'View spots ▾' : 'Más ▾';
       toggleBtn.setAttribute('aria-expanded', 'false');
 
       openVenues = null;
