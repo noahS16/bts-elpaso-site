@@ -45,13 +45,23 @@
     <!-- Menu -->
     <div id="dropdownMenu"
         class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-200 font-bold">
-        <a href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
-        <a href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
-        <a href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
-        <a href="/src/pages/nightlife/" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a data-i18n="nav.about" href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a data-i18n="nav.food" href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO
+            DO</a>
+        <a data-i18n="nav.nightlife" href="/src/pages/nightlife/"
+            class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
         <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
-        <a href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
-        <a href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <div class="flex items-center gap-3 px-4 py-2">
+            <span data-i18n="nav.language" class="font-normal">IDIOMA</span>
+            <div class="lang-toggle-wrap" id="langToggleMobile">
+                <span class="lang-option active" id="optENMobile">EN</span>
+                <span class="lang-option" id="optESMobile">ES</span>
+                <div class="lang-pill" id="langPillMobile"></div>
+            </div>
+        </div>
 
     </div>
     <!-- Overlay for clicking outside -->
@@ -69,7 +79,7 @@
             <div class="mt-2 flex items-start gap-4 font-normal whitespace-nowrap pr-0">
                 <div class="flex items-center gap-1">
                     <img src="/utils/icons/map-pin.svg" class="w-5 h-5" />
-                    <span>Miles from Sun Bowl</span>
+                    <span data-i18n="food.miles">Miles from Sun Bowl</span>
                 </div>
 
                 <!-- <div class="flex items-center gap-1">
@@ -78,7 +88,7 @@
                 </div> -->
                 <div class="flex items-center gap-1">
                     <img src="/utils/icons/multiple-loc.svg" class="w-5 h-5" />
-                    <span>Multiple locations</span>
+                    <span data-i18n="food.multipleLocations">Multiple locations</span>
                 </div>
             </div>
         </div>
@@ -86,24 +96,24 @@
 
         <div id="categoryButtons"
             class="flex  gap-2 justify-center mt-1 overflow-x-auto bg-white/100 rounded-lg p-2 sticky top-[65px] z-1">
-            <button data-cat="All"
+            <button data-cat="All" data-i18n="food.cat.all"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 transition border-transparent border-2">All</button>
-            <button data-cat="Mexican"
+            <button data-cat="Mexican" data-i18n="food.cat.mexican"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border-transparent transition">Mexican</button>
-            <button data-cat="Korean"
+            <button data-cat="Korean" data-i18n="food.cat.korean"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border border-transparent transition">Korean</button>
-            <button data-cat="American"
+            <button data-cat="American" data-i18n="food.cat.american"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border-transparent transition">American</button>
-            <button data-cat="Brunch"
+            <button data-cat="Brunch" data-i18n="food.cat.brunch"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border-transparent transition">Brunch</button>
-            <button data-cat="Asian"
-                class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border -2 border-transparent ransition">Asian</button>
-            <button data-cat="Pizza/Italian"
+            <button data-cat="Asian" data-i18n="food.cat.asian"
+                class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border-transparent transition">Asian</button>
+            <button data-cat="Pizza/Italian" data-i18n="food.cat.pizza"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border-transparent transition">Pizza/Italian</button>
-            <button data-cat="Cafes/Matcha"
+            <button data-cat="Cafes/Matcha" data-i18n="food.cat.cafes"
                 class="category-btn bg-red-500 text-white px-4 py-1 rounded-lg font-bold hover:bg-red-600 border-2 border-transparent transition">Cafes/Desserts</button>
         </div>
-        <div id="cardsContainer" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-2 ">
+        <div id="cardsContainer" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2 ">
         </div>
     </main>
     <footer class="bg-white-100 mt-5">

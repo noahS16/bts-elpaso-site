@@ -7,6 +7,7 @@ export const events = [
         location: "World Boba & Coffee",
         location_link: "https://maps.app.goo.gl/WWDSwyJ8X1kxvpet6",
         description: ["Vendors", "Performers", "Activites", "Special Surprises"],
+        descriptionEs: ["Vendedores", "Artistas", "Actividades", "Sorpresas Especiales"],
         link: "https://www.instagram.com/p/DU2Byrqjt5K/?igsh=cXd5OThxaWtobTN6", 
     },
 
@@ -18,6 +19,7 @@ export const events = [
         location: "Mexa - Cantaritos",
         location_link: "https://maps.app.goo.gl/XTqyrjmtFEtATi2Y7",
         description: ["Food Specials", "Freebies", "Vendors"],
+        descriptionEs: ["Especiales de Comida", "Regalos", "Vendedores"],
         link: "https://www.instagram.com/p/DU3UhJ3jr8o/?igsh=ZzUycGs2YWlsNG4w",
     },
     {
@@ -28,17 +30,30 @@ export const events = [
         location: "DāNa Ice Cream Parlour",
         location_link: "https://maps.app.goo.gl/SRjQfL8p8FAK4uE76",
         description: ["Vendors", "Performers", "Dance Groups", "Ice Cream!"],
+        descriptionEs: ["Vendedores", "Artistas", "Grupos de Baile", "¡Helado!"],
         link: "https://www.instagram.com/p/DTrN9_RDQlz/?igsh=dXAyeXN4cjh4ZHpk",
     },
     {
         poster: "/utils/images/banner-voting.png",
         event_name: "BTS Banner Voting",
         host_name: "BTS Army Sin Fronteras",
-        event_dates: [{"date": "Vote by March 25", "time": ""},],
+        event_dates: [{"date": "Vote by", "time": "March 25"},],
         location: "BTS Army Sin Fronteras",
         location_link: "https://www.facebook.com/btsarmysinfronterasjrzelp?mibextid=ZbWKwL",
         description: ["Concert Banner", "Fan Project", "Vote For Your Favorite"],
+        descriptionEs: ["Banner del Concierto", "Proyecto de Fans", "Vota por tu Favorito"],
         link: "https://docs.google.com/forms/d/e/1FAIpQLSdfHePnVZ_doIYU5gTczx_0O4exRelhj6vD1O8NtAEATKqS1Q/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    },
+    {
+        poster: "/utils/images/armyrang.png",
+        event_name: "ARMYRANG El Paso Pre-Party (18+)",
+        host_name: "BTS Tarot Project",
+        event_dates: [{"date": "May 1", "time": "10pm - 2am"},],
+        location: "Kyoshi Sound House",
+        location_link: "https://maps.app.goo.gl/eLytSeqJez2eJyvAA",
+        description: ["BTS DJ", "Freebies", "Lightsticks"],
+        descriptionEs: ["BTS DJ", "Freebies", "Lightsticks"],
+        link: "https://www.eventbrite.com/e/armyrang-el-paso-pre-party-18-tickets-1983507714970",
     }
 
 ];

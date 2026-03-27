@@ -45,20 +45,30 @@
     <!-- Menu -->
     <div id="dropdownMenu"
         class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-200 font-bold">
-        <a href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
-        <a href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
-        <a href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
-        <a href="/src/pages/nightlife/" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a data-i18n="nav.about" href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a data-i18n="nav.food" href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO
+            DO</a>
+        <a data-i18n="nav.nightlife" href="/src/pages/nightlife/"
+            class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
         <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
-        <a href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
-        <a href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <div class="flex items-center gap-3 px-4 py-2">
+            <span data-i18n="nav.language" class="font-normal">IDIOMA</span>
+            <div class="lang-toggle-wrap" id="langToggleMobile">
+                <span class="lang-option active" id="optENMobile">EN</span>
+                <span class="lang-option" id="optESMobile">ES</span>
+                <div class="lang-pill" id="langPillMobile"></div>
+            </div>
+        </div>
 
     </div>
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
     <main class="min-h-screen mt-20 lg:p-10 lg:px-20">
         <div class="flex flex-row items-center justify-between px-2">
-            <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
+            <h1 data-i18n="map.heading" class="text-5xl whitespace-nowrap font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                 ARMY FROM...
             </h1>
             <img src="/utils/images/mong-no-bg.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
@@ -69,65 +79,68 @@
         </div>
 
         <div class="relative px-5 mt-5">
-            <p class="text-center text-2xl font-bold">Let us know where you're visiting from!</p>
-            <input id="citySearch" type="text" placeholder="Search for your city..."
+            <p data-i18n="map.searchLabel" class="text-center text-2xl font-bold">Let us know where you're visiting from!</p>
+            <input data-i18n-placeholder="map.searchPlaceholder" id="citySearch" type="text" placeholder="Search for your city..."
                 class="w-full rounded-full px-5 py-3 text-2xl shadow bg-white/90 focus:outline-none font-normal mt-2" />
 
             <ul id="results"
                 class="h-50 text-2xl overflow-auto absolute left-5 right-5 mt-2 bg-white rounded-xl shadow-lg z-30 hidden">
             </ul>
         </div>
-        <div id="armyDataContainer" class="grid grid-cols-2 gap-3 mt-7 px-5">
+        <div class="stat-card stat-indigo mt-5 pb-1 mx-5 ">
+                <span data-i18n="map.justAdded" class="stat-sublabel">Just Added</span>
+                <div class="flex flex-row items-end gap-1">
+                    <h2 id="recentCity" class="stat-number text-2xl"></h2>
+                    <p id="recentCountry" class="text-lg font-semibold text-gray-500"></p>
+                </div>
+                
+        </div>
+        <div id="armyDataContainer" class="grid grid-cols-2 gap-3 mt-5 px-5">
 
             <div class="stat-card stat-purple">
                 <span class="stat-sublabel">Total ARMY</span>
                 <h2 id="totalArmy" class="stat-number"></h2>
-                <p class="stat-label">coming to El Paso</p>
+                <p data-i18n="map.totalArmy" class="stat-label">coming to El Paso</p>
             </div>
 
             <div class="stat-card stat-red">
                 <div class="flex justify-around">
                     <div class="text-center">
-                        <span class="stat-sublabel">Countries</span>
+                        <span data-i18n="map.countries" class="stat-sublabel">Countries</span>
                         <h2 id="totalCountries" class="stat-number"></h2>
                     </div>
                     <span class=" bg-gray-300 w-px self-stretch inline-block"></span>
                     <div class="text-center">
-                        <span class="stat-sublabel">Cities</span>
+                        <span data-i18n="map.cities" class="stat-sublabel">Cities</span>
                         <h2 id="totalCities" class="stat-number"></h2>
                     </div>
 
                 </div>
 
-                <p class="stat-label text-center">represented worldwide</p>
+                <p data-i18n="map.worldwide" class="stat-label text-center">represented worldwide</p>
             </div>
 
             <div class="stat-card stat-red">
-                <span class="stat-sublabel">Top Visitor</span>
+                <span data-i18n="map.topVisitor" class="stat-sublabel">Top Visitor</span>
                 <h2 id="highestPopulation" class="stat-number text-2xl"></h2>
-                <p class="stat-label">most ARMY visiting</p>
+                <p data-i18n="map.topVisitorSub" class="stat-label">most ARMY visiting</p>
             </div>
 
             <div class="stat-card stat-purple">
-                <span class="stat-sublabel">Furthest Traveling</span>
+                <span data-i18n="map.furthestArmy" class="stat-sublabel">Furthest Traveling</span>
                 <h2 id="furthestCityName" class="stat-number text-2xl"></h2>
                 <p id="furthestCityMiles" class="stat-label"></p>
             </div>
 
         </div>
-        <div class="mt-5 text-lg flex flex-col items-center justify-center">
-            <div>
-                <span>Looking for a concert buddy? Check out</span>
-                <a href="https://army-buddy-system.com/login?from_url=https://army-buddy-system.com/&utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="underline text-purple-500 font-semibold">Army Buddy System</a>
-                <span>made by</span>
-
-            </div>
-            <div>
-                <img src="/utils/icons/instagram.svg" alt="" class="w-4 h-4 inline" />
-                <a href="https://www.instagram.com/bora_915?igsh=anZ4a2gxZXR3dWhy" class="font-semibold hover:underline">Bora_915</a>
-            </div>
-
-
+        <div id="leaderboard" class="px-5 mt-5"></div>
+        <div class="mt-6 mx-5 border-l-4 border-purple-500 bg-purple-100 rounded-r-xl px-4 py-3 flex flex-wrap items-center gap-x-1 gap-y-1">
+            <span data-i18n="map.buddyText" class="text-gray-600">Looking for a concert buddy? Check out</span>
+            <a href="..." target="_blank" rel="noopener noreferrer"
+                class="underline text-purple-600 font-bold hover:underline">Army Buddy System</a>
+            <span data-i18n="map.buddyMadeBy" class="text-gray-600">made by</span>
+            <img src="/utils/icons/instagram.svg" alt="" class="w-4 h-4" />
+            <a href="..." target="_blank" rel="noopener noreferrer" class="font-bold hover:underline">Bora_915</a>
         </div>
     </main>
 
@@ -139,19 +152,19 @@
         <div
             class="relative bg-white/90 backdrop-blur-md rounded-2xl shadow-xl w-11/12 max-w-md p-6 text-center border border-white/30">
 
-            <h2 class="text-3xl font-bold">
+            <h2 data-i18n="modalHeading" class="text-3xl font-bold">
                 You’re already on the map 💜
             </h2>
 
-            <p class="mt-4 text-xl font-normal">
+            <p data-i18n="modalBody" class="mt-4 text-xl font-normal">
                 Each ARMY can add their city once so everyone gets a fair spotlight.
             </p>
 
-            <p class="mt-2 text-lg text-gray-600">
+            <p data-i18n="modalThanks" class="mt-2 text-lg text-gray-600">
                 Thanks for representing where you’re coming from!
             </p>
 
-            <button id="closeCityModal"
+            <button data-i18n="modalBtn" id="closeCityModal"
                 class="mt-6 w-full rounded-full py-3 text-xl font-bold bg-purple-500 text-white hover:bg-purple-600 transition">
                 Got it
             </button>

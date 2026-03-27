@@ -37,19 +37,34 @@
             <a href="/src/pages/armymap/" class="hover:underline">MA CITY</a>
             <a href="/src/pages/events/" class="hover:underline">MEETUPS/EVENTS</a>
             <a href="/" class="hover:underline">HOME</a>
+            <div class="px-4 py-2 lang-toggle-wrap" id="langToggle">
+                <span class="lang-option active" id="optEN">EN</span>
+                <span class="lang-option" id="optES">ES</span>
+                <div class="lang-pill" id="langPill"></div>
+            </div>
         </nav>
 
     </header>
     <!-- Menu -->
     <div id="dropdownMenu"
         class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-200 font-bold">
-        <a href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
-        <a href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
-        <a href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
-        <a href="/src/pages/nightlife/" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a data-i18n="nav.about" href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a data-i18n="nav.food" href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO
+            DO</a>
+        <a data-i18n="nav.nightlife" href="/src/pages/nightlife/"
+            class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
         <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
-        <a href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
-        <a href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <div class="flex items-center gap-3 px-4 py-2">
+            <span data-i18n="nav.language" class="font-normal">IDIOMA</span>
+            <div class="lang-toggle-wrap" id="langToggleMobile">
+                <span class="lang-option active" id="optENMobile">EN</span>
+                <span class="lang-option" id="optESMobile">ES</span>
+                <div class="lang-pill" id="langPillMobile"></div>
+            </div>
+        </div>
 
     </div>
     <!-- Overlay for clicking outside -->
@@ -58,7 +73,7 @@
     <div class="mt-20 lg:p-10">
         <div>
             <div class="flex flex-row items-center justify-between px-2">
-                <h1
+                <h1 data-i18n="about.heading"
                     class="text-5xl lg:text-6xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                     About El Paso
                 </h1>
@@ -72,7 +87,8 @@
             <div><img src="/utils/images/elpaso.jpg" alt="El Paso"
                     class="mt-1 w-full h-auto object-cover object-top " /></div>
             <div class="flex flex-col gap-10 lg:justify-center">
-                <p class="text-[20px] text-center font-normal px-4 lg:text-[25px]">With a population of over 2.5
+                <p data-i18n="about.intro" class="text-[20px] text-center font-normal px-4 lg:text-[25px]">With a
+                    population of over 2.5
                     million, the <span class="font-semibold">El Paso Borderplex</span> is a vibrant region where Texas,
                     New Mexico, and
                     Mexico meet. Expect desert views, mountain sunsets, amazing food, and a welcoming community ready to
@@ -82,21 +98,24 @@
                     <a href="../food/index.html"
                         class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
                         <img src="../../../utils/icons/shooky.svg" alt="BT21 Shooky" class="w-8 h-8 mb-1" />
-                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                        <span data-i18n="about.btn.food"
+                            class="text-[14px] font-bold uppercase tracking-wide leading-none">
                             Food
                         </span>
                     </a>
                     <a href="../things-to-do/index.html"
                         class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
                         <img src="../../../utils/icons/tata.svg" alt="BT21 Tata" class="w-8 h-8 mb-1" />
-                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                        <span data-i18n="about.btn.things"
+                            class="text-[14px] font-bold uppercase tracking-wide leading-none">
                             Things To Do
                         </span>
                     </a>
                     <a href="../nightlife/index.html"
                         class="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-purple-400 text-white shadow-lg hover:bg-red-600 transition">
                         <img src="../../../utils/icons/cooky-white.svg" alt="BT21 Shooky" class="w-10 h-10 mb-1" />
-                        <span class="text-[14px] font-bold uppercase tracking-wide leading-none">
+                        <span data-i18n="about.btn.night"
+                            class="text-[14px] font-bold uppercase tracking-wide leading-none">
                             Nightlife
                         </span>
                     </a>
@@ -108,7 +127,7 @@
         </div>
         <div class="flex flex-col gap-10 px-4 mt-10 lg:flex-row lg:justify-around">
             <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
-                <h2 class="text-3xl font-bold text-center lg:text-4xl">
+                <h2 data-i18n="about.facts.heading" class="text-3xl font-bold text-center lg:text-4xl">
                     QUICK FACTS ABOUT EL PASO
                 </h2>
                 <!-- Content -->
@@ -116,40 +135,43 @@
                     <ul class="flex flex-col gap-4 text-lg lg:text-xl">
                         <li class="flex items-center gap-3">
                             <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0">
-                            <span>Average May Temp: 86°F / 30°C - sunny and breezy</span>
+                            <span data-i18n="about.facts.temp">Average May Temp: 86°F / 30°C - sunny and breezy</span>
                         </li>
 
                         <li class="flex items-center gap-3">
                             <img src="../../../utils/icons/purple-car.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                            <span>Sun Metro buses, rideshare, trolley system downtown</span>
+                            <span data-i18n="about.facts.transit">Sun Metro buses, rideshare, trolley system
+                                downtown</span>
                         </li>
 
                         <li class="flex items-center gap-3">
                             <img src="../../../utils/icons/purple-ribbon.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                            <span>Consistently ranked top 10 safest large cities in the U.S.</span>
+                            <span data-i18n="about.facts.safety">Consistently ranked top 10 safest large cities in the
+                                U.S.</span>
                         </li>
 
                         <li class="flex items-center gap-3">
                             <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                            <span>Population: ~680,000 (city)</span>
+                            <span data-i18n="about.facts.pop">Population: ~680,000 (city)</span>
                         </li>
 
                         <li class="flex items-center gap-3">
                             <img src="../../../utils/icons/purple-airplane.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                            <span>Centrally located airport (15-20 minutes from most hotels)</span>
+                            <span data-i18n="about.facts.airport">Centrally located airport (15-20 minutes from most
+                                hotels)</span>
                         </li>
                     </ul>
 
-                    <div class="flex justify-center gap-4 mt-6">
-                        <a href="https://sunmetro.net/routes/routes"
+                    <div class="flex justify-center text-center gap-4 mt-6">
+                        <a data-i18n="about.btn.bus" href="https://sunmetro.net/routes/routes"
                             class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
                             Bus Info
                         </a>
-                        <a href="https://sunmetro.net/streetcar/about-streetcars/"
+                        <a data-i18n="about.btn.trolley" href="https://sunmetro.net/streetcar/about-streetcars/"
                             class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
                             Trolley Info
                         </a>
-                        <a href="https://visitelpaso.com/"
+                        <a data-i18n="about.btn.tourist" href="https://visitelpaso.com/"
                             class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
                             Tourist Info
                         </a>
@@ -159,7 +181,7 @@
             </div>
             <div class="flex flex-col bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden">
                 <div>
-                    <h2 class="text-3xl font-bold text-center lg:text-4xl">
+                    <h2 data-i18n="about.venue.heading" class="text-3xl font-bold text-center lg:text-4xl">
                         THE VENUE
                     </h2>
                     <img src="../../../utils/images/sunbowl.png" alt="Sun Bowl Stadium"
@@ -169,41 +191,47 @@
                 <!-- Content -->
                 <div class="p-4 flex flex-col gap-2 justify-around items-center">
                     <ul class="flex flex-row gap-4 text-lg items-start text-center lg:text-xl">
-                        <li class="flex items-center gap-2">
+                        <li class="flex flex-col items-center gap-0">
                             <img src="../../../utils/icons/purple-person.svg" class="w-5 h-5 flex-shrink-0" alt="">
                             <span>51,500</span>
-                        </li>
-
-                        <li class="flex items-center gap-2">
-                            <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                            <span>Outdoor</span>
-                        </li>
-
-                        <li class="flex items-center gap-2">
-                            <img src="../../../utils/icons/purple-eye.svg" class="w-5 h-5 flex-shrink-0" alt="">
-                            <span>Little to no obstructions</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-row items end justify-center text-center gap-4">
-                        <a href="https://www.utepspecialevents.com/prohibited_items/clear_bag_policy"
+                            <a data-i18n="about.btn.prohibited"
+                            href="https://www.utepspecialevents.com/prohibited_items/clear_bag_policy"
                             class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
                             Prohibited Items
                         </a>
-                        <a href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
-                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
+                        </li>
+                        <li class="flex flex-col items-center gap-0">
+                            <img src="../../../utils/icons/purple-eye.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span data-i18n="about.venue.view" class="whitespace-nowrap">Little to no obstructions</span>
+                            <a data-i18n="about.btn.pov" href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
+                            class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition self-center">
                             Section POV
                         </a>
-                        <a href="https://www.utepspecialevents.com/"
+                        </li>
+                        <li class="flex flex-col items-center gap-0">
+                            <img src="../../../utils/icons/purple-sun.svg" class="w-5 h-5 flex-shrink-0" alt="">
+                            <span data-i18n="about.venue.outdoor">Outdoor</span>
+                            <a data-i18n="about.btn.sunbowl" href="https://www.utepspecialevents.com/"
                             class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-full shadow hover:bg-red-600 transition">
                             Sun Bowl Website
                         </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="flex flex-row items end justify-center text-center gap-4">
+                        
+                        
+                        
                     </div>
                 </div>
 
             </div>
         </div>
         <div class="mt-10 p-2 flex flex-col gap-2">
-            <h2 class="underline decoration-4 decoration-red-500 font-bold text-3xl text-center lg:text-4xl lg:text-start">FAQ</h2>
+            <h2
+                class="underline decoration-4 decoration-red-500 font-bold text-3xl text-center lg:text-4xl lg:text-start">
+                FAQ</h2>
             <div id="faqContainer" class="space-y-3"></div>
         </div>
     </div>

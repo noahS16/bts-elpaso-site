@@ -1,4 +1,14 @@
 import {events} from '/src/data/events.js';
+import { getCurrentLang, onLangChange } from '/services/languages';
+
+const container = document.getElementById('eventCardsContainer');
+
+renderAllEvents();
+onLangChange(()=>renderAllEvents());
+function renderAllEvents() {
+    container.innerHTML = '';
+    container.innerHTML = events.map(renderCard).join('');
+}
 
 function renderDates(event_dates){
     if(!event_dates || event_dates.length === 0) return '';
@@ -14,15 +24,16 @@ function renderDates(event_dates){
 
 function renderDescription(description){
     return `
-        <ul class="flex justify-around font-bold text-lg">
+        <ul class="flex overflow-auto justify-around gap-1 font-bold text-lg">
             ${description.map(tag => `
-                <li class="text-red-500 bg-red-200 rounded-full px-2 py-1">${tag}</li>
+                <li class="whitespace-nowrap text-red-500 bg-red-200 rounded-full px-2 py-1">${tag}</li>
             `).join('')}
         </ul>
     `;
 }
 
 function renderCard(event){
+    const lang = getCurrentLang();
     const {
         poster,
         event_name,
@@ -33,6 +44,7 @@ function renderCard(event){
         description,
         link
     } = event;
+    const translation = lang == 'es' ? event.descriptionEs : description;
 
     return `
         <div
@@ -41,7 +53,7 @@ function renderCard(event){
                 <div class="px-3 py-3 flex flex-col gap-0">
                     <div>
                         <h3 class="text-3xl/6 font-bold">${event_name}</h3>
-                        <span class="text-lg">Hosted by <span class="font-bold text-gray-500">${host_name}</span></span>
+                        <span class="text-lg">${lang == 'es' ? "Organizado por - " : "Hosted by - "}<span class="font-bold text-gray-500">${host_name}</span></span>
 
                     </div>
                     <div class="flex justify-between items-end">
@@ -55,14 +67,13 @@ function renderCard(event){
                             </div>
                         </div>
                         <a href="${link}"
-                            class="flex items-center justify-center bg-purple-400 text-white font-bold rounded-xl w-25 h-11">MORE
-                            INFO →</a>
+                            class="flex items-center justify-center bg-purple-400 text-white font-bold rounded-xl w-25 h-11">${lang=='es' ? "Más Info →" : "MORE INFO →"}</a>
 
                     </div>
 
                     <hr class="text-gray-300 my-2">
                     <div>
-                        ${renderDescription(description)}
+                        ${renderDescription(translation)}
                     </div>
 
                 </div>
@@ -70,10 +81,3 @@ function renderCard(event){
     `;
 }
 
-function renderEvents() {
-    const grid = document.getElementById('eventCardsContainer');
-    if (!grid) return;
-    grid.innerHTML = events.map(renderCard).join('');
-}
-
-renderEvents();

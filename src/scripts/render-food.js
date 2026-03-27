@@ -24,34 +24,28 @@ function renderCards(category) {
         card.style.animationDelay = `${index * 60}ms`;
 
         card.innerHTML = `
-  <img src="${item.image}" alt="${item.name}"
-    class="w-full h-36 object-cover rounded-md mb-3">
-
-  <div class="flex flex-row items-center justify-center gap-x-1">
-    <h3 class="font-bold text-lg mb-0">${item.name}</h3>
-    ${item.multipleLocations ? '<img src="/utils/icons/multiple-loc.svg" class="w-4 h-4"/>' : ''}
-  </div>
-
-  <div class="flex flex-row items-center justify-between w-full px-3">
-    ${
-      item.miles
-        ? `
-          <p class="flex items-center gap-1 text-xl text-gray-600 mb-1">
-            <img src="/utils/icons/map-pin.svg" alt="" class="w-4 h-4" />
-            ${item.miles}
-          </p>
-        `
-        : ''
-    }
-    ${
-      item.favorite
-        ? `<img src="/utils/icons/purple-heart.svg" alt="" class="w-4 h-4" />`: ''
-    }
-    <a href="${item.link}" class="text-xl text-red-500 font-bold hover:underline">
-      View
-    </a>
-  </div>
-`;
+        <div class="food-card-img">
+            <img src="${item.image || '/utils/images/placeholder.jpg'}" 
+                 alt="${item.name}" loading="lazy" />
+            <span class="food-card-category">${item.category}</span>
+            ${item.multipleLocations ? `
+                <div class="food-card-multi">
+                    <img src="/utils/icons/multiple-loc.svg" class="w-2 h-2 p-1" alt="Multiple locations" />
+                </div>` : ''}
+        </div>
+        <div class="food-card-body">
+            <p class="food-card-name">${item.name}</p>
+            <div class="food-card-meta">
+                ${item.miles ? `
+                    <span class="food-card-miles">
+                        <img src="/utils/icons/map-pin.svg" class="w-4 h-4" alt="" />
+                        ${item.miles} mi
+                    </span>` : '<span></span>'}
+                <a href="${item.link}" target="_blank" rel="noopener noreferrer" 
+                   class="food-card-link">GO ↗</a>
+            </div>
+        </div>
+    `;
 
         cardsContainer.appendChild(card);
     });

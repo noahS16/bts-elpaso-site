@@ -162,7 +162,7 @@ input[type="time"] {
 }
 
 .stat-card {
-  @apply bg-white rounded-xl px-3 pt-2 flex flex-col gap-1 relative overflow-hidden border border-gray-200;
+  @apply rounded-xl px-3 pt-2 flex flex-col gap-1 relative overflow-hidden border border-gray-200;
 }
 .stat-card::before {
   content: "";
@@ -182,7 +182,7 @@ input[type="time"] {
 }
 
 .stat-sublabel {
-  @apply  font-bold uppercase tracking-normal;
+  @apply font-bold uppercase tracking-normal;
 }
 .stat-purple .stat-sublabel {
   @apply text-purple-500;
@@ -201,7 +201,74 @@ input[type="time"] {
   @apply text-4xl font-black leading-none;
 }
 .stat-label {
-  @apply  text-gray-500 font-semibold;
+  @apply text-gray-500 font-semibold;
+}
+
+.lang-toggle-wrap {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  padding: 3px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.lang-option {
+  position: relative;
+  z-index: 1;
+  padding: 8px 19px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: color 0.25s ease;
+  color: rgba(0, 0, 0, 0.5);
+}
+.lang-option.active {
+  color: #fff;
+}
+.lang-pill {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: calc(100% - 6px);
+  background: #9333ea;
+  border-radius: 999px;
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.25s ease;
+  z-index: 0;
+}
+
+.food-card {
+    @apply bg-white rounded-[14px] overflow-hidden border border-gray-100 transition-transform duration-200 hover:-translate-y-1;
+}
+.food-card-img {
+    @apply relative w-full h-36 overflow-hidden;
+}
+.food-card-img img {
+    @apply w-full h-full object-cover object-center block;
+}
+.food-card-category {
+    @apply absolute top-2 left-2 bg-red-500 text-white text-[11px] font-bold tracking-wide uppercase px-2 py-2 py-0.5 rounded-full;
+}
+.food-card-multi {
+    @apply absolute top-2 right-2 bg-white/70 rounded-full w-7 h-7 flex items-center justify-center;
+}
+.food-card-body {
+    @apply p-2 py-1 w-full text-start;
+}
+.food-card-name {
+    @apply font-bold text-2xl leading-tight pb-2;
+}
+.food-card-meta {
+    @apply flex items-center justify-between;
+}
+.food-card-miles {
+    @apply flex text-xl items-center gap-1 text-gray-600 font-medium;
+}
+.food-card-link {
+    @apply font-bold text-lg text-white bg-purple-400 rounded-full p-1 px-2 hover:underline tracking-wide;
 }
 /* Global defaults */
 /* html {

@@ -1,5 +1,6 @@
-import { addCity, getAllStats, getUniquePlaces } from '../../services/army-map-client.js';
+import { addCity, getUniquePlaces } from '../../services/army-map-client.js';
 import { showCityExistsModal } from './modal.js';
+import { updateArmyDataDisplay } from'./army-stats.js';
 // Render map
 const map = L.map('map', {
     scrollWheelZoom: true,
@@ -20,18 +21,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 setTimeout(() => map.invalidateSize(), 200);
 
 
-// Display army data
-async function updateArmyDataDisplay() {
-    const stats = await getAllStats();
-    //console.log('Army Stats:', stats);
-    document.getElementById('totalArmy').textContent = stats.totalArmy.toLocaleString();
-    document.getElementById('totalCountries').textContent = stats.totalCountries.toLocaleString();
-    document.getElementById('furthestCityName').textContent = stats.furthestArmy.city;
-    document.getElementById('furthestCityMiles').textContent = stats.furthestArmy.distance_miles.toLocaleString(undefined, {maximumFractionDigits:0}).concat(" ", "miles");
-    document.getElementById('highestPopulation').textContent = stats.highestPopulation.toLocaleString();
-    document.getElementById('totalCities').textContent = stats.totalCities.toLocaleString();
-}
-
 async function populateMapMarkers() {
     const places = await getUniquePlaces();
     places.forEach(place => {
@@ -39,7 +28,7 @@ async function populateMapMarkers() {
     });
 }
 
-updateArmyDataDisplay();
+
 populateMapMarkers();
 
 
@@ -112,6 +101,7 @@ function getPlaceLabel(place) {
         addr.municipality ||
         addr.hamlet ||
         addr.county ||
+        addr.province ||
         '';
 
     const parts = [

@@ -3,12 +3,14 @@ export const bars = [
         name: "Pride Square",
         image: "/utils/images/pride-square.jpg",
         description: "Heart of El Paso’s LGBTQ+ nightlife. Located Downtown between Franklin and Stanton Street.",
+        descriptionEs: 'El corazón de la vida nocturna LGBTQ+ de El Paso. Ubicado en el centro entre Franklin y Stanton Street.',
         mapLink: "https://maps.google.com/...",
         venues: [
             {
                 name: "Touch Bar (East)",
                 mapLink: "https://maps.app.goo.gl/DTFugUUN95KzcEWi7",
-                description: "Not located in Pride Square, but drag shows and brunches on weekends!"
+                description: "Not located in Pride Square, but drag shows and brunches on weekends!",
+                descriptionEs: 'No está en Pride Square, pero ¡tiene shows de drag y brunch los fines de semana!',
             },
             {
                 name: "EPIC Bar",
@@ -30,58 +32,71 @@ export const bars = [
     },
     {
         name: "Breweries & Craft Beer",
+        nameEs: 'Cervecerías y Cervezas Artesanales',
         image: "/utils/images/brewery.jpg",
         description: "Local breweries and craft beer spots around the city.",
+        descriptionEs: 'Cervecerías locales y lugares de cerveza artesanal por toda la ciudad.',
         venues: [
             {
                 name: "Broken Rules Brewing (Downtown)",
                 mapLink: "https://maps.app.goo.gl/9fjfm7gd5NKDRfae6",
-                description: "Brewery with a variety of styles as well as a full menu including sandwiches and pretzels."
+                description: "Brewery with a variety of styles as well as a full menu including sandwiches and pretzels.",
+                descriptionEs: 'Cervecería con una variedad de estilos y un menú completo con sándwiches y pretzels.',
             },
             {
                 name: "Number Brewery (Downtown)",
                 mapLink: "https://maps.app.goo.gl/Csz8KaEMpDLu6zBK6",
-                description: "Brewery with a great beer menu, they also serve coffee and matcha."
+                description: "Brewery with a great beer menu, they also serve coffee and matcha.",
+                descriptionEs: 'Cervecería con un excelente menú de cervezas, también sirven café y matcha.',
             },
             {
                 name: "Aurellia’s Bottle Shop & Brewhouse (West)",
                 mapLink: "https://maps.app.goo.gl/WGdNpyQcWiNgU1Dy9",
-                description: "Brewery with an outdoor patio, sunset views, and a great scratch kitchen. They also make their own rootbeer."
+                description: "Brewery with an outdoor patio, sunset views, and a great scratch kitchen. They also make their own rootbeer.",
+                descriptionEs: 'Cervecería con patio exterior, vistas al atardecer y una excelente cocina. También elaboran su propio rootbeer.',
+
             },
             {
                 name: "Old Sheepdog Brewery (Central)",
                 mapLink: "https://maps.app.goo.gl/aXt97aLtB8DUsYP66",
-                description: "Brewery with a vintage vibe and great art, including a vintage shop upstairs."
+                description: "Brewery with a vintage vibe and great art, including a vintage shop upstairs.",
+                descriptionEs: 'Cervecería con ambiente vintage y gran arte, incluyendo una tienda vintage en el piso de arriba.',
             },
             {
                 name: "Mountain Star Brewing Co. (East)",
                 mapLink: "https://maps.app.goo.gl/pebRyBpBXr4PDYAk8",
-                description: "Brewery with a garage-like vibe and their famous Mazapan Brown Ale."
+                description: "Brewery with a garage-like vibe and their famous Mazapan Brown Ale.",
+                description: 'Cervecería con ambiente de garage y su famosa Mazapan Brown Ale.',
             },
             {
                 name: "Three Missions Brewery (East)",
                 mapLink: "https://maps.app.goo.gl/Hhw5RjUK73iJcP6w7",
-                description: "Brewery in an adobe building on the historic Mission Trail in Socorro, TX."
+                description: "Brewery in an adobe building on the historic Mission Trail in Socorro, TX.",
+                descriptionEs: 'Cervecería en un edificio de adobe en el histórico Mission Trail en Socorro, TX.',
             },
             {
                 name: "Icebox 28 Beer Garden (NM)",
                 mapLink: "https://maps.app.goo.gl/2gJsgvDR6xUPcRny8",
                 description: "About 40 minutes outside of the city, take the scenic route up Highway 28 into New Mexico. Pass multiple wineries, restaurants along the way.",
+                descriptionEs: 'A unos 40 minutos de la ciudad, toma la ruta panorámica por la Highway 28 hacia Nuevo México. Pasa por múltiples viñedos y restaurantes en el camino.',
             },
             {
                 name: "Flix Brewhouse (West)",
                 mapLink: "https://maps.app.goo.gl/mQtgVXkrk5Ly1Gjy5",
-                description: "Brewery and movie theater in one. Watch a movie while enjoying their craft beer. They also have a full food menu and a full bar with movie themed cocktails."
+                description: "Brewery and movie theater in one. Watch a movie while enjoying their craft beer. They also have a full food menu and a full bar with movie themed cocktails.",
+                descriptionEs: 'Cervecería y cine en uno. ¡Ve una película mientras disfrutas su cerveza artesanal! También tienen menú completo de comida y coctelería temática de películas.',
             },
             {
                 name: "Tin Man",
                 mapLink: "https://maps.app.goo.gl/3MHJXc4g1PJf1vka8",
-                description: "A local tap room with multiple locations city wide."
+                description: "A local tap room with multiple locations city wide.",
+                descriptionEs: 'Un bar de grifos local con múltiples sucursales en la ciudad.',
             },
             {
                 name: "Union Draft House",
                 mapLink: "https://maps.app.goo.gl/1GHF95duRpRRci7p8",
-                description: "A local sports bar with over 100 beers on tap and a full food menu. Multiple locations."
+                description: "A local sports bar with over 100 beers on tap and a full food menu. Multiple locations.",
+                descriptionEs: 'Un bar deportivo local con más de 100 cervezas de grifo y menú completo. Múltiples sucursales.',
             }
         ]
     },
@@ -89,38 +104,46 @@ export const bars = [
         name: "Downtown",
         image: "/utils/images/downtown-bars.jpg",
         description: "Popular bars in the Downtown area.",
+        descriptionEs: 'Bares populares en el área del centro.',
         venues: [
             {
                 name: "International Bar",
                 mapLink: "https://maps.app.goo.gl/FU1waMP7XMqDzDG76",
-                description: "Rooftop"
+                description: "Rooftop",
+                debuggerEs: 'Terraza en la azotea.',
             },
             {
                 name: "The Reagan",
                 mapLink: "https://maps.app.goo.gl/7PcNsM7KdudF6pyv8",
-                description: "Unique cocktails"
+                description: "Unique cocktails",
+                descriptionEs: 'Cocteles únicos.',
             },
             {
                 name: "MONA",
                 mapLink: "https://maps.app.goo.gl/RoT26EAav48rpuEX8",
-                description: "Frequent live music/bands"
+                description: "Frequent live music/bands",
+                descriptionEs: 'Música en vivo frecuente.',
             },
             {
                 name: "The Tiki Room",
                 mapLink: "https://maps.app.goo.gl/q3r4QSU5eQweyrdg7",
-                description: "Tropical themed bar with island-inspired food and cocktails"
+                description: "Tropical themed bar with island-inspired food and cocktails",
+                descriptionEs: 'Bar temático tropical con comida y cocteles inspirados en la isla.',
             },
             {
                 name: "Prickly Elder",
                 mapLink: "https://maps.app.goo.gl/ALK6URBCBYCbPuGy5",
-                description: "Bar with a unique living room ambiance."
+                description: "Bar with a unique living room ambiance.",
+                descriptionEs: 'Bar con un ambiente único de sala de estar.',
             },
         ]
     },
     {
         name: "Wineries",
+        nameEs: "Viñedos",
         image: "/utils/images/winery.jpg",
         description: "Local wineries around the city. Take a drive up Highway 28 for scenic views and a great variety of places to choose from.",
+        descriptionEs: 'Viñedos locales alrededor de la ciudad. Toma la ruta por la Highway 28 para vistas panorámicas y una gran variedad de lugares.',
         venues: [
             {
                 name: "Zin Valle Vineyards (NM)",
@@ -166,15 +189,18 @@ export const bars = [
             {
                 name: "Willie's Brew and Q (Northeast)",
                 mapLink: "https://maps.app.goo.gl/mSMYQZuqNn6rsLAp7",
-                description: "A casual bar in northeast El Paso with great BBQ. Go early before they run out!"
+                description: "A casual bar in northeast El Paso with great BBQ. Go early before they run out!",
+                descriptionEs: 'Un bar informal al noreste de El Paso con excelente BBQ. ¡Llega temprano antes de que se acaben!',
             }
            
         ]
     },
     {
         name: "CLose to Sun Bowl",
+        nameEs: "Cerca del Sunbowl",
         image: "/utils/images/cinci.jpg",
         description: "Also known as 'Cinci', a strip of bars on Cincinnati Street near the Sun Bowl with club vibes.",
+        descriptionEs: 'También conocida como "Cinci", una hilera de bares en Cincinnati Street cerca del Sun Bowl con ambiente de club.',
         venues: [
             {
                 name: "Kyoshi Sound House",
@@ -198,6 +224,7 @@ export const bars = [
         name: "Five Points",
         image: "/utils/images/five-points.jpg",
         description: "A historic district in central El Paso with plenty of spots to choose from. Most bars here have a full food menu.",
+        descriptionEs: 'Un distrito histórico en el centro de El Paso con muchos lugares para elegir. La mayoría de los bares aquí tienen menú completo de comida.',
         venues: [
             {
                 name: "House of Rock",
@@ -206,7 +233,8 @@ export const bars = [
             {
                 name: "The District",
                 mapLink: "https://maps.app.goo.gl/mzqxvgpGh2u4gDWm7",
-                description: "Rolled tacos that rival Chicos Tacos."
+                description: "Rolled tacos that rival Chicos Tacos.",
+                descriptionEs: 'Tacos dorados que rivalizan con los de Chico\'s Tacos.',
             },
             {
                 name: "Headquartes Tap House",
@@ -244,8 +272,10 @@ export const bars = [
     },
     {
         name: "Dive Bars",
+        nameEs: "Barres de Barrio",
         image: "/utils/images/dive-bars.jpg",
         description: "Popular dive bars around El Paso. Check out Rosa's Cantina, famous for inspiring Marty Robbins' 'El Paso'",
+        descriptionEs: 'Bares de barrio populares en El Paso. Visita Rosa\'s Cantina, famoso por inspirar "El Paso" de Marty Robbins.',
         venues: [
             {
                 name: "Lloyd's Pub",

@@ -1,17 +1,32 @@
 import { bars } from '/src/data/bars.js';
+import { getCurrentLang, onLangChange } from '/services/languages';
 
 const container = document.getElementById('nightlifeCardsContainer');
 let openVenues = null;
 let openButton = null;
 
-bars.forEach(category => {
-  console.log('Rendering category:', category)
+
+
+renderAllNightlife();
+onLangChange(()=>renderAllNightlife());
+
+function renderAllNightlife() {
+  container.innerHTML = '';
+
+  bars.forEach(category => {
+  //console.log('Rendering category:', category)
   const card = renderCard(category);
   container.appendChild(card);
 });
+}
 
 function renderCard(category) {
   const card = document.createElement('div');
+  const lang = getCurrentLang();
+  const catName = lang == 'es' && category.nameEs ? category.nameEs : category.name;
+  const catDescription = lang == 'es' ? category.descriptionEs : category.description;
+
+
   card.className = `
     bg-white rounded-xl shadow-md overflow-hidden
     transition-transform duration-200 hover:-translate-y-1
@@ -27,7 +42,7 @@ function renderCard(category) {
   <div class="px-2 mt-2 flex flex-col gap-3">
     <!-- Header row -->
     <div class="flex justify-between items-center">
-      <h3 class="text-3xl font-bold">${category.name}</h3>
+      <h3 class="text-3xl font-bold">${catName}</h3>
 
       ${category.mapLink ? `
         
@@ -48,7 +63,7 @@ function renderCard(category) {
 
       <!-- Category description (now inside dropdown) -->
       <p class="text-gray-600 leading-snug px-1">
-        ${category.description}
+        ${catDescription}
       </p>
 
       <!-- Venue list -->
@@ -56,7 +71,7 @@ function renderCard(category) {
         ${category.venues.map(venue => `
           <a
             href="${venue.mapLink || '#'}"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="block px-3 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
           >
             <!-- Header row -->
@@ -66,7 +81,7 @@ function renderCard(category) {
                 <!-- Description -->
                 ${venue.description ? `
                   <p class="text-gray-600 leading-snug">
-                    ${venue.description}
+                    ${lang == 'es' ? venue.descriptionEs : venue.description}
                   </p>
                   ` : ''}
               </div>

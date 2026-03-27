@@ -38,13 +38,21 @@
     <!-- Menu -->
     <div id="dropdownMenu"
         class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-20">
-        <a href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EP</a>
-        <a href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
-        <a href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
-        <a href="/src/pages/nightlife/" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a data-i18n="nav.about" href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EP</a>
+        <a data-i18n="nav.food" href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO DO</a>
+        <a data-i18n="nav.night" href="/src/pages/nightlife/" class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
         <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
-        <a href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
-        <a href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <!-- <div class="flex items-center gap-3 px-4 py-2">
+            <span data-i18n="nav.language" class="font-normal">IDIOMA</span>
+            <div class="lang-toggle-wrap" id="langToggleMobile">
+                <span class="lang-option active" id="optENMobile">EN</span>
+                <span class="lang-option" id="optESMobile">ES</span>
+                <div class="lang-pill" id="langPillMobile"></div>
+            </div>
+        </div> -->
     </div>
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
@@ -65,18 +73,18 @@
             <div id="dayOneCard"
                 class="flex flex-col justify-center backdrop-blur-sm bg-purple-300 ring rounded-xl shadow-lg p-4 w-[90%] max-w-md text-center lg:max-w-lg lg:h-[30vh] lg:translate-x-[-50px]">
 
-                <div class="text-3xl uppercase tracking-wider mb-2 lg:text-4xl">
+                <div data-i18n="countdown.dayOne" class="text-3xl uppercase tracking-wider mb-2 lg:text-4xl">
                     Days Until arirang in el paso day one!
                 </div>
 
                 <div class="grid grid-cols-4 gap-3">
                     <div>
                         <div id="days" class="text-4xl lg:text-5xl">0</div>
-                        <div class="text-sm text-white/100 lg:text-lg">Days</div>
+                        <div data-i18n="countdown.days" class="text-sm text-white/100 lg:text-lg">Days</div>
                     </div>
                     <div>
                         <div id="hours" class="text-4xl lg:text-5xl">0</div>
-                        <div class="text-sm text-white/100 lg:text-lg">Hours</div>
+                        <div data-i18n="countdown.hours" class="text-sm text-white/100 lg:text-lg">Hours</div>
                     </div>
                     <div>
                         <div id="minutes" class="text-4xl lg:text-5xl">0</div>
@@ -84,7 +92,7 @@
                     </div>
                     <div>
                         <div id="seconds" class="text-4xl lg:text-5xl">0</div>
-                        <div class="text-sm text-white/100 lg:text-lg">Sec</div>
+                        <div data-i18n="countdown.seconds" class="text-sm text-white/100 lg:text-lg">Sec</div>
                     </div>
                 </div>
 
@@ -93,18 +101,18 @@
             <div id="dayTwoCard"
                 class="flex flex-col justify-center backdrop-blur-sm bg-purple-300 rounded-xl shadow-lg p-4 ring w-[90%] max-w-md text-center lg:max-w-lg lg:h-[30vh] lg:translate-x-[50px]">
 
-                <div class="text-3xl uppercase tracking-wider mb-2 lg:text-4xl">
+                <div data-i18n="countdown.dayTwo" class="text-3xl uppercase tracking-wider mb-2 lg:text-4xl">
                     Days Until Arirang in el paso day two!
                 </div>
 
                 <div class="grid grid-cols-4 gap-3">
                     <div>
                         <div id="daysTwo" class="text-4xl lg:text-5xl">0</div>
-                        <div class="text-sm text-white/100 lg:text-lg">Days</div>
+                        <div data-i18n="countdown.days" class="text-sm text-white/100 lg:text-lg">Days</div>
                     </div>
                     <div>
                         <div id="hoursTwo" class="text-4xl lg:text-5xl">0</div>
-                        <div class="text-sm text-white/100 lg:text-lg">Hours</div>
+                        <div data-i18n="countdown.hours" class="text-sm text-white/100 lg:text-lg">Hours</div>
                     </div>
                     <div>
                         <div id="minutesTwo" class="text-4xl lg:text-5xl">0</div>
@@ -112,10 +120,15 @@
                     </div>
                     <div>
                         <div id="secondsTwo" class="text-4xl lg:text-5xl">0</div>
-                        <div class="text-sm text-white/100 lg:text-lg">Sec</div>
+                        <div data-i18n="countdown.seconds" class="text-sm text-white/100 lg:text-lg">Sec</div>
                     </div>
                 </div>
 
+            </div>
+            <div class="lang-toggle-wrap" id="langToggleMobile">
+                <span class="lang-option active" id="optENMobile">EN</span>
+                <span class="lang-option" id="optESMobile">ES</span>
+                <div class="lang-pill" id="langPillMobile"></div>
             </div>
             <div class="w-full h-20 overflow-hidden lg:hidden">
                 <img src="/utils/images/homepage2.png" class="w-full h-full object-cover object-bottom" />
