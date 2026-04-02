@@ -5,6 +5,17 @@ const posterPreview = document.getElementById('posterPreview');
 const uploadPrompt = document.getElementById('uploadPrompt');
 const uploadZone = document.getElementById('uploadZone');
 
+document.getElementById('jumpToForm')?.addEventListener('click', () => {
+    const drawer = document.getElementById('formDrawer');
+    const arrow = document.getElementById('toggleArrow');
+    const isOpen = drawer.style.maxHeight && drawer.style.maxHeight !== '0px';
+    
+    if (!isOpen) {
+        drawer.style.maxHeight = drawer.scrollHeight + 'px';
+        arrow.classList.add('rotate-180');
+    }
+});
+
 function showPreview(file) {
     if (!file || !file.type.startsWith('image/')) return;
     const reader = new FileReader();

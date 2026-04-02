@@ -45,7 +45,13 @@ function renderLeaderboard(topCities) {
                             <span class="font-black text-xl mr-2 bg-white rounded-full p-1">${getFlagEmoji(city.country_code)}</span>
                             <span class="text-xl font-semibold text-gray-600">${city.city}</span>
                         </span>
-                        <span class="font-bold text-2xl text-purple-500">${city.population }</span>
+                        <div class="items-center flex flex-row gap-2">
+                            <span class="text-lg text-center">💜</span>
+                            <span class="font-bold text-3xl text-purple-600">${city.population }</span>
+
+
+                        </div>
+                        
                     </li>
                 `).join('')}
             </ol>

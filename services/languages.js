@@ -55,6 +55,10 @@ const translations = {
         // ---- THINGS TO DO PAGE ---------------------------------------------
         'things.heading': 'QUÉ HACER',
         'things.localEvents': 'Eventos Locales',
+        'things.subheading': 'Favoritos locales en El Paso',
+        'things.jumpBtn': '↓ Eventos Locales',
+
+
 
         // ---- NIGHTLIFE PAGE ------------------------------------------------
         'night.header': "VIDA NOCTURNA",
@@ -79,6 +83,8 @@ const translations = {
         'events.heading': 'EVENTOS DE ARMY',
         'form.heading': 'ENVÍA UN EVENTO',
         'form.headingSub': '¿Organizas un meetup o evento para los conciertos? ¡Envíalo y lo añadimos a la página!',
+        'events.subheading': '¡Eventos organizados por fans alrededor de la ciudad!',
+        'events.jumpBtn': '+ Enviar un Evento',
 
         // Form labels
         'form.title': 'Nombre del Evento',

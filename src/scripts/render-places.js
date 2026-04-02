@@ -51,7 +51,7 @@ function renderPlaceCard(activity) {
           <a
             href="${activity.mapLink}"
             target=target="_blank" rel="noopener noreferrer"
-            class="category-btn bg-red-500 text-white px-4 py-2 rounded-full font-bold whitespace-nowrap"
+            class="category-btn bg-red-500 text-white p-2 px-3 rounded-xl font-bold whitespace-nowrap"
           >
             ${lang == 'en' ? "View map" : "Mapa"}
           </a>
@@ -61,7 +61,7 @@ function renderPlaceCard(activity) {
           <a
             href="${activity.siteLink}"
             target=target="_blank" rel="noopener noreferrer"
-            class="category-btn bg-purple-500 text-white px-4 py-2 rounded-full font-bold"
+            class="category-btn bg-purple-400 text-white p-2 px-3 rounded-xl font-bold"
           >
             ${lang == 'en' ? "Website" : "Sitio Web"}
           </a>
@@ -94,8 +94,8 @@ function renderLocalEventCard(localEvent) {
                                 </div>
                                 
                                 <div>
-                                    <a href="${localEvent.siteLink}" target="_blank" rel="noopener noreferrer" class="category-btn bg-purple-500 text-white px-4 py-2 rounded-full font-bold">
-                                        ${lang == 'en' ? "More Info" : "Más Información"}
+                                    <a href="${localEvent.siteLink}" target="_blank" rel="noopener noreferrer" class="category-btn bg-purple-400 text-white p-3 rounded-xl font-bold">
+                                        ${lang == 'en' ? "More Info" : "Más Info"}
                                     </a>
                                 </div>
                             </div>

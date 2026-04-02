@@ -68,29 +68,31 @@
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
 
     <main class="mt-20 px-4 h-full lg:p-10 lg:px-20">
-        <div class="flex flex-col ">
-            <div class="flex flex-row items-center justify-between ">
+        <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col ">
                 <h1 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                     EP EATS
                 </h1>
-                <img src="/utils/images/rj-red.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
-            </div>
+                <div class="mt-2 flex items-start gap-4 font-normal whitespace-nowrap pr-0">
+                    <div class="flex items-center gap-1">
+                        <img src="/utils/icons/map-pin.svg" class="w-5 h-5" />
+                        <span data-i18n="food.miles">Miles from Sun Bowl</span>
+                    </div>
 
-            <div class="mt-2 flex items-start gap-4 font-normal whitespace-nowrap pr-0">
-                <div class="flex items-center gap-1">
-                    <img src="/utils/icons/map-pin.svg" class="w-5 h-5" />
-                    <span data-i18n="food.miles">Miles from Sun Bowl</span>
-                </div>
-
-                <!-- <div class="flex items-center gap-1">
+                    <!-- <div class="flex items-center gap-1">
                     <img src="../icons/purple-heart.svg" class="w-5 h-5" />
                     <span>Fan favorite</span>
                 </div> -->
-                <div class="flex items-center gap-1">
-                    <img src="/utils/icons/multiple-loc.svg" class="w-5 h-5" />
-                    <span data-i18n="food.multipleLocations">Multiple locations</span>
+                    <div class="flex items-center gap-1">
+                        <img src="/utils/icons/multiple-loc.svg" class="w-5 h-5" />
+                        <span data-i18n="food.multipleLocations">Multiple locations</span>
+                    </div>
                 </div>
+
             </div>
+            <img src="/utils/images/rj-red.png" alt="BT21 RJ" class="w-16 h-16 rounded-full" />
+
+
         </div>
 
 

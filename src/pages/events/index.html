@@ -77,16 +77,27 @@
 
     <main class="min-h-auto mt-20 px-4">
         <div class="flex flex-row justify-between items-center">
-            <h1 data-i18n="events.heading" class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4">
+            <h1 data-i18n="events.heading"
+                class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4">
                 ARMY EVENTS
             </h1>
-            <img src="/utils/images/tata-no-bg.png" class="h-15 w-15 rounded-full" alt="">
+            <img src="/utils/images/tata-no-bg.png" class="h-15 w-15" alt="">
         </div>
-
-        <div class="mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto" id="eventCardsContainer"></div>
+        <div class="flex items-center justify-between mt-5">
+            <p data-i18n="events.subheading" class="text-gray-500 font-semibold text-xl">
+                Fan-organized events around the city!
+            </p>
+            <a href="#eventForm" id="jumpToForm" data-i18n="events.jumpBtn"
+                class="flex items-end font-bold px-2 py-2 rounded-xl text-base bg-purple-400 text-white whitespace-nowrap">
+                <span>+ Submit an Event</span>
+            </a>
+        </div>
+        <!-- <hr class="text-gray-300"> -->
+        <div class="mt-2 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto" id="eventCardsContainer"></div>
 
         <div class="mt-10">
-            <button id="toggleForm" class="flex items-center gap-3 text-4xl font-bold md:text-6xl group w-full text-left">
+            <button id="toggleForm"
+                class="flex items-center gap-3 text-4xl font-bold md:text-6xl group w-full text-left">
                 <span class="bg-red-500 w-1 h-9 inline-block"></span>
                 <span data-i18n="form.heading">SUBMIT AN EVENT</span>
                 <svg id="toggleArrow" xmlns="http://www.w3.org/2000/svg"
@@ -100,73 +111,77 @@
             </p>
         </div>
         <!-- change no validate -->
-         <div id="formDrawer" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+        <div id="formDrawer" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
             <form id="eventForm" class="flex flex-col gap-5 mt-5 pb-6">
 
-            <div>
-                <label data-i18n="form.title" class="label" for="eventTitle">Event Title</label>
-                <input data-i18n-placeholder="form.titlePlaceholder" type="text" id="eventTitle" name="eventTitle" class="form-input"
-                    placeholder="e.g. Borapaso Cup Sleeve Event" required />
-            </div>
-
-            <div>
-                <label data-i18n="form.organizer" class="label" for="organizer">Host / Organizer</label>
-                <input data-i18n-placeholder="form.organizerPlaceholder" type="text" id="organizer" name="organizer" class="form-input"
-                    placeholder="Person, group, or organization name" required />
-            </div>
-
-            <div>
-                <label data-i18n="form.location" class="label" for="location">Location</label>
-                <input data-i18n-placeholder="form.locationPlaceholder" type="text" id="location" name="location" class="form-input"
-                    placeholder="Venue name or address in El Paso" required />
-            </div>
-
-            <div class="flex flex-row gap-2">
-                <div class="grow">
-                    <label data-i18n="form.date" class="label" for="eventDate">Date</label>
-                    <input type="date" id="eventDate" name="eventDate" class="form-input" required />
+                <div>
+                    <label data-i18n="form.title" class="label" for="eventTitle">Event Title</label>
+                    <input data-i18n-placeholder="form.titlePlaceholder" type="text" id="eventTitle" name="eventTitle"
+                        class="form-input" placeholder="e.g. Borapaso Cup Sleeve Event" required />
                 </div>
-                <div class="grow">
-                    <label data-i18n="form.time" class="label" for="eventTime">Time </label>
-                    <input type="time" id="eventTime" name="eventTime" class="form-input" required />
+
+                <div>
+                    <label data-i18n="form.organizer" class="label" for="organizer">Host / Organizer</label>
+                    <input data-i18n-placeholder="form.organizerPlaceholder" type="text" id="organizer" name="organizer"
+                        class="form-input" placeholder="Person, group, or organization name" required />
                 </div>
-            </div>
 
-            <div>
-                <label data-i18n="form.description" class="label" for="description">Description</label>
-                <textarea data-i18n-placeholder="form.descriptionPlaceholder" id="description" name="description" class="form-input resize-none" rows="4"
-                    placeholder="What's happening, who's it for, what to expect..." required></textarea>
-            </div>
+                <div>
+                    <label data-i18n="form.location" class="label" for="location">Location</label>
+                    <input data-i18n-placeholder="form.locationPlaceholder" type="text" id="location" name="location"
+                        class="form-input" placeholder="Venue name or address in El Paso" required />
+                </div>
 
-            <div>
-                <label data-i18n="form.email" class="label" for="email">Your Email</label>
-                <input data-i18n-placeholder="form.emailPlaceholder" type="email" id="email" name="email" class="form-input"
-                    placeholder="So we can follow up if needed" required />
-            </div>
-
-            <div>
-                <label data-i18n="form.poster" class="label">Event Poster <span data-i18n="form.optional" class="optional-tag">(optional)</span></label>
-                <div class="upload-zone content-center" id="uploadZone" onclick="document.getElementById('posterUpload').click()">
-                    <input type="file" id="posterUpload" name="poster" accept="image/*" />
-                    <div class ="" id="uploadPrompt">
-                        <svg class="mx-auto mb-2 text-gray-400" width="32" height="32" fill="none" stroke="currentColor"
-                            stroke-width="1.5" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                        </svg>
-                        <p data-i18n="form.uploadPrompt" class="text-sm text-gray-500 font-semibold">Tap to upload a poster</p>
-                        <p data-i18n="form.uploadType" class="text-xs text-gray-400 mt-1">PNG, JPG up to 5MB</p>
+                <div class="flex flex-row gap-2">
+                    <div class="grow">
+                        <label data-i18n="form.date" class="label" for="eventDate">Date</label>
+                        <input type="date" id="eventDate" name="eventDate" class="form-input" required />
                     </div>
-                    <img id="posterPreview" class="preview-img hidden" alt="Event poster preview" />
+                    <div class="grow">
+                        <label data-i18n="form.time" class="label" for="eventTime">Time </label>
+                        <input type="time" id="eventTime" name="eventTime" class="form-input" required />
+                    </div>
                 </div>
-            </div>
 
-            <button data-i18n="form.submitBtn" type="submit" class="submit-btn mt-2">SUBMIT EVENT →</button>
+                <div>
+                    <label data-i18n="form.description" class="label" for="description">Description</label>
+                    <textarea data-i18n-placeholder="form.descriptionPlaceholder" id="description" name="description"
+                        class="form-input resize-none" rows="4"
+                        placeholder="What's happening, who's it for, what to expect..." required></textarea>
+                </div>
 
-        </form>
+                <div>
+                    <label data-i18n="form.email" class="label" for="email">Your Email</label>
+                    <input data-i18n-placeholder="form.emailPlaceholder" type="email" id="email" name="email"
+                        class="form-input" placeholder="So we can follow up if needed" required />
+                </div>
 
-         </div>
-        
+                <div>
+                    <label data-i18n="form.poster" class="label">Event Poster <span data-i18n="form.optional"
+                            class="optional-tag">(optional)</span></label>
+                    <div class="upload-zone content-center" id="uploadZone"
+                        onclick="document.getElementById('posterUpload').click()">
+                        <input type="file" id="posterUpload" name="poster" accept="image/*" />
+                        <div class="" id="uploadPrompt">
+                            <svg class="mx-auto mb-2 text-gray-400" width="32" height="32" fill="none"
+                                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                            </svg>
+                            <p data-i18n="form.uploadPrompt" class="text-sm text-gray-500 font-semibold">Tap to upload a
+                                poster</p>
+                            <p data-i18n="form.uploadType" class="text-xs text-gray-400 mt-1">PNG, JPG up to 5MB</p>
+                        </div>
+                        <img id="posterPreview" class="preview-img hidden" alt="Event poster preview" />
+                    </div>
+                </div>
+
+                <button data-i18n="form.submitBtn" type="submit" class="submit-btn mt-2">SUBMIT EVENT →</button>
+
+            </form>
+
+        </div>
+
     </main>
 
 

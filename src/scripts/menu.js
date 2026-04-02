@@ -15,3 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('hidden')
   })
 })
+
+document.querySelectorAll('#dropdownMenu a').forEach(link => {
+    link.addEventListener('touchstart', () => {
+        link.classList.add('underline','decoration-red-500', 'decoration-4');
+    }, { passive: true });
+
+    link.addEventListener('touchend', () => {
+        setTimeout(() => link.classList.remove('underline','decoration-red-500', 'decoration-4'), 250);
+    }, { passive: true });
+});
+
+const currentPath = window.location.pathname;
+
+document.querySelectorAll('#dropdownMenu a').forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    
+    if (currentPath === linkPath || currentPath.startsWith(linkPath) && linkPath !== '/') {
+        link.classList.add('underline','decoration-red-500', 'decoration-4');
+    }
+});

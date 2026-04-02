@@ -49,7 +49,7 @@ function renderCard(event){
     return `
         <div
                 class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-200 hover:-translate-y-1">
-                <img src="${poster}" alt="" class="w-full object-cover h-55">
+                <img src="${poster}" alt="" class="w-full object-cover h-63">
                 <div class="px-3 py-3 flex flex-col gap-0">
                     <div>
                         <h3 class="text-3xl/6 font-bold">${event_name}</h3>
@@ -67,7 +67,7 @@ function renderCard(event){
                             </div>
                         </div>
                         <a href="${link}"
-                            class="flex items-center justify-center bg-purple-400 text-white font-bold rounded-xl w-25 h-11">${lang=='es' ? "Más Info →" : "MORE INFO →"}</a>
+                            class="flex items-center justify-center bg-purple-400 text-white font-bold rounded-xl p-2">${lang=='es' ? "Más Info →" : "MORE INFO →"}</a>
 
                     </div>
 
