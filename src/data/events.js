@@ -27,7 +27,7 @@ export const events = [
     {
         poster: "/utils/images/chucohae-event.png",
         event_name: "ChucoHae 915 Cupsleeve",
-        host_name: "Texas ARMY Unites, heartnsoul",
+        host_name: "heartnsoul",
         event_dates: [{ "date": "May 1", "time": "2pm - 6pm" }, { "date": "May 2", "time": "11am - 4pm" }, { "date": "May 3", "time": "11am - 4pm" }],
         location: "World Boba & Coffee",
         location_link: "https://maps.app.goo.gl/WWDSwyJ8X1kxvpet6",
@@ -91,6 +91,17 @@ export const events = [
         description: ["Cupsleeve", "Vendors", "Texas Flag Signing", "Photo ops"],
         descriptionEs: ["Cupsleeve", "Vendedores", "Firma de Bandera de Texas", "Sesiones de Fotos"],
         link: "https://www.instagram.com/p/DWcSHTOEat2/?igsh=NHZ0YjloODFvZWhq",
+    },
+    {
+        poster: "/utils/images/gavilanes-event.jpeg",
+        event_name: "Los Gavilanes ARMY Event",
+        host_name: "Los Gavilanes Mexican Food",
+        event_dates: [{ "date": "May 2", "time": "9am - 3pm" }, { "date": "May 3", "time": "9am - 3pm" },],
+        location: "Los Gavilanes",
+        location_link: "https://maps.app.goo.gl/P7iMpHtv1rkfsKhL6",
+        description: ["Freebies", "Vendors", "Food Specials", "Raffles"],
+        descriptionEs: ["Freebies", "Vendedores", "Especiales de Comida", "Rifas"],
+        link: "https://facebook.com/events/s/army-event-for-bts/830534076705389/",
     },
     // {
     //     poster: "/utils/images/banner-voting.png",
