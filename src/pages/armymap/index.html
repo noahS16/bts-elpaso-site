@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About El Paso - BTS Arirang in EL Paso</title>
+    <title>BTS Arirang in EL Paso</title>
     <link rel="stylesheet" href="/src/styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -12,7 +12,7 @@
 
 <body class="font-solano">
     <header id="magicHeader"
-        class="lg:p-6 lg:py-4 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+        class="lg:p-0 lg:h-0 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-5 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
 
         <!-- Left Logo -->
         <a href="/">EPTX</a>
@@ -31,21 +31,76 @@
         </div>
 
         <!-- Desktop menu (hidden on mobile) -->
-        <nav class="hidden lg:flex justify-end gap-8 font-bold text-4l ">
-            <a data-i18n="nav.about" href="/src/pages/about/" class="hover:opacity-70">ABOUT EP</a>
-            <a data-i18n="nav.food" href="/src/pages/food/" class="hover:opacity-70">FOOD</a>
-            <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="hover:opacity-70">THINGS TO DO</a>
-            <a data-i18n="nav.night" href="/src/pages/nightlife/" class="hover:opacity-70">NIGHTLIFE</a>
-            <a href="/src/pages/armymap/" class="hover:opacity-70">MA CITY</a>
-            <a data-i18n="nav.events" href="/src/pages/events/" class="hover:opacity-70">EVENTS</a>
-            <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="hover:opacity-70">FAN PROJECTS</a>
-            <a data-i18n="nav.home" href="/" class="hover:opacity-70">HOME</a>
-            <div class="px-4 py-2 lang-toggle-wrap" id="langToggle">
-                <span class="lang-option active" id="optEN">EN</span>
-                <span class="lang-option" id="optES">ES</span>
-                <div class="lang-pill" id="langPill"></div>
+        <!-- DESKTOP SIDEBAR -->
+        <aside id="sidebar"
+            class="hidden lg:flex flex-col fixed top-0 left-0 h-full min-h-screen w-56 bg-purple-300 border-r border-white/30 shadow-sm z-30 px-4 pt-6 pb-2 gap-6">
+
+            <!-- <a href="/" class="text-3xl font-bold">EPTX</a> -->
+
+            <nav class="flex flex-col gap-1 font-bold text-3xl flex-1">
+                <a href="/src/pages/about/" data-i18n="nav.about"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">ABOUT
+                    EP</a>
+                <a href="/src/pages/food/" data-i18n="nav.food"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">FOOD</a>
+                <a href="/src/pages/things-to-do/" data-i18n="nav.things"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">THINGS
+                    TO DO</a>
+                <a href="/src/pages/nightlife/" data-i18n="nav.nightlife"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">NIGHTLIFE</a>
+                <a href="/src/pages/armymap/"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">MA
+                    CITY</a>
+                <a href="/src/pages/events/" data-i18n="nav.events"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">MEETUPS/EVENTS</a>
+                <a href="/src/pages/fan-projects/"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">FAN
+                    PROJECTS</a>
+                <a href="/" data-i18n="nav.home"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">HOME</a>
+                <!-- Lang toggle at bottom -->
+                <div class="flex items-center gap-3">
+                    <!-- <span data-i18n="nav.language" class="font-bold text-2xl">IDIOMA</span> -->
+                    <div class="lang-toggle-wrap" id="langToggle">
+                        <span class="lang-option active" id="optEN">EN</span>
+                        <span class="lang-option" id="optES">ES</span>
+                        <div class="lang-pill" id="langPill"></div>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div
+                class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center text-base lg:mt-auto">
+                <div class="w-full h-px bg-white/50"></div>
+                <p class="text-gray-600">
+                    Designed & Developed by
+                    <span class="font-semibold">Noah</span> &
+                    <span class="font-semibold">Nadia Saenz</span>
+                    &copy; 2026
+                </p>
+
+                <div class="flex gap-4 mt-1">
+                    <div class="flex flex-col items-center text-sm text-gray-500">
+                        <a href="https://www.instagram.com/nerdiia?igsh=MWJ2a3Vjc3A3N3pibw==" target="_blank"
+                            aria-label="Nadia Instagram" class="hover:opacity-70 transition">
+                            <img src="/utils/icons/instagram.svg" alt="" class="w-6 h-6" />
+                        </a>
+                        <span>Nadia</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-sm text-gray-500">
+                        <a href="https://www.instagram.com/noa_saenz?igsh=eW1oeXpvYjZiaXh5&utm_source=qr"
+                            target="_blank" aria-label="Noah Instagram" class="hover:opacity-70 transition">
+                            <img src="/utils/icons/instagram.svg" alt="" class="w-6 h-6" />
+                        </a>
+                        <span>Noah</span>
+                    </div>
+                </div>
+                <span class="text-gray-600 font-semibold">For ARMY by ARMY</span>
             </div>
-        </nav>
+        </aside>
 
     </header>
     <!-- Menu -->
@@ -59,7 +114,8 @@
             class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
         <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
         <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
-        <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="block px-4 py-2 hover:bg-gray-100">FAN PROJECTS</a>
+        <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="block px-4 py-2 hover:bg-gray-100">FAN
+            PROJECTS</a>
         <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
         <div class="flex items-center gap-3 px-4 py-2">
             <span data-i18n="nav.language" class="font-normal">IDIOMA</span>
@@ -73,81 +129,97 @@
     </div>
     <!-- Overlay for clicking outside -->
     <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
-    <main class="min-h-screen mt-20 lg:p-10 lg:px-20">
+    <main class="min-h-screen mt-20 lg:p-10 lg:px-20 lg:mt-0 lg:ml-56">
         <div class="flex flex-row items-center justify-between px-2">
-            <h1 data-i18n="map.heading" class="text-5xl whitespace-nowrap font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
+            <h1 data-i18n="map.heading"
+                class="text-5xl whitespace-nowrap font-bold underline decoration-6 decoration-red-500 underline-offset-4 w-3/5">
                 ARMY FROM...
             </h1>
             <img src="/utils/images/mong-no-bg.png" alt="BT21 RJ" class="w-15 h-15 rounded-full" />
         </div>
 
         <div class="backdrop-blur-sm p-1">
-            <div id="map" class="w-full h-80 overflow-hidden rounded-xl"></div>
+            <div id="map" class="w-full h-80 overflow-hidden rounded-xl lg:h-100"></div>
         </div>
 
         <div class="relative px-5 mt-5">
-            <p data-i18n="map.searchLabel" class="text-center text-2xl font-bold">Let us know where you're visiting from!</p>
-            <input data-i18n-placeholder="map.searchPlaceholder" id="citySearch" type="text" placeholder="Search for your city..."
+            <p data-i18n="map.searchLabel" class="text-center text-2xl font-bold lg:text-3xl lg:text-start">Let us know where you're visiting
+                from!</p>
+            <input data-i18n-placeholder="map.searchPlaceholder" id="citySearch" type="text"
+                placeholder="Search for your city..."
                 class="w-full rounded-full px-5 py-3 text-2xl shadow bg-white/90 focus:outline-none font-normal mt-2" />
 
             <ul id="results"
                 class="h-50 text-2xl overflow-auto absolute left-5 right-5 mt-2 bg-white rounded-xl shadow-lg z-30 hidden">
             </ul>
         </div>
-        <div class="stat-card stat-indigo mt-5 pb-1 mx-5 ">
-                <span data-i18n="map.justAdded" class="stat-sublabel">Just Added</span>
-                <div class="flex flex-row items-end gap-1">
-                    <h2 id="recentCity" class="stat-number text-2xl"></h2>
-                    <p id="recentCountry" class="text-lg font-semibold text-gray-500"></p>
-                </div>
-                
-        </div>
-        <div id="armyDataContainer" class="grid grid-cols-2 gap-3 mt-5 px-5">
-
-            <div class="stat-card stat-purple">
-                <span class="stat-sublabel">Total ARMY</span>
-                <h2 id="totalArmy" class="stat-number"></h2>
-                <p data-i18n="map.totalArmy" class="stat-label">coming to El Paso</p>
-            </div>
-
-            <div class="stat-card stat-red">
-                <div class="flex justify-around">
-                    <div class="text-center">
-                        <span data-i18n="map.countries" class="stat-sublabel">Countries</span>
-                        <h2 id="totalCountries" class="stat-number"></h2>
-                    </div>
-                    <span class=" bg-gray-300 w-px self-stretch inline-block"></span>
-                    <div class="text-center">
-                        <span data-i18n="map.cities" class="stat-sublabel">Cities</span>
-                        <h2 id="totalCities" class="stat-number"></h2>
+        <div class="stats-area lg:flex lg:flex-row lg:items-center">
+            <div class="layout-container lg:w-full">
+                <div class="stat-card stat-indigo mt-5 pb-1 mx-5">
+                    <span data-i18n="map.justAdded" class="stat-sublabel">Just Added</span>
+                    <div class="flex flex-row items-end gap-1">
+                        <h2 id="recentCity" class="stat-number text-2xl"></h2>
+                        <p id="recentCountry" class="text-lg font-semibold text-gray-500"></p>
                     </div>
 
                 </div>
+                <div id="armyDataContainer" class="grid grid-cols-2 gap-3 mt-5 px-5 lg:h-min lg:w-full">
 
-                <p data-i18n="map.worldwide" class="stat-label text-center">represented worldwide</p>
+                    <div class="stat-card stat-purple">
+                        <span class="stat-sublabel">Total ARMY</span>
+                        <h2 id="totalArmy" class="stat-number"></h2>
+                        <p data-i18n="map.totalArmy" class="stat-label">coming to El Paso</p>
+                    </div>
+
+                    <div class="stat-card stat-red">
+                        <div class="flex justify-around">
+                            <div class="text-center">
+                                <span data-i18n="map.countries" class="stat-sublabel">Countries</span>
+                                <h2 id="totalCountries" class="stat-number"></h2>
+                            </div>
+                            <span class=" bg-gray-300 w-px self-stretch inline-block"></span>
+                            <div class="text-center">
+                                <span data-i18n="map.cities" class="stat-sublabel">Cities</span>
+                                <h2 id="totalCities" class="stat-number"></h2>
+                            </div>
+
+                        </div>
+
+                        <p data-i18n="map.worldwide" class="stat-label text-center">represented worldwide</p>
+                    </div>
+
+                    <div class="stat-card stat-red">
+                        <span data-i18n="map.topVisitor" class="stat-sublabel">Top Visitor</span>
+                        <h2 id="highestPopulation" class="stat-number text-2xl"></h2>
+                        <p data-i18n="map.topVisitorSub" class="stat-label">most ARMY visiting</p>
+                    </div>
+
+                    <div class="stat-card stat-purple">
+                        <span data-i18n="map.furthestArmy" class="stat-sublabel">Furthest Traveling</span>
+                        <h2 id="furthestCityName" class="stat-number text-2xl"></h2>
+                        <p id="furthestCityMiles" class="stat-label"></p>
+                    </div>
+
+                </div>
+
+
             </div>
 
-            <div class="stat-card stat-red">
-                <span data-i18n="map.topVisitor" class="stat-sublabel">Top Visitor</span>
-                <h2 id="highestPopulation" class="stat-number text-2xl"></h2>
-                <p data-i18n="map.topVisitorSub" class="stat-label">most ARMY visiting</p>
-            </div>
 
-            <div class="stat-card stat-purple">
-                <span data-i18n="map.furthestArmy" class="stat-sublabel">Furthest Traveling</span>
-                <h2 id="furthestCityName" class="stat-number text-2xl"></h2>
-                <p id="furthestCityMiles" class="stat-label"></p>
-            </div>
+            <div id="leaderboard" class="px-5 mt-5 lg:w-full"></div>
 
         </div>
-        <div id="leaderboard" class="px-5 mt-5"></div>
-        <div class="mt-6 mx-5 border-l-4 border-purple-500 bg-purple-100 rounded-r-xl px-4 py-3 flex flex-wrap items-center gap-x-1 gap-y-1">
+
+        <div
+            class="mt-6 mx-5 border-l-4 border-purple-500 bg-purple-100 rounded-r-xl px-4 py-3 flex flex-wrap items-center gap-x-1 gap-y-1">
             <span data-i18n="map.buddyText" class="text-gray-600">Looking for a concert buddy? Check out</span>
-            <a href="https://army-buddy-system.com/login?from_url=https://army-buddy-system.com/&utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer"
+            <a href="https://army-buddy-system.com/login?from_url=https://army-buddy-system.com/&utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                target="_blank" rel="noopener noreferrer"
                 class="underline text-purple-600 font-bold hover:underline">Army Buddy System</a>
             <span data-i18n="map.buddyMadeBy" class="text-gray-600">made by</span>
             <img src="/utils/icons/instagram.svg" alt="" class="w-4 h-4" />
-            <a href="https://www.instagram.com/bora_915?igsh=anZ4a2gxZXR3dWhy" target="_blank" rel="noopener noreferrer" class="font-bold hover:underline">Bora_915</a>
+            <a href="https://www.instagram.com/bora_915?igsh=anZ4a2gxZXR3dWhy" target="_blank" rel="noopener noreferrer"
+                class="font-bold hover:underline">Bora_915</a>
         </div>
     </main>
 
@@ -178,7 +250,7 @@
         </div>
     </div>
 
-    <footer class="bg-white-100 mt-5">
+    <footer class="bg-white-100 mt-5 lg:hidden">
         <div class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center">
             <div class="w-full h-px bg-gray-300"></div>
 

@@ -35,3 +35,4 @@ document.querySelectorAll('#dropdownMenu a').forEach(link => {
         link.classList.add('underline','decoration-red-500', 'decoration-4');
     }
 });
+

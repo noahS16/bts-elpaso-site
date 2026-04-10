@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About El Paso - BTS Arirang in EL Paso</title>
+    <title>BTS Arirang in EL Paso</title>
     <link rel="stylesheet" href="/src/styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -12,7 +12,7 @@
 
 <body class="font-solano">
     <header id="magicHeader"
-        class="lg:p-6 lg:py-4 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-4 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+        class="lg:p-0 lg:h-0 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-4 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
 
         <!-- Left Logo -->
         <a href="/">EPTX</a>
@@ -31,21 +31,76 @@
         </div>
 
         <!-- Desktop menu (hidden on mobile) -->
-        <nav class="hidden lg:flex justify-end gap-8 font-bold text-4l ">
-            <a data-i18n="nav.about" href="/src/pages/about/" class="hover:opacity-70">ABOUT EP</a>
-            <a data-i18n="nav.food" href="/src/pages/food/" class="hover:opacity-70">FOOD</a>
-            <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="hover:opacity-70">THINGS TO DO</a>
-            <a data-i18n="nav.night" href="/src/pages/nightlife/" class="hover:opacity-70">NIGHTLIFE</a>
-            <a href="/src/pages/armymap/" class="hover:opacity-70">MA CITY</a>
-            <a data-i18n="nav.events" href="/src/pages/events/" class="hover:opacity-70">EVENTS</a>
-            <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="hover:opacity-70">FAN PROJECTS</a>
-            <a data-i18n="nav.home" href="/" class="hover:opacity-70">HOME</a>
-            <div class="px-4 py-2 lang-toggle-wrap" id="langToggle">
-                <span class="lang-option active" id="optEN">EN</span>
-                <span class="lang-option" id="optES">ES</span>
-                <div class="lang-pill" id="langPill"></div>
+        <!-- DESKTOP SIDEBAR -->
+        <aside id="sidebar"
+            class="hidden lg:flex flex-col fixed top-0 left-0 h-full min-h-screen w-56 bg-purple-300 border-r border-white/30 shadow-sm z-30 px-4 pt-6 pb-2 gap-6">
+
+            <!-- <a href="/" class="text-3xl font-bold">EPTX</a> -->
+
+            <nav class="flex flex-col gap-1 font-bold text-3xl flex-1">
+                <a href="/src/pages/about/" data-i18n="nav.about"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">ABOUT
+                    EP</a>
+                <a href="/src/pages/food/" data-i18n="nav.food"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">FOOD</a>
+                <a href="/src/pages/things-to-do/" data-i18n="nav.things"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">THINGS
+                    TO DO</a>
+                <a href="/src/pages/nightlife/" data-i18n="nav.nightlife"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">NIGHTLIFE</a>
+                <a href="/src/pages/armymap/"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">MA
+                    CITY</a>
+                <a href="/src/pages/events/" data-i18n="nav.events"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">MEETUPS/EVENTS</a>
+                <a href="/src/pages/fan-projects/"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">FAN
+                    PROJECTS</a>
+                <a href="/" data-i18n="nav.home"
+                    class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">HOME</a>
+                <!-- Lang toggle at bottom -->
+                <div class="flex items-center gap-3">
+                    <!-- <span data-i18n="nav.language" class="font-bold text-2xl">IDIOMA</span> -->
+                    <div class="lang-toggle-wrap" id="langToggle">
+                        <span class="lang-option active" id="optEN">EN</span>
+                        <span class="lang-option" id="optES">ES</span>
+                        <div class="lang-pill" id="langPill"></div>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div
+                class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center text-base lg:mt-auto">
+                <div class="w-full h-px bg-white/50"></div>
+                <p class="text-gray-600">
+                    Designed & Developed by
+                    <span class="font-semibold">Noah</span> &
+                    <span class="font-semibold">Nadia Saenz</span>
+                    &copy; 2026
+                </p>
+
+                <div class="flex gap-4 mt-1">
+                    <div class="flex flex-col items-center text-sm text-gray-500">
+                        <a href="https://www.instagram.com/nerdiia?igsh=MWJ2a3Vjc3A3N3pibw==" target="_blank"
+                            aria-label="Nadia Instagram" class="hover:opacity-70 transition">
+                            <img src="/utils/icons/instagram.svg" alt="" class="w-6 h-6" />
+                        </a>
+                        <span>Nadia</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-sm text-gray-500">
+                        <a href="https://www.instagram.com/noa_saenz?igsh=eW1oeXpvYjZiaXh5&utm_source=qr"
+                            target="_blank" aria-label="Noah Instagram" class="hover:opacity-70 transition">
+                            <img src="/utils/icons/instagram.svg" alt="" class="w-6 h-6" />
+                        </a>
+                        <span>Noah</span>
+                    </div>
+                </div>
+                <span class="text-gray-600 font-semibold">For ARMY by ARMY</span>
             </div>
-        </nav>
+        </aside>
 
     </header>
     <!-- Menu -->
@@ -82,7 +137,7 @@
         </div>
     </div>
 
-    <main class="min-h-auto mt-20 px-4">
+    <main class="min-h-auto mt-20 px-4 lg:p-10 lg:px-20 lg:ml-56 lg:mt-0">
         <div class="flex flex-row justify-between items-center">
             <h1 data-i18n="events.heading"
                 class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4">
@@ -193,7 +248,7 @@
 
 
 
-    <footer class="bg-white-100 mt-5">
+    <footer class="bg-white-100 mt-5 lg:hidden">
         <div class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center">
             <div class="w-full h-px bg-gray-300"></div>
             <p class="text-gray-600">
