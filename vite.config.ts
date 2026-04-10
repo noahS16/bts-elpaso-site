@@ -14,7 +14,8 @@ export default defineConfig({
         thingstodo: resolve(__dirname, 'src/pages/things-to-do/index.html'),
         nightlife: resolve(__dirname, 'src/pages/nightlife/index.html'),
         armymap: resolve(__dirname, 'src/pages/armymap/index.html'),
-        events: resolve(__dirname, 'src/pages/events/index.html')
+        events: resolve(__dirname, 'src/pages/events/index.html'),
+        fanprojects: resolve(__dirname, 'src/pages/fan-projects/index.html'),
       },
     },
   },

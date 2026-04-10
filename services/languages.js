@@ -7,6 +7,7 @@ const translations = {
         'nav.nightlife': 'VIDA NOCTURNA',
         'nav.map': 'MI CIUDAD',
         'nav.events': 'EVENTOS DE ARMY',
+        'nav.projects': 'PROYECTOS DE FANS',
         'nav.home': 'INICIO',
         'nav.language': 'LANGUAGE',
 
@@ -123,6 +124,33 @@ const translations = {
         'modalBody': 'Cada ARMY puede agregar su ciudad una vez para que todos tengan su momento.',
         'modalThanks': '¡Gracias por representar de dónde vienes!',
         'modalBtn': 'OK',
+
+        // ---- FAN PROJECTS PAGE --------------------------------------------
+        'projects.heading': 'PROYECTOS DE FANS',
+        'projects.subheading': '¡Proyectos organizados por fans para los conciertos! Descubre cómo participar y apoyar.',
+        //'projects.organizedBy': 'Organizado por',
+        'projects.moreInfo': 'MÁS INFO →',
+        'projects.supportLink': 'aquí',
+
+        // Keep Swimming Project
+        'projects.keepSwimming.descriptionA': 'Trae un letrero de ballena morada con "KEEP SWIMMING" escrito en marcador - SOLO DÍA UNO.',
+        'projects.keepSwimming.descriptionB': 'Levántalo durante el soundcheck y durante la presentación de SWIM.',
+        'projects.keepSwimming.descriptionC': 'Hazlo de papel A4 morado - ¡trae extras para compartir con tu sección!',
+
+        // Purple Heart Project
+        'projects.purpleHeart.descriptionA': 'Trae un letrero de corazón morado con "WE STAYED" escrito en marcador - SOLO DÍA DOS.',
+        'projects.purpleHeart.descriptionB': 'Levántalo cuando BTS se presente.',
+        'projects.purpleHeart.descriptionC': 'Hazlo de papel A4 morado - ¡trae extras para compartir con tu sección!',
+
+        // BTS Banner Project Day One
+        'projects.bannerOne.descriptionA': 'FRENTE - Representa la unidad entre Juárez y El Paso como ciudades fronterizas unidas por BTS.',
+        'projects.bannerOne.descriptionB': 'REVERSO - Refleja nuestra identidad compartida en ARMY bombs con íconos de cada ciudad.',
+        'projects.bannerOne.descriptionC': 'Apoya este proyecto ',
+
+        // BTS Banner Project Day Two
+        'projects.bannerTwo.descriptionA': 'Elementos icónicos de El Paso y Juárez.',
+        'projects.bannerTwo.descriptionB': 'Las Montañas Franklin en EP y La X (Plaza de la Mexicanidad) en Juárez crean un paisaje que conecta ambos lados de la frontera.',
+        'projects.bannerTwo.descriptionC': 'Apoya este proyecto ',
 
     }
 };

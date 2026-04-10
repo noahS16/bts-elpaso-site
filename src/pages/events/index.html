@@ -12,7 +12,7 @@
 
 <body class="font-solano">
     <header id="magicHeader"
-        class="lg:p-6 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-4 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+        class="lg:p-6 lg:py-4 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-4 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
 
         <!-- Left Logo -->
         <a href="/">EPTX</a>
@@ -32,13 +32,19 @@
 
         <!-- Desktop menu (hidden on mobile) -->
         <nav class="hidden lg:flex justify-end gap-8 font-bold text-4l ">
-            <a href="/src/pages/about/" class="hover:underline">ABOUT EP</a>
-            <a href="/src/pages/food/" class="hover:underline">FOOD</a>
-            <a href="/src/pages/things-to-do/" class="hover:underline">THINGS TO DO</a>
-            <a href="/src/pages/nightlife/" class="hover:underline">NIGHTLIFE</a>
-            <a href="/src/pages/armymap/" class="hover:underline">MA CITY</a>
-            <a href="/src/pages/events/" class="hover:underline">MEETUPS/EVENTS</a>
-            <a href="/" class="hover:underline">HOME</a>
+            <a data-i18n="nav.about" href="/src/pages/about/" class="hover:opacity-70">ABOUT EP</a>
+            <a data-i18n="nav.food" href="/src/pages/food/" class="hover:opacity-70">FOOD</a>
+            <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="hover:opacity-70">THINGS TO DO</a>
+            <a data-i18n="nav.night" href="/src/pages/nightlife/" class="hover:opacity-70">NIGHTLIFE</a>
+            <a href="/src/pages/armymap/" class="hover:opacity-70">MA CITY</a>
+            <a data-i18n="nav.events" href="/src/pages/events/" class="hover:opacity-70">EVENTS</a>
+            <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="hover:opacity-70">FAN PROJECTS</a>
+            <a data-i18n="nav.home" href="/" class="hover:opacity-70">HOME</a>
+            <div class="px-4 py-2 lang-toggle-wrap" id="langToggle">
+                <span class="lang-option active" id="optEN">EN</span>
+                <span class="lang-option" id="optES">ES</span>
+                <div class="lang-pill" id="langPill"></div>
+            </div>
         </nav>
 
     </header>
@@ -53,6 +59,7 @@
             class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
         <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
         <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="block px-4 py-2 hover:bg-gray-100">FAN PROJECTS</a>
         <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
         <div class="flex items-center gap-3 px-4 py-2">
             <span data-i18n="nav.language" class="font-normal">IDIOMA</span>

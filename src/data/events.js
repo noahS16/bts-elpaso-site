@@ -1,4 +1,4 @@
-export const events = [    
+export const events = [
     {
         poster: "/utils/images/listening-party-event.png",
         event_name: "Arirang Listening Party",
@@ -58,7 +58,7 @@ export const events = [
         descriptionEs: ["Vendedores", "Artistas", "Grupos de Baile", "¡Helado!"],
         link: "https://www.instagram.com/p/DTrN9_RDQlz/?igsh=dXAyeXN4cjh4ZHpk",
     },
-    
+
     {
         poster: "/utils/images/armyrang.png",
         event_name: "ARMYRANG El Paso Pre-Party (18+)",
@@ -103,6 +103,18 @@ export const events = [
         descriptionEs: ["Freebies", "Vendedores", "Especiales de Comida", "Rifas"],
         link: "https://facebook.com/events/s/army-event-for-bts/830534076705389/",
     },
+    {
+        poster: "/utils/images/armyrang-vendor-event.jpeg",
+        event_name: "ARMYRANG Vendor Market",
+        host_name: "BTS Tarot Project",
+        event_dates: [{ "date": "May 2", "time": "12pm - 4pm" },],
+        location: "Crunch & Chill",
+        location_link: "https://maps.app.goo.gl/equ4emdJT6PmTSXH6",
+        description: ["Vendors", "Photo Ops", "Food Specials", "Event Packages"],
+        descriptionEs: ["Vendedores", "Sesiones de Fotos", "Especiales de Comida", "Paquetes del Evento"],
+        link: "https://www.instagram.com/p/DW2UrncDAPE/?igsh=MWhuaWM5MnBkbTAy",
+    },
+
     // {
     //     poster: "/utils/images/banner-voting.png",
     //     event_name: "BTS Banner Voting",

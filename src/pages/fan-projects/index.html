@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About El Paso - BTS Arirang in EL Paso</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body class="font-solano">
+    <header id="magicHeader"
+        class="lg:p-6 lg:py-4 fixed top-0 left-0 w-full z-30 flex justify-between items-center px-4 py-3 text-3xl font-bold bg-purple-300 backdrop-blur-md border-b border-white/30 shadow-sm transition-transform duration-300">
+
+        <!-- Left Logo -->
+        <a href="/">EPTX</a>
+
+        <!-- Mobile title (still exactly the same) -->
+        <span class="text-3xl mt-0 font-normal md:hidden">-Arirang in El Paso-</span>
+
+        <!-- Hamburger (mobile only) -->
+        <div class="relative lg:hidden">
+            <button id="menuButton" class="p-2 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black"
+                    stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Desktop menu (hidden on mobile) -->
+        <nav class="hidden lg:flex justify-end gap-8 font-bold text-4l ">
+            <a data-i18n="nav.about" href="/src/pages/about/" class="hover:opacity-70">ABOUT EP</a>
+            <a data-i18n="nav.food" href="/src/pages/food/" class="hover:opacity-70">FOOD</a>
+            <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="hover:opacity-70">THINGS TO DO</a>
+            <a data-i18n="nav.night" href="/src/pages/nightlife/" class="hover:opacity-70">NIGHTLIFE</a>
+            <a href="/src/pages/armymap/" class="hover:opacity-70">MA CITY</a>
+            <a data-i18n="nav.events" href="/src/pages/events/" class="hover:opacity-70">EVENTS</a>
+            <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="hover:opacity-70">FAN PROJECTS</a>
+            <a data-i18n="nav.home" href="/" class="hover:opacity-70">HOME</a>
+            <div class="px-4 py-2 lang-toggle-wrap" id="langToggle">
+                <span class="lang-option active" id="optEN">EN</span>
+                <span class="lang-option" id="optES">ES</span>
+                <div class="lang-pill" id="langPill"></div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- Menu -->
+    <div id="dropdownMenu"
+        class="text-4xl fixed top-0 right-0 h-full w-64 bg-white/90 shadow-lg transform translate-x-full transition-transform duration-300 z-200 font-bold">
+        <a data-i18n="nav.about" href="/src/pages/about/" class="block px-4 py-2 hover:bg-gray-100">ABOUT EL PASO</a>
+        <a data-i18n="nav.food" href="/src/pages/food/" class="block px-4 py-2 hover:bg-gray-100">FOOD</a>
+        <a data-i18n="nav.things" href="/src/pages/things-to-do/" class="block px-4 py-2 hover:bg-gray-100">THINGS TO
+            DO</a>
+        <a data-i18n="nav.nightlife" href="/src/pages/nightlife/"
+            class="block px-4 py-2 hover:bg-gray-100">NIGHTLIFE</a>
+        <a href="/src/pages/armymap/" class="block px-4 py-2 hover:bg-gray-100">MA CITY</a>
+        <a data-i18n="nav.events" href="/src/pages/events/" class="block px-4 py-2 hover:bg-gray-100">MEETUPS/EVENTS</a>
+        <a data-i18n="nav.projects" href="/src/pages/fan-projects/" class="block px-4 py-2 hover:bg-gray-100">FAN PROJECTS</a>
+        <a data-i18n="nav.home" href="/" class="block px-4 py-2 hover:bg-gray-100">HOME</a>
+        <div class="flex items-center gap-3 px-4 py-2">
+            <span data-i18n="nav.language" class="font-normal">IDIOMA</span>
+            <div class="lang-toggle-wrap" id="langToggleMobile">
+                <span class="lang-option active" id="optENMobile">EN</span>
+                <span class="lang-option" id="optESMobile">ES</span>
+                <div class="lang-pill" id="langPillMobile"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Overlay for clicking outside -->
+    <div id="overlay" class="fixed inset-0 bg-black/30 hidden z-10"></div>
+
+    <main class="min-h-auto mt-20 px-4">
+        <div class="flex flex-row justify-between items-center">
+            <h1 data-i18n="projects.heading"
+                class="text-5xl font-bold underline decoration-6 decoration-red-500 underline-offset-4">
+                FAN PROJECTS
+            </h1>
+            <img src="/utils/images/van.png" class="h-16 w-16" alt="">
+        </div>
+        <div class="flex items-center justify-between mt-1">
+            <p data-i18n="projects.subheading" class="text-gray-500 font-semibold text-xl">
+                Projects organized by fans for the concerts! Find out how to participate and help out.
+            </p>
+        </div>
+
+        <div class="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto" id="fanProjectCardsContainer">
+            <div id="fanProjectCard" class="shadow-md rounded-xl overflow-hidden pb-2">
+                <img src="/utils/images/keep-swimming-project.png" alt="" class="w-full h-64 object-cover">
+                <div class="flex flex-row items-center justify-between px-3 py-2">
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-3xl">Keep Swimming Project</h2>
+                        <span class="text-lg font-bold text-gray-400">Organized by <a href="https://www.instagram.com/bora_915?igsh=Z2UwcTV2em03Nmtz" class="underline font-bold text-purple-500">bora_915</a></span>
+                    </div>
+                    <a data-i18n="projects.moreInfo" href="https://www.instagram.com/p/DWWbPMUFAhz/?igsh=Nzk0cTE5ZHYzcHFq" class="p-2 rounded-lg bg-purple-400 text-center text-white font-bold">MORE INFO →</a>
+                </div>
+                <ul class="flex flex-col gap-2 font-semibold text-gray-500 text-[17px] mx-2 border-t border-gray-200 pt-1">
+                    <li class="flex items-center gap-2">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.keepSwimming.descriptionA">Bring a purple whale sign with "KEEP SWIMMING" written in marker - DAY ONE ONLY.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.keepSwimming.descriptionB">Hold it up during soundcheck and during the performance of SWIM</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.keepSwimming.descriptionC">Make them out of purple A4 paper - bring extras to share with your section!</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fanProjectCard" class="shadow-md rounded-xl overflow-hidden pb-2">
+                <img src="/utils/images/purple-heart-project.png" alt="" class="w-full h-64 object-cover">
+                <div class="flex flex-row items-center justify-between px-3 py-2">
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-3xl">Purple Heart Project</h2>
+                        <span class="text-lg font-bold text-gray-400">Organized by <a href="https://www.instagram.com/bora_915?igsh=Z2UwcTV2em03Nmtz" class="underline font-bold text-purple-500">bora_915</a></span>
+                    </div>
+                    <a data-i18n="projects.moreInfo" href="https://www.instagram.com/p/DVu1pZflNd_/?igsh=bG80Njhsa2luemgx" class="p-2 rounded-lg bg-purple-400 text-center text-white font-bold">MORE INFO →</a>
+                </div>
+                <ul class="flex flex-col gap-2 font-semibold text-gray-500 text-[17px] mx-2 border-t border-gray-200 pt-1">
+                    <li class="flex items-center gap-2">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.purpleHeart.descriptionA">Bring a purple heart sign with "WE STAYED" written in marker - DAY TWO ONLY.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.purpleHeart.descriptionB">Hold it up when BTS introduces themselves.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.purpleHeart.descriptionC">Make them out of purple A4 paper - bring extras to share with your section!</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fanProjectCard" class="shadow-md rounded-xl overflow-hidden pb-2">
+                <img src="/utils/images/banner-day-one.png" alt="" class="w-full h-70 object-cover">
+                <div class="flex flex-row items-center justify-between px-3 py-2">
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-3xl">BTS Banner Project</h2>
+                        <span class="text-lg font-bold text-gray-400">Organized by <a href="https://www.instagram.com/btsarmysinfronteras?igsh=ZHdpc3RodXh3dGJr" class="underline font-bold text-purple-500">BTS Army Sin Fronteras</a></span>
+                    </div>
+                    <a data-i18n="projects.moreInfo" href="https://www.instagram.com/p/DWhyDY2kWJd/?igsh=MXE1MmViNXdwaG45Ng==" class="p-2 rounded-lg bg-purple-400 text-center text-white font-bold">MORE INFO →</a>
+                </div>
+                <ul class="flex flex-col gap-2 font-semibold text-gray-500 text-[17px] mx-2 border-t border-gray-200 pt-1">
+                    <li class="flex items-center gap-2">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.bannerOne.descriptionA">FRONT - Represents the unity between Juárez and El Paso as border cities strengthened by BTS.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.bannerOne.descriptionB">BACK - Reflects our shared identity in ARMY bombs with icons from each city.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <div class="flex flex-row gap-1">
+                            <span data-i18n="projects.bannerTwo.descriptionC">Support this project </span>
+                            <a data-i18n="projects.supportLink" class="underline text-purple-400 font-semibold" href="https://www.gofundme.com/f/join-army-fill-bts-concert-with-10000-banners?attribution_id=sl:0263d406-d78f-4081-9c6b-cf68ab185e5a&lang=en_US&ts=1775062709&utm_campaign=fp_sharesheet&utm_content=amp17_control-amp20_t1&utm_medium=customer&utm_source=copy_link&fbclid=PARlRTSAREGxxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae7kb1zMbUkns3lR9tkEqJSat4lkZ0vfKM24pD_imKi4xWmDkAgK_bO0Ggu1w_aem_aAT88PEMhSmgiyv4NAz3Ow">here</a>.
+
+                        </div>
+                </ul>
+            </div>
+
+            <div id="fanProjectCard" class="shadow-md rounded-xl overflow-hidden pb-2">
+                <img src="/utils/images/banner-day-two.png" alt="" class="w-full h-70 object-cover">
+                <div class="flex flex-row items-center justify-between px-3 py-2">
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-3xl">BTS Banner Project</h2>
+                        <span class="text-lg font-bold text-gray-400">Organized by <a href="https://www.instagram.com/btsarmysinfronteras?igsh=ZHdpc3RodXh3dGJr" class="underline font-bold text-purple-500">BTS Army Sin Fronteras</a></span>
+                    </div>
+                    <a data-i18n="projects.moreInfo" href="https://www.instagram.com/p/DWhyDY2kWJd/?igsh=MXE1MmViNXdwaG45Ng==" class="p-2 rounded-lg bg-purple-400 text-center text-white font-bold">MORE INFO →</a>
+                </div>
+                <ul class="flex flex-col gap-2 font-semibold text-gray-500 text-[17px] mx-2 border-t border-gray-200 pt-1">
+                    <li class="flex items-center gap-2">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.bannerTwo.descriptionA">Iconic elements from El Paso and Juárez </span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <span data-i18n="projects.bannerTwo.descriptionB">Franklin Mountains in EP and La X (Plaza de la MExicanidad) in Juárez creates a landscape connecting both sides of the border.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/utils/icons/purple-heart-list.svg" alt="" class="h-5 w-5">
+                        <div class="flex flex-row gap-1">
+                            <span data-i18n="projects.bannerTwo.descriptionC">Support this project </span>
+                            <a data-i18n="projects.supportLink" class="underline text-purple-400 font-semibold" href="https://www.gofundme.com/f/join-army-fill-bts-concert-with-10000-banners?attribution_id=sl:0263d406-d78f-4081-9c6b-cf68ab185e5a&lang=en_US&ts=1775062709&utm_campaign=fp_sharesheet&utm_content=amp17_control-amp20_t1&utm_medium=customer&utm_source=copy_link&fbclid=PARlRTSAREGxxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae7kb1zMbUkns3lR9tkEqJSat4lkZ0vfKM24pD_imKi4xWmDkAgK_bO0Ggu1w_aem_aAT88PEMhSmgiyv4NAz3Ow">here</a>.
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <footer class="bg-white-100 mt-5">
+        <div class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center">
+            <div class="w-full h-px bg-gray-300"></div>
+            <p class="text-gray-600">
+                Designed & Developed by
+                <span class="font-semibold">Noah</span> &
+                <span class="font-semibold">Nadia Saenz</span>
+                &copy; 2026
+            </p>
+
+            <div class="flex gap-4 mt-1">
+                <div class="flex flex-col items-center text-xs text-gray-500">
+                    <a href="https://www.instagram.com/nerdiia?igsh=MWJ2a3Vjc3A3N3pibw==" target="_blank"
+                        aria-label="Nadia Instagram" class="hover:opacity-70 transition">
+                        <img src="/utils/icons/instagram.svg" alt="" class="w-6 h-6" />
+                    </a>
+                    <span>Nadia</span>
+                </div>
+
+                <div class="flex flex-col items-center text-xs text-gray-500">
+                    <a href="https://www.instagram.com/noa_saenz?igsh=eW1oeXpvYjZiaXh5&utm_source=qr" target="_blank"
+                        aria-label="Noah Instagram" class="hover:opacity-70 transition">
+                        <img src="/utils/icons/instagram.svg" alt="" class="w-6 h-6" />
+                    </a>
+                    <span>Noah</span>
+                </div>
+            </div>
+            <span class="text-gray-600 font-semibold">For ARMY by ARMY</span>
+        </div>
+
+    </footer>
+    <script src="./main.js" type="module"></script>
+
+</body>
