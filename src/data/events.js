@@ -11,18 +11,16 @@ export const events = [
         link: "https://www.instagram.com/p/DWfniWgjSVX/?igsh=ZTlxNDF1eHV0Z25z",
     },
     {
-        poster: "/utils/images/kpop-store-event.png",
-        event_name: "BTS Arirang Event",
-        host_name: "K-Pop El Paso",
-        event_dates: [{ "date": "April 10", "time": "1pm" }],
-        location: "K-Pop El Paso (K-Pop Store)",
-        location_link: "https://maps.app.goo.gl/GUYCu68nUurw4qHe7",
-        description: ["Photo-Card Decorating", "Photo-Card Trading", "Photo-Card Contest"],
-        descriptionEs: ["Decoración de Photocards", "Intercambio de Photocards", "Concurso de Photocards"],
-        link: "https://www.instagram.com/p/DWh1owakWSN/?igsh=MWc5ZG95anRwdm51Mg==",
+        poster: "/utils/images/tattoo_event.png",
+        event_name: "ARIRANG Inspired Tattoos",
+        host_name: "@celestialmoonins, @valex.tatue, @bri_inkss",
+        event_dates: [{ "date": "April 20 - May 1", "time": "DM For Appointment" }],
+        location: "5640 Montana Ave Ste F",
+        location_link: "https://maps.app.goo.gl/rKW415zoPDifjZvM9",
+        description: ["BTS Tattoos", "BTS Piercings", "Walk-ins"],
+        descriptionEs: ["BTS Tattoos", "BTS Piercings", "Walk-ins"],
+        link: "https://www.instagram.com/reel/DXCPacHgJZZ/?igsh=MTNzbjBuaGk2eGtmeA==",
     },
-
-
 
     {
         poster: "/utils/images/chucohae-event.png",
