@@ -11,7 +11,7 @@ export const events = [
         link: "https://www.instagram.com/p/DWfniWgjSVX/?igsh=ZTlxNDF1eHV0Z25z",
     },
     {
-        poster: "/utils/images/tattoo_event.png",
+        poster: "/utils/images/tattoo_event.jpeg",
         event_name: "ARIRANG Inspired Tattoos",
         host_name: "@celestialmoonins, @valex.tatue, @bri_inkss",
         event_dates: [{ "date": "April 20 - May 1", "time": "DM For Appointment" }],
