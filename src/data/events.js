@@ -24,7 +24,7 @@ export const events = [
     {
         poster: "/utils/images/tattoo_event.jpeg",
         event_name: "ARIRANG Inspired Tattoos",
-        host_name: "@celestialmoonins, @valex.tatue, @bri_inkss",
+        host_name: "@celestialmooninks, @valex.tatue, @bri_inkss",
         event_dates: [{ "date": "April 20 - May 1", "time": "DM For Appointment" }],
         location: "5640 Montana Ave Ste F",
         location_link: "https://maps.app.goo.gl/rKW415zoPDifjZvM9",
