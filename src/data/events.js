@@ -11,6 +11,17 @@ export const events = [
         link: "https://www.instagram.com/p/DWfniWgjSVX/?igsh=ZTlxNDF1eHV0Z25z",
     },
     {
+        poster: "/utils/images/county_event.png",
+        event_name: "BTS Weekend Resolution",
+        host_name: "El Paso County Commissioners Court",
+        event_dates: [{ "date": "April 27", "time": "9:30am" }],
+        location: "El Paso County Courthouse",
+        location_link: "https://maps.app.goo.gl/tveoSoGSgWNbjkYU6",
+        description: ["Wear Purple!", "Estimado Amigo Award", "Celebrate with ARMY"],
+        descriptionEs: ["¡Vístete de morado!", "Premio Estimado Amigo", "Celebra con ARMY"],
+        link: "https://www.instagram.com/p/DW9zLBtkolf/?igsh=MXNvaTU4eW5xYTNhMQ==",
+    },
+    {
         poster: "/utils/images/tattoo_event.jpeg",
         event_name: "ARIRANG Inspired Tattoos",
         host_name: "@celestialmoonins, @valex.tatue, @bri_inkss",
@@ -21,6 +32,7 @@ export const events = [
         descriptionEs: ["BTS Tattoos", "BTS Piercings", "Walk-ins"],
         link: "https://www.instagram.com/reel/DXCPacHgJZZ/?igsh=MTNzbjBuaGk2eGtmeA==",
     },
+    
 
     {
         poster: "/utils/images/chucohae-event.png",
