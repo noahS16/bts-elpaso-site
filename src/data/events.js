@@ -1,16 +1,5 @@
 export const events = [
     {
-        poster: "/utils/images/listening-party-event.png",
-        event_name: "Arirang Listening Party",
-        host_name: "Bora_915",
-        event_dates: [{ "date": "April 18", "time": "12pm - 5pm" }],
-        location: "Moe Green's Coffee Bar",
-        location_link: "https://maps.app.goo.gl/auAiyyaQ2eE42vU2A",
-        description: ["BTS DJ", "Vendors", "Raffles", "Games"],
-        descriptionEs: ["BTS DJ", "Vendedores", "Rifas", "Juegos"],
-        link: "https://www.instagram.com/p/DWfniWgjSVX/?igsh=ZTlxNDF1eHV0Z25z",
-    },
-    {
         poster: "/utils/images/county_event.png",
         event_name: "BTS Weekend Resolution",
         host_name: "El Paso County Commissioners Court",
@@ -21,6 +10,18 @@ export const events = [
         descriptionEs: ["¡Vístete de morado!", "Premio Estimado Amigo", "Celebra con ARMY"],
         link: "https://www.instagram.com/p/DW9zLBtkolf/?igsh=MXNvaTU4eW5xYTNhMQ==",
     },
+     {
+        poster: "/utils/images/cake_event.png",
+        event_name: "BTS Inspired Treats",
+        host_name: "Greggerson's Cake Cottage",
+        event_dates: [{ "date": "April 18", "time": "For 2 weeks!" }],
+        location: "Greggerson's Cake Cottage",
+        location_link: "https://maps.app.goo.gl/pJE6xgMJFWkiaQfL8",
+        description: ["Ube Cupcakes", "Sugar Cookies", "Historic Bakery"],
+        descriptionEs: ["Ube Cupcakes", "Sugar Cookies", "Historic Bakery"],
+        link: "https://www.instagram.com/p/DXRWyXdGba5/?igsh=MWNoemZ1eXk3czE4bA==",
+    },
+
     {
         poster: "/utils/images/tattoo_event.jpeg",
         event_name: "ARIRANG Inspired Tattoos",
@@ -45,6 +46,19 @@ export const events = [
         descriptionEs: ["Vendedores", "Artistas", "Actividades", "Sorpresas Especiales"],
         link: "https://www.instagram.com/p/DU2Byrqjt5K/?igsh=cXd5OThxaWtobTN6",
     },
+    {
+        poster: "/utils/images/library_event.png",
+        event_name: "BTS Trivia & Craft Fest",
+        host_name: "El Paso Public Library - Main Branch",
+        event_dates: [{ "date": "May 1", "time": "1:30pm - 3pm" }, { "date": "May 1", "time": "3:30pm - 5pm" }],
+        location: "Main Library",
+        location_link: "https://maps.app.goo.gl/EnUPyJYmhjg9L14M7",
+        description: ["Trivia", "Picket Decorating", "Lightstick Strap Making", "CALL TO RESERVE"],
+        descriptionEs: ["Vendedores", "Artistas", "Actividades", "Sorpresas Especiales"],
+        link: "/utils/images/library_event.png",
+    },
+
+
 
     {
         poster: "/utils/images/mexa-event.jpg",

@@ -70,6 +70,8 @@ export const restaurants = {
         { name: "My Favorite Matcha", miles: 4.5, image: "/utils/images/my-favorite-matcha.png", favorite: false, link: "https://maps.app.goo.gl/9JRCxFiF28vTa9Kz9", category: "Cafés/Desserts" },
         { name: "787 Coffee", miles: 0.9, image: "/utils/images/787-coffee.jpg", multipleLocations: true, favorite: false, link: "https://maps.app.goo.gl/PvNCAuz1NyciTQeS6", category: "Cafés/Desserts" },
         { name: "Viejo Coffee", miles: 0.9, image: "/utils/images/viejo-coffee.jpg", link: "https://maps.app.goo.gl/YeH3jGjLRFuBKNXi8", category: "Cafés/Desserts" },
+        { name: "Greggerson's Cake Cottage", miles: 13.1, image: "/utils/images/cake-cottage.png", link: "https://maps.app.goo.gl/VazcSYHSpa2zW3Lh7", category: "Cafés/Desserts" },
+
         { name: "Brewnergy", miles: 0.8, image: "/utils/images/brewnergy.jpg", link: "https://maps.app.goo.gl/JK7pSMKsC3rRJ1uN9", category: "Cafés/Desserts" },
         { name: "Coffee Box", miles: 2.0, image: "/utils/images/coffee-box.jpg", link: "https://maps.app.goo.gl/D9ZqgBZoZmj6risd7", category: "Cafés/Desserts" },
         { name: "Crunch & Chill", miles: 7.4, image: "/utils/images/crunch-chill.png", link: "https://maps.app.goo.gl/iNnXc3xQx7RMvZLm9", category: "Cafés/Desserts" },
