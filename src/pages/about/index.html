@@ -57,19 +57,20 @@
                 <a href="/" data-i18n="nav.home"
                     class="sidebar-link px-0 py-2 rounded-lg hover:bg-white/30 transition active:bg-purple-200">HOME</a>
                 <!-- Lang toggle at bottom -->
-            <div class="flex items-center gap-3">
-                <!-- <span data-i18n="nav.language" class="font-bold text-2xl">IDIOMA</span> -->
-                <div class="lang-toggle-wrap" id="langToggle">
-                    <span class="lang-option active" id="optEN">EN</span>
-                    <span class="lang-option" id="optES">ES</span>
-                    <div class="lang-pill" id="langPill"></div>
+                <div class="flex items-center gap-3">
+                    <!-- <span data-i18n="nav.language" class="font-bold text-2xl">IDIOMA</span> -->
+                    <div class="lang-toggle-wrap" id="langToggle">
+                        <span class="lang-option active" id="optEN">EN</span>
+                        <span class="lang-option" id="optES">ES</span>
+                        <div class="lang-pill" id="langPill"></div>
+                    </div>
                 </div>
-            </div>    
             </nav>
 
-            
 
-            <div class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center text-base lg:mt-auto">
+
+            <div
+                class="max-w-5xl mx-auto px-4 py-1 pb-3 flex flex-col items-center gap-2 text-center text-base lg:mt-auto">
                 <div class="w-full h-px bg-white/50"></div>
                 <p class="text-gray-600">
                     Designed & Developed by
@@ -183,7 +184,7 @@
 
             </div>
         </div>
-        <div class="flex flex-col gap-10 px-4 mt-10 lg:flex-row lg:justify-between">
+        <div class="flex flex-col gap-10 px-4 mt-10 lg:flex-row lg:justify-between lg:items-center">
             <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-md">
                 <h2 data-i18n="about.facts.heading" class="text-3xl font-bold text-center lg:text-4xl">
                     QUICK FACTS ABOUT EL PASO
@@ -237,7 +238,8 @@
 
                 </div>
             </div>
-            <div class="flex flex-col bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden lg:w-full lg:h-full">
+            <div
+                class="flex flex-col bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden lg:w-full lg:h-full">
                 <div>
                     <h2 data-i18n="about.venue.heading" class="text-3xl font-bold text-center lg:text-4xl lg:hidden">
                         THE VENUE
@@ -264,7 +266,7 @@
                                 obstructions</span>
                             <a data-i18n="about.btn.pov"
                                 href="https://aviewfrommyseat.com/venue/Sun+Bowl+Stadium/sections/"
-                                class="flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-xl shadow hover:bg-red-600 transition self-center">
+                                class="mt-auto flex items-center justify-center px-4 py-2 bg-red-500 text-white font-bold rounded-xl shadow hover:bg-red-600 transition self-center">
                                 Section POV
                             </a>
                         </li>
@@ -281,11 +283,47 @@
                     </ul>
 
                 </div>
-                
+
 
             </div>
         </div>
-        <div class="mt-10 p-2 flex flex-col gap-2 lg:px-">
+        <div class="mt-12 px-4 lg:mt-15">
+            <h2 data-i18n="about.concertInfo.heading" class="underline decoration-4 decoration-red-500 font-bold text-4xl text-center lg:text-start lg:text-5xl">
+                Concert Information
+            </h2>
+
+            <div class="mt-4 flex flex-row gap-2 px-5 text-center whitespace-nowrap overflow-auto">
+                <a id="parkingLink" data-i18n="about.info.parking" href="https://www.instagram.com/p/DXH42ytCZg8/?igsh=dGIxcHcwc3V1aDZr" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center bg-purple-400 text-white px-4 py-2 rounded-xl text-lg font-bold hover:bg-purple-400 transition">
+                    Parking Information 
+                </a>
+                <a id="fanGuideOneLink" data-i18n="about.info.guideOne" href="https://www.instagram.com/p/DXaZWjAlr_0/?igsh=MXRwYzNvcW5teDNhdQ==" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center  bg-purple-400 text-white px-4 py-2 rounded-xl text-lg font-bold hover:bg-purple-400 transition">
+                    Official Fan Guide Part 1 
+                </a>
+                <a id="fanGuideTwoLink" data-i18n="about.info.guideTwo" href="https://www.instagram.com/p/DXaaDWrj6by/?igsh=MW1lZ3g2dHJxbTdqeA==" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center  bg-purple-400 text-white px-4 py-2 rounded-xl text-lg font-bold hover:bg-purple-400 transition">
+                    Official Fan Guide Part 2 
+                </a>
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
+                <img id="generalInfoImg" src="/utils/images/general_info.png" alt="General Info"
+                    class="w-full rounded-xl border-2 border-gray-100 shadow-md">
+                <img id="fanPlazaImg" src="/utils/images/fan_plaza.png" alt="Fan Plaza"
+                    class="w-full rounded-xl border-2 border-gray-100 shadow-md">
+                <img id="eventParkingImg" src="/utils/images/event_parking.png" alt="Parking"
+                    class="w-full rounded-xl border-2 border-gray-100 shadow-md">
+                <img id="timelineImg" src="/utils/images/timeline.png" alt="Timeline"
+                    class="w-full rounded-xl border-2 border-gray-100 shadow-md">
+            </div>
+            <p class="text-sm text-gray-500 mt-2 text-center">
+                Images via
+                <a id="imgCredit" href="https://www.instagram.com/utep_ose?igsh=Mjl3MzBxaXVuNTll" target="_blank" rel="noopener noreferrer"
+                    class="underline hover:text-gray-600 transition">@utep_ose</a>
+            </p>
+        </div>
+        <div class="mt-10 p-2 flex flex-col gap-2 px-4">
             <h2
                 class="underline decoration-4 decoration-red-500 font-bold text-3xl text-center lg:text-4xl lg:text-start">
                 FAQ</h2>

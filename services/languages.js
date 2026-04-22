@@ -39,6 +39,11 @@ const translations = {
 
         'about.faq.heading': 'PREGUNTAS FRECUENTES',
 
+        "about.concertInfo.heading": "Información del Concierto",
+        "about.info.parking": "Información de Estacionamiento",
+        "about.info.guideOne": "Guía Oficial para Fans Parte 1",
+        "about.info.guideTwo": "Guía Oficial para Fans Parte 2",
+
         // ---- FOOD PAGE --------------------------------------------
         'food.miles': 'Millas del Sun Bowl',
         'food.multipleLocations': 'Múltiples ubicaciones',

@@ -54,7 +54,7 @@ export const events = [
         location: "Main Library",
         location_link: "https://maps.app.goo.gl/EnUPyJYmhjg9L14M7",
         description: ["Trivia", "Picket Decorating", "Lightstick Strap Making", "CALL TO RESERVE"],
-        descriptionEs: ["Vendedores", "Artistas", "Actividades", "Sorpresas Especiales"],
+        descriptionEs: ["Trivia", "Decoración de Pancartas", "Haciendo Correas para Lightstick", "LLAMA PARA RESERVAR"],
         link: "/utils/images/library_event.png",
     },
 
