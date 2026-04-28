@@ -145,6 +145,16 @@ export const localEvents = [
 
     },
     {
+        image: "/utils/images/lanube_local_event.jpeg",
+        name: "Beyond the Stars Day",
+        siteLink: "https://la-nube.org/plan-your-day/calendar/beyond-stars-day",
+        description: "Located downown. Celebration filled with science, creativity, costumes, and fun for the whole family. Build your own lightsaber and make your own blue milk!",
+        date: "May 3",
+        descriptionEs: "Ubicado en el centro. ¡Celebración llena de ciencia, creatividad, disfraces y diversión para toda la familia. ¡Construye tu propio sable de luz y prepara tu propia leche azul!",
+
+    },
+
+    {
         image: "/utils/images/elmont.jpg",
         name: "Crankdat",
         siteLink:"https://www.elmontsocial.com/category/events/",
