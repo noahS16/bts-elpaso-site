@@ -216,17 +216,17 @@ export const events = [
         link: "https://www.instagram.com/p/DXmxN56kVzK/?igsh=N3Joa2Rncmd5bDF2",
     },
 
-    {
-        poster: "/utils/images/opium_event.png",
-        event_name: "BTS DAY Party (18+)",
-        host_name: "Opium Nightclub",
-        event_dates: [{ "date": "May 3", "time": "2pm - 2am" },],
-        location: "Opium Nightclub",
-        location_link: "https://maps.app.goo.gl/MEfTrTPzSAwueMYb6",
-        description: ["BTS Music", "Bottle Discounts", "No Cover"],
-        descriptionEs: ["Música de BTS", "Descuentos en Botellas", "Sin Cover"],
-        link: "https://www.instagram.com/p/DXsGmO5lO-K/?igsh=MXFyNDJ6cHkydW9xaA==",
-    },
+    // {
+    //     poster: "/utils/images/opium_event.png",
+    //     event_name: "BTS DAY Party (18+)",
+    //     host_name: "Opium Nightclub",
+    //     event_dates: [{ "date": "May 3", "time": "2pm - 2am" },],
+    //     location: "Opium Nightclub",
+    //     location_link: "https://maps.app.goo.gl/MEfTrTPzSAwueMYb6",
+    //     description: ["BTS Music", "Bottle Discounts", "No Cover"],
+    //     descriptionEs: ["Música de BTS", "Descuentos en Botellas", "Sin Cover"],
+    //     link: "https://www.instagram.com/p/DXsGmO5lO-K/?igsh=MXFyNDJ6cHkydW9xaA==",
+    // },
     {
         poster: "/utils/images/prickly_event.png",
         event_name: "K-Pop Nite (21+)",
