@@ -10,7 +10,7 @@ export const events = [
     //     descriptionEs: ["¡Vístete de morado!", "Premio Estimado Amigo", "Celebra con ARMY"],
     //     link: "https://www.instagram.com/p/DW9zLBtkolf/?igsh=MXNvaTU4eW5xYTNhMQ==",
     // },
-     {
+    {
         poster: "/utils/images/cake_event.png",
         event_name: "BTS Inspired Treats",
         host_name: "Greggerson's Cake Cottage",
@@ -45,7 +45,7 @@ export const events = [
         link: "https://www.instagram.com/reel/DXCPacHgJZZ/?igsh=MTNzbjBuaGk2eGtmeA==",
     },
 
-     {
+    {
         poster: "/utils/images/monolith_event.png",
         event_name: "BTS Flash Tattoos",
         host_name: "@honey_.ink_, @dan.dee.tattoos",
@@ -55,6 +55,17 @@ export const events = [
         description: ["BTS Tattoos", "Walk-ins"],
         descriptionEs: ["BTS Tattoos", "Walk-ins"],
         link: "https://www.instagram.com/p/DXuOAYrERoh/?img_index=1&igsh=dHAzb280ZGsyMWNq",
+    },
+    {
+        poster: "/utils/images/breakroom_event.png",
+        event_name: "BTS Coffees/Matcha",
+        host_name: "Breakroom Coffee",
+        event_dates: [{ "date": "April 28 - May 3", "time": ""}],
+        location: "Breakroom Coffee",
+        location_link: "https://maps.app.goo.gl/yVKw8ntuPwmuiRK68",
+        description: ["BTS Coffees", "BTS Matchas", "1$ Photo Cards"],
+        descriptionEs: ["Cafés de BTS", "Matchas de BTS", "Fotocards $1"],
+        link: "https://www.instagram.com/p/DXptYEBjRwV/?igsh=MWJsamlnd2F5NGVwbw==",
     },
 
     {
@@ -79,7 +90,7 @@ export const events = [
         descriptionEs: ["Galletas de BTS", "Cafés", "Postres"],
         link: "https://www.instagram.com/p/DXvA6kgD7lf/?igsh=ejJtYjdsN25iMGxo",
     },
-    
+
 
     {
         poster: "/utils/images/chucohae-event.png",
@@ -130,7 +141,7 @@ export const events = [
         poster: "/utils/images/indigo_event.png",
         event_name: "BTS Weekend Pre-Party",
         host_name: "Hotel Indigo, Circa 1963",
-        event_dates: [{ "date": "May 1", "time": "2pm - 6pm" },{ "date": "May 2", "time": "2pm - 6pm" },{ "date": "May 3", "time": "2pm - 6pm" }],
+        event_dates: [{ "date": "May 1", "time": "2pm - 6pm" }, { "date": "May 2", "time": "2pm - 6pm" }, { "date": "May 3", "time": "2pm - 6pm" }],
         location: "Hotel Indigo",
         location_link: "https://maps.app.goo.gl/Nyz6M8p9vxCHREnC8",
         description: ["BTS DJ", "BTS Outfit Contest", "BTS Drinks"],
@@ -208,7 +219,7 @@ export const events = [
         poster: "/utils/images/suncitykitty_event.png",
         event_name: "BTS Cupsleeve @ Sun City Kitty",
         host_name: "Pop City Con",
-        event_dates: [{ "date": "May 2", "time": "11am - 7pm" },{ "date": "May 3", "time": "12pm - 5pm" }],
+        event_dates: [{ "date": "May 2", "time": "11am - 7pm" }, { "date": "May 3", "time": "12pm - 5pm" }],
         location: "Sun City Kitty",
         location_link: "https://maps.app.goo.gl/1sH8mvErccNKoqYZ7",
         description: ["Freebies", "Scavenger Hunt", "Toploader Decorating"],
@@ -242,7 +253,7 @@ export const events = [
         poster: "/utils/images/lostfound_event.png",
         event_name: "BTS Before/After",
         host_name: "Lost & Found",
-        event_dates: [{ "date": "May 2", "time": "2pm" },{ "date": "May 3", "time": "2pm" },],
+        event_dates: [{ "date": "May 2", "time": "2pm" }, { "date": "May 3", "time": "2pm" },],
         location: "Lost & Found",
         location_link: "https://maps.app.goo.gl/Zc7zNJm5M3Y7PaAb7",
         description: ["All ages", "BTS Cocktails", "BTS Mocktails"],

@@ -145,6 +145,16 @@ export const localEvents = [
 
     },
     {
+        image: "/utils/images/101_event.png",
+        name: "Cinco De Mayo Retro Party (18+)",
+        siteLink: "https://www.instagram.com/reel/DXsnhWujXyB/?igsh=cHp0Z3FpeDM0eXQz",
+        description: "Located 5 min from the Sun Bowl. Step back in time and celebrate Cinco de Mayo with a retro twist! Drink Specials All night!",
+        date: "May 2",
+        descriptionEs: "A 5 minutos del Sun Bowl. ¡Retrocede en el tiempo y celebra el Cinco de Mayo con un toque retro! ¡Especiales en bebidas toda la noche!",
+
+    },
+
+    {
         image: "/utils/images/lanube_local_event.jpeg",
         name: "Beyond the Stars Day",
         siteLink: "https://la-nube.org/plan-your-day/calendar/beyond-stars-day",
